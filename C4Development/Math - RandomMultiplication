@@ -1,0 +1,33 @@
+//
+//  CFACanvas.h
+//  CodeSamples
+//
+//	A Cocoa For Artists project
+//  Created by Travis Kirton
+//
+
+#import "CFACanvas.h"
+
+CFAString *a, *b, *equation;
+
+@implementation CFACanvas
+-(void)setup {
+[self windowWidth:400 andHeight:320];
+[self drawStyle:EVENTBASED];
+[CFAString fill:1.0f];
+}
+
+-(void)draw {
+[self background:0];
+int A = [CFAMath randomInt:1000];
+int B = [CFAMath randomInt:1000];
+
+a = [CFAString stringWithFormat:@"A = %d",A];
+b = [CFAString stringWithFormat:@"B = %d",B];
+equation = [CFAString stringWithFormat:@"A * B = %d", A*B];
+
+[a drawAtPoint:NSMakePoint(50, self.canvasHeight*3/4)];
+[b drawAtPoint:NSMakePoint(50, self.canvasHeight/2)];
+[equation drawAtPoint:NSMakePoint(50, self.canvasHeight/4)];
+}
+@end

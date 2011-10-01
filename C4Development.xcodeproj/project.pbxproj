@@ -1,0 +1,819 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED66044B1437CA67003881DA /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED66044A1437CA67003881DA /* Accelerate.framework */; };
+		ED66044D1437CA67003881DA /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED66044C1437CA67003881DA /* AppKit.framework */; };
+		ED66044F1437CA67003881DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED66044E1437CA67003881DA /* Cocoa.framework */; };
+		ED6604511437CA67003881DA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6604501437CA67003881DA /* CoreData.framework */; };
+		ED6604531437CA67003881DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6604521437CA67003881DA /* Foundation.framework */; };
+		ED6604551437CA67003881DA /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6604541437CA67003881DA /* OpenGL.framework */; };
+		ED6604571437CA67003881DA /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6604561437CA67003881DA /* QTKit.framework */; };
+		ED6604591437CA67003881DA /* Quicktime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6604581437CA67003881DA /* Quicktime.framework */; };
+		ED66045B1437CA67003881DA /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED66045A1437CA67003881DA /* Quartz.framework */; };
+		ED66045D1437CA67003881DA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED66045C1437CA67003881DA /* QuartzCore.framework */; };
+		ED66045F1437CA67003881DA /* vecLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED66045E1437CA67003881DA /* vecLib.framework */; };
+		ED6604651437CA67003881DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED6604631437CA67003881DA /* InfoPlist.strings */; };
+		ED6604691437CA67003881DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604681437CA67003881DA /* main.m */; };
+		ED66046C1437CA67003881DA /* C4DevelopmentAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED66046B1437CA67003881DA /* C4DevelopmentAppDelegate.m */; };
+		ED6604701437CA67003881DA /* CFACanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = ED66046F1437CA67003881DA /* CFACanvas.m */; };
+		ED6604731437CA67003881DA /* CFAColor.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604721437CA67003881DA /* CFAColor.m */; };
+		ED6604761437CA67003881DA /* CFADateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604751437CA67003881DA /* CFADateTime.m */; };
+		ED66047A1437CA67003881DA /* CFAFont.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604791437CA67003881DA /* CFAFont.m */; };
+		ED66047D1437CA67003881DA /* CFAFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = ED66047C1437CA67003881DA /* CFAFoundation.m */; };
+		ED6604801437CA67003881DA /* CFAGlobalShapeAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = ED66047F1437CA67003881DA /* CFAGlobalShapeAttributes.m */; };
+		ED6604831437CA67003881DA /* CFAGlobalTypeAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604821437CA67003881DA /* CFAGlobalTypeAttributes.m */; };
+		ED6604861437CA67003881DA /* CFAGlobalStringAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604851437CA67003881DA /* CFAGlobalStringAttributes.m */; };
+		ED6604891437CA67003881DA /* CFAGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604881437CA67003881DA /* CFAGradient.m */; };
+		ED66048C1437CA67003881DA /* CFAImage.m in Sources */ = {isa = PBXBuildFile; fileRef = ED66048B1437CA67003881DA /* CFAImage.m */; };
+		ED6604901437CA67003881DA /* CFAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = ED66048F1437CA67003881DA /* CFAMath.m */; };
+		ED6604931437CA67003881DA /* CFAMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604921437CA67003881DA /* CFAMovie.m */; };
+		ED6604961437CA67003881DA /* CFANoise.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604951437CA67003881DA /* CFANoise.m */; };
+		ED6604991437CA67003881DA /* CFAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604981437CA67003881DA /* CFAObject.m */; };
+		ED66049C1437CA67003881DA /* CFAOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED66049B1437CA67003881DA /* CFAOpenGLView.m */; };
+		ED66049F1437CA67003881DA /* CFAQuartz.m in Sources */ = {isa = PBXBuildFile; fileRef = ED66049E1437CA67003881DA /* CFAQuartz.m */; };
+		ED6604A21437CA67003881DA /* CFAShape.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604A11437CA67003881DA /* CFAShape.m */; };
+		ED6604A51437CA67003881DA /* CFASound.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604A41437CA67003881DA /* CFASound.m */; };
+		ED6604A81437CA67003881DA /* CFAString.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604A71437CA67003881DA /* CFAString.m */; };
+		ED6604AB1437CA67003881DA /* CFATransform.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604AA1437CA67003881DA /* CFATransform.m */; };
+		ED6604AE1437CA68003881DA /* CFAVector.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604AD1437CA68003881DA /* CFAVector.m */; };
+		ED6604B11437CA68003881DA /* CFAVoice.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604B01437CA68003881DA /* CFAVoice.m */; };
+		ED6604B51437CA68003881DA /* C4.mov in Resources */ = {isa = PBXBuildFile; fileRef = ED6604B41437CA68003881DA /* C4.mov */; };
+		ED6604B81437CA68003881DA /* C4Black.png in Resources */ = {isa = PBXBuildFile; fileRef = ED6604B71437CA68003881DA /* C4Black.png */; };
+		ED6604BA1437CA68003881DA /* C4Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = ED6604B91437CA68003881DA /* C4Blue.png */; };
+		ED6604BC1437CA68003881DA /* C4Orange.png in Resources */ = {isa = PBXBuildFile; fileRef = ED6604BB1437CA68003881DA /* C4Orange.png */; };
+		ED6604BE1437CA68003881DA /* C4Red.png in Resources */ = {isa = PBXBuildFile; fileRef = ED6604BD1437CA68003881DA /* C4Red.png */; };
+		ED6604C01437CA68003881DA /* C4Sky.png in Resources */ = {isa = PBXBuildFile; fileRef = ED6604BF1437CA68003881DA /* C4Sky.png */; };
+		ED6604C21437CA68003881DA /* C4Wood.png in Resources */ = {isa = PBXBuildFile; fileRef = ED6604C11437CA68003881DA /* C4Wood.png */; };
+		ED6604C41437CA68003881DA /* loop.aif in Resources */ = {isa = PBXBuildFile; fileRef = ED6604C31437CA68003881DA /* loop.aif */; };
+		ED6605551437CA68003881DA /* C4Development.icns in Resources */ = {isa = PBXBuildFile; fileRef = ED6605531437CA68003881DA /* C4Development.icns */; };
+		ED6605581437CA69003881DA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = ED6605561437CA68003881DA /* Credits.rtf */; };
+		ED66055B1437CA69003881DA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6605591437CA69003881DA /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ED6604461437CA67003881DA /* C4Development.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C4Development.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED66044A1437CA67003881DA /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		ED66044C1437CA67003881DA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		ED66044E1437CA67003881DA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		ED6604501437CA67003881DA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		ED6604521437CA67003881DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ED6604541437CA67003881DA /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		ED6604561437CA67003881DA /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
+		ED6604581437CA67003881DA /* Quicktime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quicktime.framework; path = System/Library/Frameworks/Quicktime.framework; sourceTree = SDKROOT; };
+		ED66045A1437CA67003881DA /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		ED66045C1437CA67003881DA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		ED66045E1437CA67003881DA /* vecLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = vecLib.framework; path = System/Library/Frameworks/vecLib.framework; sourceTree = SDKROOT; };
+		ED6604621437CA67003881DA /* C4Development-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "C4Development-Info.plist"; sourceTree = "<group>"; };
+		ED6604641437CA67003881DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ED6604671437CA67003881DA /* C4Development-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "C4Development-Prefix.pch"; sourceTree = "<group>"; };
+		ED6604681437CA67003881DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ED66046A1437CA67003881DA /* C4DevelopmentAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = C4DevelopmentAppDelegate.h; sourceTree = "<group>"; };
+		ED66046B1437CA67003881DA /* C4DevelopmentAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = C4DevelopmentAppDelegate.m; sourceTree = "<group>"; };
+		ED66046E1437CA67003881DA /* CFACanvas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFACanvas.h; path = "en.lproj/C4A Source/CFACanvas.h"; sourceTree = "<group>"; };
+		ED66046F1437CA67003881DA /* CFACanvas.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFACanvas.m; path = "en.lproj/C4A Source/CFACanvas.m"; sourceTree = "<group>"; };
+		ED6604711437CA67003881DA /* CFAColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAColor.h; path = "en.lproj/C4A Source/CFAColor.h"; sourceTree = "<group>"; };
+		ED6604721437CA67003881DA /* CFAColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAColor.m; path = "en.lproj/C4A Source/CFAColor.m"; sourceTree = "<group>"; };
+		ED6604741437CA67003881DA /* CFADateTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFADateTime.h; path = "en.lproj/C4A Source/CFADateTime.h"; sourceTree = "<group>"; };
+		ED6604751437CA67003881DA /* CFADateTime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFADateTime.m; path = "en.lproj/C4A Source/CFADateTime.m"; sourceTree = "<group>"; };
+		ED6604771437CA67003881DA /* CFADefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFADefines.h; path = "en.lproj/C4A Source/CFADefines.h"; sourceTree = "<group>"; };
+		ED6604781437CA67003881DA /* CFAFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAFont.h; path = "en.lproj/C4A Source/CFAFont.h"; sourceTree = "<group>"; };
+		ED6604791437CA67003881DA /* CFAFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAFont.m; path = "en.lproj/C4A Source/CFAFont.m"; sourceTree = "<group>"; };
+		ED66047B1437CA67003881DA /* CFAFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAFoundation.h; path = "en.lproj/C4A Source/CFAFoundation.h"; sourceTree = "<group>"; };
+		ED66047C1437CA67003881DA /* CFAFoundation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAFoundation.m; path = "en.lproj/C4A Source/CFAFoundation.m"; sourceTree = "<group>"; };
+		ED66047E1437CA67003881DA /* CFAGlobalShapeAttributes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAGlobalShapeAttributes.h; path = "en.lproj/C4A Source/CFAGlobalShapeAttributes.h"; sourceTree = "<group>"; };
+		ED66047F1437CA67003881DA /* CFAGlobalShapeAttributes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAGlobalShapeAttributes.m; path = "en.lproj/C4A Source/CFAGlobalShapeAttributes.m"; sourceTree = "<group>"; };
+		ED6604811437CA67003881DA /* CFAGlobalTypeAttributes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAGlobalTypeAttributes.h; path = "en.lproj/C4A Source/CFAGlobalTypeAttributes.h"; sourceTree = "<group>"; };
+		ED6604821437CA67003881DA /* CFAGlobalTypeAttributes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAGlobalTypeAttributes.m; path = "en.lproj/C4A Source/CFAGlobalTypeAttributes.m"; sourceTree = "<group>"; };
+		ED6604841437CA67003881DA /* CFAGlobalStringAttributes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAGlobalStringAttributes.h; path = "en.lproj/C4A Source/CFAGlobalStringAttributes.h"; sourceTree = "<group>"; };
+		ED6604851437CA67003881DA /* CFAGlobalStringAttributes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAGlobalStringAttributes.m; path = "en.lproj/C4A Source/CFAGlobalStringAttributes.m"; sourceTree = "<group>"; };
+		ED6604871437CA67003881DA /* CFAGradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAGradient.h; path = "en.lproj/C4A Source/CFAGradient.h"; sourceTree = "<group>"; };
+		ED6604881437CA67003881DA /* CFAGradient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAGradient.m; path = "en.lproj/C4A Source/CFAGradient.m"; sourceTree = "<group>"; };
+		ED66048A1437CA67003881DA /* CFAImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAImage.h; path = "en.lproj/C4A Source/CFAImage.h"; sourceTree = "<group>"; };
+		ED66048B1437CA67003881DA /* CFAImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAImage.m; path = "en.lproj/C4A Source/CFAImage.m"; sourceTree = "<group>"; };
+		ED66048D1437CA67003881DA /* CFAImports.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAImports.h; path = "en.lproj/C4A Source/CFAImports.h"; sourceTree = "<group>"; };
+		ED66048E1437CA67003881DA /* CFAMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAMath.h; path = "en.lproj/C4A Source/CFAMath.h"; sourceTree = "<group>"; };
+		ED66048F1437CA67003881DA /* CFAMath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAMath.m; path = "en.lproj/C4A Source/CFAMath.m"; sourceTree = "<group>"; };
+		ED6604911437CA67003881DA /* CFAMovie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAMovie.h; path = "en.lproj/C4A Source/CFAMovie.h"; sourceTree = "<group>"; };
+		ED6604921437CA67003881DA /* CFAMovie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAMovie.m; path = "en.lproj/C4A Source/CFAMovie.m"; sourceTree = "<group>"; };
+		ED6604941437CA67003881DA /* CFANoise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFANoise.h; path = "en.lproj/C4A Source/CFANoise.h"; sourceTree = "<group>"; };
+		ED6604951437CA67003881DA /* CFANoise.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFANoise.m; path = "en.lproj/C4A Source/CFANoise.m"; sourceTree = "<group>"; };
+		ED6604971437CA67003881DA /* CFAObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAObject.h; path = "en.lproj/C4A Source/CFAObject.h"; sourceTree = "<group>"; };
+		ED6604981437CA67003881DA /* CFAObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAObject.m; path = "en.lproj/C4A Source/CFAObject.m"; sourceTree = "<group>"; };
+		ED66049A1437CA67003881DA /* CFAOpenGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAOpenGLView.h; path = "en.lproj/C4A Source/CFAOpenGLView.h"; sourceTree = "<group>"; };
+		ED66049B1437CA67003881DA /* CFAOpenGLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAOpenGLView.m; path = "en.lproj/C4A Source/CFAOpenGLView.m"; sourceTree = "<group>"; };
+		ED66049D1437CA67003881DA /* CFAQuartz.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAQuartz.h; path = "en.lproj/C4A Source/CFAQuartz.h"; sourceTree = "<group>"; };
+		ED66049E1437CA67003881DA /* CFAQuartz.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAQuartz.m; path = "en.lproj/C4A Source/CFAQuartz.m"; sourceTree = "<group>"; };
+		ED6604A01437CA67003881DA /* CFAShape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAShape.h; path = "en.lproj/C4A Source/CFAShape.h"; sourceTree = "<group>"; };
+		ED6604A11437CA67003881DA /* CFAShape.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAShape.m; path = "en.lproj/C4A Source/CFAShape.m"; sourceTree = "<group>"; };
+		ED6604A31437CA67003881DA /* CFASound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFASound.h; path = "en.lproj/C4A Source/CFASound.h"; sourceTree = "<group>"; };
+		ED6604A41437CA67003881DA /* CFASound.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFASound.m; path = "en.lproj/C4A Source/CFASound.m"; sourceTree = "<group>"; };
+		ED6604A61437CA67003881DA /* CFAString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAString.h; path = "en.lproj/C4A Source/CFAString.h"; sourceTree = "<group>"; };
+		ED6604A71437CA67003881DA /* CFAString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAString.m; path = "en.lproj/C4A Source/CFAString.m"; sourceTree = "<group>"; };
+		ED6604A91437CA67003881DA /* CFATransform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFATransform.h; path = "en.lproj/C4A Source/CFATransform.h"; sourceTree = "<group>"; };
+		ED6604AA1437CA67003881DA /* CFATransform.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFATransform.m; path = "en.lproj/C4A Source/CFATransform.m"; sourceTree = "<group>"; };
+		ED6604AC1437CA67003881DA /* CFAVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAVector.h; path = "en.lproj/C4A Source/CFAVector.h"; sourceTree = "<group>"; };
+		ED6604AD1437CA68003881DA /* CFAVector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAVector.m; path = "en.lproj/C4A Source/CFAVector.m"; sourceTree = "<group>"; };
+		ED6604AF1437CA68003881DA /* CFAVoice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAVoice.h; path = "en.lproj/C4A Source/CFAVoice.h"; sourceTree = "<group>"; };
+		ED6604B01437CA68003881DA /* CFAVoice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAVoice.m; path = "en.lproj/C4A Source/CFAVoice.m"; sourceTree = "<group>"; };
+		ED6604B21437CA68003881DA /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Singleton.h; path = "en.lproj/C4A Source/Singleton.h"; sourceTree = "<group>"; };
+		ED6604B41437CA68003881DA /* C4.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = C4.mov; path = "en.lproj/C4A Media/C4.mov"; sourceTree = "<group>"; };
+		ED6604B61437CA68003881DA /* C4.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; name = C4.qtz; path = "en.lproj/C4A Media/C4.qtz"; sourceTree = "<group>"; };
+		ED6604B71437CA68003881DA /* C4Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Black.png; path = "en.lproj/C4A Media/C4Black.png"; sourceTree = "<group>"; };
+		ED6604B91437CA68003881DA /* C4Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Blue.png; path = "en.lproj/C4A Media/C4Blue.png"; sourceTree = "<group>"; };
+		ED6604BB1437CA68003881DA /* C4Orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Orange.png; path = "en.lproj/C4A Media/C4Orange.png"; sourceTree = "<group>"; };
+		ED6604BD1437CA68003881DA /* C4Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Red.png; path = "en.lproj/C4A Media/C4Red.png"; sourceTree = "<group>"; };
+		ED6604BF1437CA68003881DA /* C4Sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Sky.png; path = "en.lproj/C4A Media/C4Sky.png"; sourceTree = "<group>"; };
+		ED6604C11437CA68003881DA /* C4Wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Wood.png; path = "en.lproj/C4A Media/C4Wood.png"; sourceTree = "<group>"; };
+		ED6604C31437CA68003881DA /* loop.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = loop.aif; path = "en.lproj/C4A Media/loop.aif"; sourceTree = "<group>"; };
+		ED6604C61437CA68003881DA /* Advanced - EveryLetterEveryFont */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Advanced - EveryLetterEveryFont"; sourceTree = "<group>"; };
+		ED6604C71437CA68003881DA /* Advanced - Kandinskyish */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Advanced - Kandinskyish"; sourceTree = "<group>"; };
+		ED6604C81437CA68003881DA /* Advanced - Oscillator */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Advanced - Oscillator"; sourceTree = "<group>"; };
+		ED6604C91437CA68003881DA /* Advanced - SketchPad */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Advanced - SketchPad"; sourceTree = "<group>"; };
+		ED6604CA1437CA68003881DA /* Advanced - StoringInputAdvanced */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Advanced - StoringInputAdvanced"; sourceTree = "<group>"; };
+		ED6604CB1437CA68003881DA /* Arrays - Array1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Arrays - Array1D"; sourceTree = "<group>"; };
+		ED6604CC1437CA68003881DA /* Arrays - Array2D */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Arrays - Array2D"; sourceTree = "<group>"; };
+		ED6604CD1437CA68003881DA /* Arrays - MoreOnCArrays */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Arrays - MoreOnCArrays"; sourceTree = "<group>"; };
+		ED6604CE1437CA68003881DA /* Arrays - MutableArrays */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Arrays - MutableArrays"; sourceTree = "<group>"; };
+		ED6604CF1437CA68003881DA /* Arrays - ObjectArray1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Arrays - ObjectArray1D"; sourceTree = "<group>"; };
+		ED6604D01437CA68003881DA /* Arrays - ObjectArray2D */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Arrays - ObjectArray2D"; sourceTree = "<group>"; };
+		ED6604D11437CA68003881DA /* Arrays - ObjectArrays */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Arrays - ObjectArrays"; sourceTree = "<group>"; };
+		ED6604D21437CA68003881DA /* Basics - Animated */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Basics - Animated"; sourceTree = "<group>"; };
+		ED6604D31437CA68003881DA /* Basics - Coordinates */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Basics - Coordinates"; sourceTree = "<group>"; };
+		ED6604D41437CA68003881DA /* Basics - CustomMethods */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Basics - CustomMethods"; sourceTree = "<group>"; };
+		ED6604D51437CA68003881DA /* Basics - DisplayRate */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Basics - DisplayRate"; sourceTree = "<group>"; };
+		ED6604D61437CA68003881DA /* Basics - EventBased */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Basics - EventBased"; sourceTree = "<group>"; };
+		ED6604D71437CA68003881DA /* Basics - Framerate */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Basics - Framerate"; sourceTree = "<group>"; };
+		ED6604D81437CA68003881DA /* Basics - LogMessages */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Basics - LogMessages"; sourceTree = "<group>"; };
+		ED6604D91437CA68003881DA /* Basics - RecursiveCircle */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Basics - RecursiveCircle"; sourceTree = "<group>"; };
+		ED6604DA1437CA68003881DA /* Basics - RecursiveCircleRandom */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Basics - RecursiveCircleRandom"; sourceTree = "<group>"; };
+		ED6604DB1437CA68003881DA /* Basics - Redraw */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Basics - Redraw"; sourceTree = "<group>"; };
+		ED6604DC1437CA68003881DA /* Basics - SingleFrame */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Basics - SingleFrame"; sourceTree = "<group>"; };
+		ED6604DD1437CA68003881DA /* Basics - SwitchingDrawStyles */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Basics - SwitchingDrawStyles"; sourceTree = "<group>"; };
+		ED6604DE1437CA68003881DA /* Basics - WidthAndHeight */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Basics - WidthAndHeight"; sourceTree = "<group>"; };
+		ED6604DF1437CA68003881DA /* C4 - C4Animated1 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "C4 - C4Animated1"; sourceTree = "<group>"; };
+		ED6604E01437CA68003881DA /* C4 - C4Animated2 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "C4 - C4Animated2"; sourceTree = "<group>"; };
+		ED6604E11437CA68003881DA /* C4 - C4FadingImages */ = {isa = PBXFileReference; lastKnownFileType = text; path = "C4 - C4FadingImages"; sourceTree = "<group>"; };
+		ED6604E21437CA68003881DA /* C4 - C4ForLoops */ = {isa = PBXFileReference; lastKnownFileType = text; path = "C4 - C4ForLoops"; sourceTree = "<group>"; };
+		ED6604E31437CA68003881DA /* C4 - C4GL */ = {isa = PBXFileReference; lastKnownFileType = text; path = "C4 - C4GL"; sourceTree = "<group>"; };
+		ED6604E41437CA68003881DA /* C4 - C4GradientShapes */ = {isa = PBXFileReference; lastKnownFileType = text; path = "C4 - C4GradientShapes"; sourceTree = "<group>"; };
+		ED6604E51437CA68003881DA /* C4 - C4LoopingImages */ = {isa = PBXFileReference; lastKnownFileType = text; path = "C4 - C4LoopingImages"; sourceTree = "<group>"; };
+		ED6604E61437CA68003881DA /* C4 - C4Methods */ = {isa = PBXFileReference; lastKnownFileType = text; path = "C4 - C4Methods"; sourceTree = "<group>"; };
+		ED6604E71437CA68003881DA /* C4 - C4Particles */ = {isa = PBXFileReference; lastKnownFileType = text; path = "C4 - C4Particles"; sourceTree = "<group>"; };
+		ED6604E81437CA68003881DA /* C4 - C4Points */ = {isa = PBXFileReference; lastKnownFileType = text; path = "C4 - C4Points"; sourceTree = "<group>"; };
+		ED6604E91437CA68003881DA /* C4 - C4Quartz */ = {isa = PBXFileReference; lastKnownFileType = text; path = "C4 - C4Quartz"; sourceTree = "<group>"; };
+		ED6604EA1437CA68003881DA /* C4 - C4RandomLines */ = {isa = PBXFileReference; lastKnownFileType = text; path = "C4 - C4RandomLines"; sourceTree = "<group>"; };
+		ED6604EB1437CA68003881DA /* C4 - C4Shapes */ = {isa = PBXFileReference; lastKnownFileType = text; path = "C4 - C4Shapes"; sourceTree = "<group>"; };
+		ED6604EC1437CA68003881DA /* C4 - C4Wireframe */ = {isa = PBXFileReference; lastKnownFileType = text; path = "C4 - C4Wireframe"; sourceTree = "<group>"; };
+		ED6604ED1437CA68003881DA /* Color - ColorAndTransparency */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Color - ColorAndTransparency"; sourceTree = "<group>"; };
+		ED6604EE1437CA68003881DA /* Color - ColorRelativity */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Color - ColorRelativity"; sourceTree = "<group>"; };
+		ED6604EF1437CA68003881DA /* Color - ColorWheel */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Color - ColorWheel"; sourceTree = "<group>"; };
+		ED6604F01437CA68003881DA /* Color - Gradients */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Color - Gradients"; sourceTree = "<group>"; };
+		ED6604F11437CA68003881DA /* Color - GradientsAnimated */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Color - GradientsAnimated"; sourceTree = "<group>"; };
+		ED6604F21437CA68003881DA /* Control - Conditionals1 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Control - Conditionals1"; sourceTree = "<group>"; };
+		ED6604F31437CA68003881DA /* Control - Conditionals2 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Control - Conditionals2"; sourceTree = "<group>"; };
+		ED6604F41437CA68003881DA /* Control - EmbeddedIteration */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Control - EmbeddedIteration"; sourceTree = "<group>"; };
+		ED6604F51437CA68003881DA /* Control - IterationForLoops */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Control - IterationForLoops"; sourceTree = "<group>"; };
+		ED6604F61437CA68003881DA /* Control - LogicalOperators */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Control - LogicalOperators"; sourceTree = "<group>"; };
+		ED6604F71437CA68003881DA /* Data - DatatypeConversion */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Data - DatatypeConversion"; sourceTree = "<group>"; };
+		ED6604F81437CA68003881DA /* Data - IntegersAndFloats */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Data - IntegersAndFloats"; sourceTree = "<group>"; };
+		ED6604F91437CA68003881DA /* Data - TrueFalse */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Data - TrueFalse"; sourceTree = "<group>"; };
+		ED6604FA1437CA68003881DA /* Data - VariableMath */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Data - VariableMath"; sourceTree = "<group>"; };
+		ED6604FB1437CA68003881DA /* Data - VariableScope */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Data - VariableScope"; sourceTree = "<group>"; };
+		ED6604FC1437CA68003881DA /* Data - VariablesWithAnimatedEllipses */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Data - VariablesWithAnimatedEllipses"; sourceTree = "<group>"; };
+		ED6604FD1437CA68003881DA /* DateTime - Clock */ = {isa = PBXFileReference; lastKnownFileType = text; path = "DateTime - Clock"; sourceTree = "<group>"; };
+		ED6604FE1437CA68003881DA /* DateTime - CurrentDateTime */ = {isa = PBXFileReference; lastKnownFileType = text; path = "DateTime - CurrentDateTime"; sourceTree = "<group>"; };
+		ED6604FF1437CA68003881DA /* DateTime - MillisPatterns */ = {isa = PBXFileReference; lastKnownFileType = text; path = "DateTime - MillisPatterns"; sourceTree = "<group>"; };
+		ED6605001437CA68003881DA /* Fonts - BasicFont */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Fonts - BasicFont"; sourceTree = "<group>"; };
+		ED6605011437CA68003881DA /* Fonts - RandomFont */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Fonts - RandomFont"; sourceTree = "<group>"; };
+		ED6605021437CA68003881DA /* Fonts - YourFonts */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Fonts - YourFonts"; sourceTree = "<group>"; };
+		ED6605031437CA68003881DA /* Image - BackgroundImage */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Image - BackgroundImage"; sourceTree = "<group>"; };
+		ED6605041437CA68003881DA /* Image - CombinedFilters */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Image - CombinedFilters"; sourceTree = "<group>"; };
+		ED6605051437CA68003881DA /* Image - CreateDraw */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Image - CreateDraw"; sourceTree = "<group>"; };
+		ED6605061437CA68003881DA /* Image - DynamicImageMatrix */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Image - DynamicImageMatrix"; sourceTree = "<group>"; };
+		ED6605071437CA68003881DA /* Image - FilterWithOriginal */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Image - FilterWithOriginal"; sourceTree = "<group>"; };
+		ED6605081437CA68003881DA /* Image - ImageIterativeStretch */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Image - ImageIterativeStretch"; sourceTree = "<group>"; };
+		ED6605091437CA68003881DA /* Image - ImageTransparency */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Image - ImageTransparency"; sourceTree = "<group>"; };
+		ED66050A1437CA68003881DA /* Image - MultiImage */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Image - MultiImage"; sourceTree = "<group>"; };
+		ED66050B1437CA68003881DA /* Image - Pixelism */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Image - Pixelism"; sourceTree = "<group>"; };
+		ED66050C1437CA68003881DA /* Image - Pointilism */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Image - Pointilism"; sourceTree = "<group>"; };
+		ED66050D1437CA68003881DA /* Image - SingleFilter */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Image - SingleFilter"; sourceTree = "<group>"; };
+		ED66050E1437CA68003881DA /* KeyboardMouse - AbstractKeyboard1 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "KeyboardMouse - AbstractKeyboard1"; sourceTree = "<group>"; };
+		ED66050F1437CA68003881DA /* KeyboardMouse - AbstractKeyboard2 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "KeyboardMouse - AbstractKeyboard2"; sourceTree = "<group>"; };
+		ED6605101437CA68003881DA /* KeyboardMouse - ConstantType */ = {isa = PBXFileReference; lastKnownFileType = text; path = "KeyboardMouse - ConstantType"; sourceTree = "<group>"; };
+		ED6605111437CA68003881DA /* KeyboardMouse - ConstrainedCircle */ = {isa = PBXFileReference; lastKnownFileType = text; path = "KeyboardMouse - ConstrainedCircle"; sourceTree = "<group>"; };
+		ED6605121437CA68003881DA /* KeyboardMouse - EasingCircle */ = {isa = PBXFileReference; lastKnownFileType = text; path = "KeyboardMouse - EasingCircle"; sourceTree = "<group>"; };
+		ED6605131437CA68003881DA /* KeyboardMouse - Mouse1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = "KeyboardMouse - Mouse1D"; sourceTree = "<group>"; };
+		ED6605141437CA68003881DA /* KeyboardMouse - Mouse2D */ = {isa = PBXFileReference; lastKnownFileType = text; path = "KeyboardMouse - Mouse2D"; sourceTree = "<group>"; };
+		ED6605151437CA68003881DA /* KeyboardMouse - MouseMethods */ = {isa = PBXFileReference; lastKnownFileType = text; path = "KeyboardMouse - MouseMethods"; sourceTree = "<group>"; };
+		ED6605161437CA68003881DA /* KeyboardMouse - MouseSignals */ = {isa = PBXFileReference; lastKnownFileType = text; path = "KeyboardMouse - MouseSignals"; sourceTree = "<group>"; };
+		ED6605181437CA68003881DA /* AbstractKeyboard1 */ = {isa = PBXFileReference; lastKnownFileType = text; path = AbstractKeyboard1; sourceTree = "<group>"; };
+		ED6605191437CA68003881DA /* AbstractKeyboard2 */ = {isa = PBXFileReference; lastKnownFileType = text; path = AbstractKeyboard2; sourceTree = "<group>"; };
+		ED66051A1437CA68003881DA /* ConstantType */ = {isa = PBXFileReference; lastKnownFileType = text; path = ConstantType; sourceTree = "<group>"; };
+		ED66051B1437CA68003881DA /* ConstrainedCircle */ = {isa = PBXFileReference; lastKnownFileType = text; path = ConstrainedCircle; sourceTree = "<group>"; };
+		ED66051C1437CA68003881DA /* EasingCircle */ = {isa = PBXFileReference; lastKnownFileType = text; path = EasingCircle; sourceTree = "<group>"; };
+		ED66051D1437CA68003881DA /* Mouse1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = Mouse1D; sourceTree = "<group>"; };
+		ED66051E1437CA68003881DA /* Mouse2D */ = {isa = PBXFileReference; lastKnownFileType = text; path = Mouse2D; sourceTree = "<group>"; };
+		ED66051F1437CA68003881DA /* MouseMethods */ = {isa = PBXFileReference; lastKnownFileType = text; path = MouseMethods; sourceTree = "<group>"; };
+		ED6605201437CA68003881DA /* MouseSignals */ = {isa = PBXFileReference; lastKnownFileType = text; path = MouseSignals; sourceTree = "<group>"; };
+		ED6605211437CA68003881DA /* StoringMouseCoords */ = {isa = PBXFileReference; lastKnownFileType = folder; name = StoringMouseCoords; sourceTree = "<group>"; };
+		ED6605221437CA68003881DA /* Math - Distance1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Math - Distance1D"; sourceTree = "<group>"; };
+		ED6605231437CA68003881DA /* Math - DoubleRandom */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Math - DoubleRandom"; sourceTree = "<group>"; };
+		ED6605241437CA68003881DA /* Math - IncrementDecrement */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Math - IncrementDecrement"; sourceTree = "<group>"; };
+		ED6605251437CA68003881DA /* Math - MixedSineWave */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Math - MixedSineWave"; sourceTree = "<group>"; };
+		ED6605261437CA68003881DA /* Math - ModulusFloat */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Math - ModulusFloat"; sourceTree = "<group>"; };
+		ED6605271437CA68003881DA /* Math - OperatorPrecedence */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Math - OperatorPrecedence"; sourceTree = "<group>"; };
+		ED6605281437CA68003881DA /* Math - PolarCoordinates */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Math - PolarCoordinates"; sourceTree = "<group>"; };
+		ED6605291437CA68003881DA /* Math - RandomLines */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Math - RandomLines"; sourceTree = "<group>"; };
+		ED66052A1437CA68003881DA /* Math - RandomMultiplication */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Math - RandomMultiplication"; sourceTree = "<group>"; };
+		ED66052B1437CA68003881DA /* Math - SinCosTan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Math - SinCosTan"; sourceTree = "<group>"; };
+		ED66052C1437CA68003881DA /* Movies - DoubleMovie */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Movies - DoubleMovie"; sourceTree = "<group>"; };
+		ED66052D1437CA68003881DA /* Movies - MoveAbove */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Movies - MoveAbove"; sourceTree = "<group>"; };
+		ED66052E1437CA68003881DA /* Movies - MovieMatrix */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Movies - MovieMatrix"; sourceTree = "<group>"; };
+		ED66052F1437CA68003881DA /* Movies - MovingMovie */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Movies - MovingMovie"; sourceTree = "<group>"; };
+		ED6605301437CA68003881DA /* Movies - SimpleMovie */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Movies - SimpleMovie"; sourceTree = "<group>"; };
+		ED6605311437CA68003881DA /* Movies - StretchingMovie */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Movies - StretchingMovie"; sourceTree = "<group>"; };
+		ED6605321437CA68003881DA /* Noise - Noise1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Noise - Noise1D"; sourceTree = "<group>"; };
+		ED6605331437CA68003881DA /* Noise - Noise2D */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Noise - Noise2D"; sourceTree = "<group>"; };
+		ED6605341437CA68003881DA /* Noise - Noise3D */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Noise - Noise3D"; sourceTree = "<group>"; };
+		ED6605351437CA68003881DA /* Noise - NoiseWave */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Noise - NoiseWave"; sourceTree = "<group>"; };
+		ED6605361437CA68003881DA /* Numbers - NumberObject */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Numbers - NumberObject"; sourceTree = "<group>"; };
+		ED6605371437CA68003881DA /* Objects - KeyPressListener */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Objects - KeyPressListener"; sourceTree = "<group>"; };
+		ED6605381437CA68003881DA /* Objects - ManyBasicObjects */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Objects - ManyBasicObjects"; sourceTree = "<group>"; };
+		ED6605391437CA68003881DA /* Objects - ManyBasicObjectsAnimated */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Objects - ManyBasicObjectsAnimated"; sourceTree = "<group>"; };
+		ED66053A1437CA68003881DA /* Objects - MouseTracker */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Objects - MouseTracker"; sourceTree = "<group>"; };
+		ED66053B1437CA68003881DA /* Objects - ObjectUpdate */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Objects - ObjectUpdate"; sourceTree = "<group>"; };
+		ED66053C1437CA68003881DA /* OpenGL - SimpleGL */ = {isa = PBXFileReference; lastKnownFileType = text; path = "OpenGL - SimpleGL"; sourceTree = "<group>"; };
+		ED66053D1437CA68003881DA /* Shapes - BlackWhiteCircles */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Shapes - BlackWhiteCircles"; sourceTree = "<group>"; };
+		ED66053E1437CA68003881DA /* Shapes - DrawingAnAlien */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Shapes - DrawingAnAlien"; sourceTree = "<group>"; };
+		ED66053F1437CA68003881DA /* Shapes - PieChart */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Shapes - PieChart"; sourceTree = "<group>"; };
+		ED6605401437CA68003881DA /* Shapes - PointsAndLines */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Shapes - PointsAndLines"; sourceTree = "<group>"; };
+		ED6605411437CA68003881DA /* Shapes - ShapeModes */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Shapes - ShapeModes"; sourceTree = "<group>"; };
+		ED6605421437CA68003881DA /* Shapes - ShapePrimitives */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Shapes - ShapePrimitives"; sourceTree = "<group>"; };
+		ED6605431437CA68003881DA /* Shapes - SimpleCurves */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Shapes - SimpleCurves"; sourceTree = "<group>"; };
+		ED6605441437CA68003881DA /* Shapes - SineCosineCurves */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Shapes - SineCosineCurves"; sourceTree = "<group>"; };
+		ED6605451437CA68003881DA /* Shapes - VertexShapes */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Shapes - VertexShapes"; sourceTree = "<group>"; };
+		ED6605461437CA68003881DA /* Sounds - AudioControl */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Sounds - AudioControl"; sourceTree = "<group>"; };
+		ED6605471437CA68003881DA /* Sounds - FadeInOut */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Sounds - FadeInOut"; sourceTree = "<group>"; };
+		ED6605481437CA68003881DA /* Sounds - PlayLoop */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Sounds - PlayLoop"; sourceTree = "<group>"; };
+		ED6605491437CA68003881DA /* Sounds - SystemSound */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Sounds - SystemSound"; sourceTree = "<group>"; };
+		ED66054A1437CA68003881DA /* Transforms - Arm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Transforms - Arm"; sourceTree = "<group>"; };
+		ED66054B1437CA68003881DA /* Transforms - AutoRotate */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Transforms - AutoRotate"; sourceTree = "<group>"; };
+		ED66054C1437CA68003881DA /* Transforms - DynamicTransform */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Transforms - DynamicTransform"; sourceTree = "<group>"; };
+		ED66054D1437CA68003881DA /* Vectors - Orbs */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Vectors - Orbs"; sourceTree = "<group>"; };
+		ED66054E1437CA68003881DA /* Vectors - Swarm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Vectors - Swarm"; sourceTree = "<group>"; };
+		ED66054F1437CA68003881DA /* Voice - Cacaphony */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Voice - Cacaphony"; sourceTree = "<group>"; };
+		ED6605501437CA68003881DA /* Voice - PausableVoice */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Voice - PausableVoice"; sourceTree = "<group>"; };
+		ED6605511437CA68003881DA /* Voice - QuietPrincess */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Voice - QuietPrincess"; sourceTree = "<group>"; };
+		ED6605521437CA68003881DA /* Voice - SimpleVoice */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Voice - SimpleVoice"; sourceTree = "<group>"; };
+		ED6605541437CA68003881DA /* en */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = en; path = en.lproj/C4Development.icns; sourceTree = "<group>"; };
+		ED6605571437CA69003881DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		ED66055A1437CA69003881DA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED6604431437CA67003881DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED66044B1437CA67003881DA /* Accelerate.framework in Frameworks */,
+				ED66044D1437CA67003881DA /* AppKit.framework in Frameworks */,
+				ED66044F1437CA67003881DA /* Cocoa.framework in Frameworks */,
+				ED6604511437CA67003881DA /* CoreData.framework in Frameworks */,
+				ED6604531437CA67003881DA /* Foundation.framework in Frameworks */,
+				ED6604551437CA67003881DA /* OpenGL.framework in Frameworks */,
+				ED6604571437CA67003881DA /* QTKit.framework in Frameworks */,
+				ED6604591437CA67003881DA /* Quicktime.framework in Frameworks */,
+				ED66045B1437CA67003881DA /* Quartz.framework in Frameworks */,
+				ED66045D1437CA67003881DA /* QuartzCore.framework in Frameworks */,
+				ED66045F1437CA67003881DA /* vecLib.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED66043B1437CA67003881DA = {
+			isa = PBXGroup;
+			children = (
+				ED6604601437CA67003881DA /* C4Development */,
+				ED6604491437CA67003881DA /* Frameworks */,
+				ED6604471437CA67003881DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED6604471437CA67003881DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED6604461437CA67003881DA /* C4Development.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED6604491437CA67003881DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED66044A1437CA67003881DA /* Accelerate.framework */,
+				ED66044C1437CA67003881DA /* AppKit.framework */,
+				ED66044E1437CA67003881DA /* Cocoa.framework */,
+				ED6604501437CA67003881DA /* CoreData.framework */,
+				ED6604521437CA67003881DA /* Foundation.framework */,
+				ED6604541437CA67003881DA /* OpenGL.framework */,
+				ED6604561437CA67003881DA /* QTKit.framework */,
+				ED6604581437CA67003881DA /* Quicktime.framework */,
+				ED66045A1437CA67003881DA /* Quartz.framework */,
+				ED66045C1437CA67003881DA /* QuartzCore.framework */,
+				ED66045E1437CA67003881DA /* vecLib.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED6604601437CA67003881DA /* C4Development */ = {
+			isa = PBXGroup;
+			children = (
+				ED66046F1437CA67003881DA /* CFACanvas.m */,
+				ED6604661437CA67003881DA /* C4A Framework */,
+				ED66046D1437CA67003881DA /* C4A Source */,
+				ED6604B31437CA68003881DA /* C4A Media */,
+				ED6604C51437CA68003881DA /* C4 Examples */,
+				ED6604611437CA67003881DA /* Supporting Files */,
+			);
+			path = C4Development;
+			sourceTree = "<group>";
+		};
+		ED6604611437CA67003881DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED6604621437CA67003881DA /* C4Development-Info.plist */,
+				ED6604631437CA67003881DA /* InfoPlist.strings */,
+				ED6605531437CA68003881DA /* C4Development.icns */,
+				ED6605561437CA68003881DA /* Credits.rtf */,
+				ED6605591437CA69003881DA /* MainMenu.xib */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED6604661437CA67003881DA /* C4A Framework */ = {
+			isa = PBXGroup;
+			children = (
+				ED6604671437CA67003881DA /* C4Development-Prefix.pch */,
+				ED6604681437CA67003881DA /* main.m */,
+				ED66046A1437CA67003881DA /* C4DevelopmentAppDelegate.h */,
+				ED66046B1437CA67003881DA /* C4DevelopmentAppDelegate.m */,
+				ED6604771437CA67003881DA /* CFADefines.h */,
+				ED66048D1437CA67003881DA /* CFAImports.h */,
+			);
+			name = "C4A Framework";
+			sourceTree = "<group>";
+		};
+		ED66046D1437CA67003881DA /* C4A Source */ = {
+			isa = PBXGroup;
+			children = (
+				ED66046E1437CA67003881DA /* CFACanvas.h */,
+				ED6604711437CA67003881DA /* CFAColor.h */,
+				ED6604721437CA67003881DA /* CFAColor.m */,
+				ED6604741437CA67003881DA /* CFADateTime.h */,
+				ED6604751437CA67003881DA /* CFADateTime.m */,
+				ED6604781437CA67003881DA /* CFAFont.h */,
+				ED6604791437CA67003881DA /* CFAFont.m */,
+				ED66047B1437CA67003881DA /* CFAFoundation.h */,
+				ED66047C1437CA67003881DA /* CFAFoundation.m */,
+				ED66047E1437CA67003881DA /* CFAGlobalShapeAttributes.h */,
+				ED66047F1437CA67003881DA /* CFAGlobalShapeAttributes.m */,
+				ED6604811437CA67003881DA /* CFAGlobalTypeAttributes.h */,
+				ED6604821437CA67003881DA /* CFAGlobalTypeAttributes.m */,
+				ED6604841437CA67003881DA /* CFAGlobalStringAttributes.h */,
+				ED6604851437CA67003881DA /* CFAGlobalStringAttributes.m */,
+				ED6604871437CA67003881DA /* CFAGradient.h */,
+				ED6604881437CA67003881DA /* CFAGradient.m */,
+				ED66048A1437CA67003881DA /* CFAImage.h */,
+				ED66048B1437CA67003881DA /* CFAImage.m */,
+				ED66048E1437CA67003881DA /* CFAMath.h */,
+				ED66048F1437CA67003881DA /* CFAMath.m */,
+				ED6604911437CA67003881DA /* CFAMovie.h */,
+				ED6604921437CA67003881DA /* CFAMovie.m */,
+				ED6604941437CA67003881DA /* CFANoise.h */,
+				ED6604951437CA67003881DA /* CFANoise.m */,
+				ED6604971437CA67003881DA /* CFAObject.h */,
+				ED6604981437CA67003881DA /* CFAObject.m */,
+				ED66049A1437CA67003881DA /* CFAOpenGLView.h */,
+				ED66049B1437CA67003881DA /* CFAOpenGLView.m */,
+				ED66049D1437CA67003881DA /* CFAQuartz.h */,
+				ED66049E1437CA67003881DA /* CFAQuartz.m */,
+				ED6604A01437CA67003881DA /* CFAShape.h */,
+				ED6604A11437CA67003881DA /* CFAShape.m */,
+				ED6604A31437CA67003881DA /* CFASound.h */,
+				ED6604A41437CA67003881DA /* CFASound.m */,
+				ED6604A61437CA67003881DA /* CFAString.h */,
+				ED6604A71437CA67003881DA /* CFAString.m */,
+				ED6604A91437CA67003881DA /* CFATransform.h */,
+				ED6604AA1437CA67003881DA /* CFATransform.m */,
+				ED6604AC1437CA67003881DA /* CFAVector.h */,
+				ED6604AD1437CA68003881DA /* CFAVector.m */,
+				ED6604AF1437CA68003881DA /* CFAVoice.h */,
+				ED6604B01437CA68003881DA /* CFAVoice.m */,
+				ED6604B21437CA68003881DA /* Singleton.h */,
+			);
+			name = "C4A Source";
+			sourceTree = "<group>";
+		};
+		ED6604B31437CA68003881DA /* C4A Media */ = {
+			isa = PBXGroup;
+			children = (
+				ED6604B41437CA68003881DA /* C4.mov */,
+				ED6604B61437CA68003881DA /* C4.qtz */,
+				ED6604B71437CA68003881DA /* C4Black.png */,
+				ED6604B91437CA68003881DA /* C4Blue.png */,
+				ED6604BB1437CA68003881DA /* C4Orange.png */,
+				ED6604BD1437CA68003881DA /* C4Red.png */,
+				ED6604BF1437CA68003881DA /* C4Sky.png */,
+				ED6604C11437CA68003881DA /* C4Wood.png */,
+				ED6604C31437CA68003881DA /* loop.aif */,
+			);
+			name = "C4A Media";
+			sourceTree = "<group>";
+		};
+		ED6604C51437CA68003881DA /* C4 Examples */ = {
+			isa = PBXGroup;
+			children = (
+				ED6604C61437CA68003881DA /* Advanced - EveryLetterEveryFont */,
+				ED6604C71437CA68003881DA /* Advanced - Kandinskyish */,
+				ED6604C81437CA68003881DA /* Advanced - Oscillator */,
+				ED6604C91437CA68003881DA /* Advanced - SketchPad */,
+				ED6604CA1437CA68003881DA /* Advanced - StoringInputAdvanced */,
+				ED6604CB1437CA68003881DA /* Arrays - Array1D */,
+				ED6604CC1437CA68003881DA /* Arrays - Array2D */,
+				ED6604CD1437CA68003881DA /* Arrays - MoreOnCArrays */,
+				ED6604CE1437CA68003881DA /* Arrays - MutableArrays */,
+				ED6604CF1437CA68003881DA /* Arrays - ObjectArray1D */,
+				ED6604D01437CA68003881DA /* Arrays - ObjectArray2D */,
+				ED6604D11437CA68003881DA /* Arrays - ObjectArrays */,
+				ED6604D21437CA68003881DA /* Basics - Animated */,
+				ED6604D31437CA68003881DA /* Basics - Coordinates */,
+				ED6604D41437CA68003881DA /* Basics - CustomMethods */,
+				ED6604D51437CA68003881DA /* Basics - DisplayRate */,
+				ED6604D61437CA68003881DA /* Basics - EventBased */,
+				ED6604D71437CA68003881DA /* Basics - Framerate */,
+				ED6604D81437CA68003881DA /* Basics - LogMessages */,
+				ED6604D91437CA68003881DA /* Basics - RecursiveCircle */,
+				ED6604DA1437CA68003881DA /* Basics - RecursiveCircleRandom */,
+				ED6604DB1437CA68003881DA /* Basics - Redraw */,
+				ED6604DC1437CA68003881DA /* Basics - SingleFrame */,
+				ED6604DD1437CA68003881DA /* Basics - SwitchingDrawStyles */,
+				ED6604DE1437CA68003881DA /* Basics - WidthAndHeight */,
+				ED6604DF1437CA68003881DA /* C4 - C4Animated1 */,
+				ED6604E01437CA68003881DA /* C4 - C4Animated2 */,
+				ED6604E11437CA68003881DA /* C4 - C4FadingImages */,
+				ED6604E21437CA68003881DA /* C4 - C4ForLoops */,
+				ED6604E31437CA68003881DA /* C4 - C4GL */,
+				ED6604E41437CA68003881DA /* C4 - C4GradientShapes */,
+				ED6604E51437CA68003881DA /* C4 - C4LoopingImages */,
+				ED6604E61437CA68003881DA /* C4 - C4Methods */,
+				ED6604E71437CA68003881DA /* C4 - C4Particles */,
+				ED6604E81437CA68003881DA /* C4 - C4Points */,
+				ED6604E91437CA68003881DA /* C4 - C4Quartz */,
+				ED6604EA1437CA68003881DA /* C4 - C4RandomLines */,
+				ED6604EB1437CA68003881DA /* C4 - C4Shapes */,
+				ED6604EC1437CA68003881DA /* C4 - C4Wireframe */,
+				ED6604ED1437CA68003881DA /* Color - ColorAndTransparency */,
+				ED6604EE1437CA68003881DA /* Color - ColorRelativity */,
+				ED6604EF1437CA68003881DA /* Color - ColorWheel */,
+				ED6604F01437CA68003881DA /* Color - Gradients */,
+				ED6604F11437CA68003881DA /* Color - GradientsAnimated */,
+				ED6604F21437CA68003881DA /* Control - Conditionals1 */,
+				ED6604F31437CA68003881DA /* Control - Conditionals2 */,
+				ED6604F41437CA68003881DA /* Control - EmbeddedIteration */,
+				ED6604F51437CA68003881DA /* Control - IterationForLoops */,
+				ED6604F61437CA68003881DA /* Control - LogicalOperators */,
+				ED6604F71437CA68003881DA /* Data - DatatypeConversion */,
+				ED6604F81437CA68003881DA /* Data - IntegersAndFloats */,
+				ED6604F91437CA68003881DA /* Data - TrueFalse */,
+				ED6604FA1437CA68003881DA /* Data - VariableMath */,
+				ED6604FB1437CA68003881DA /* Data - VariableScope */,
+				ED6604FC1437CA68003881DA /* Data - VariablesWithAnimatedEllipses */,
+				ED6604FD1437CA68003881DA /* DateTime - Clock */,
+				ED6604FE1437CA68003881DA /* DateTime - CurrentDateTime */,
+				ED6604FF1437CA68003881DA /* DateTime - MillisPatterns */,
+				ED6605001437CA68003881DA /* Fonts - BasicFont */,
+				ED6605011437CA68003881DA /* Fonts - RandomFont */,
+				ED6605021437CA68003881DA /* Fonts - YourFonts */,
+				ED6605031437CA68003881DA /* Image - BackgroundImage */,
+				ED6605041437CA68003881DA /* Image - CombinedFilters */,
+				ED6605051437CA68003881DA /* Image - CreateDraw */,
+				ED6605061437CA68003881DA /* Image - DynamicImageMatrix */,
+				ED6605071437CA68003881DA /* Image - FilterWithOriginal */,
+				ED6605081437CA68003881DA /* Image - ImageIterativeStretch */,
+				ED6605091437CA68003881DA /* Image - ImageTransparency */,
+				ED66050A1437CA68003881DA /* Image - MultiImage */,
+				ED66050B1437CA68003881DA /* Image - Pixelism */,
+				ED66050C1437CA68003881DA /* Image - Pointilism */,
+				ED66050D1437CA68003881DA /* Image - SingleFilter */,
+				ED66050E1437CA68003881DA /* KeyboardMouse - AbstractKeyboard1 */,
+				ED66050F1437CA68003881DA /* KeyboardMouse - AbstractKeyboard2 */,
+				ED6605101437CA68003881DA /* KeyboardMouse - ConstantType */,
+				ED6605111437CA68003881DA /* KeyboardMouse - ConstrainedCircle */,
+				ED6605121437CA68003881DA /* KeyboardMouse - EasingCircle */,
+				ED6605131437CA68003881DA /* KeyboardMouse - Mouse1D */,
+				ED6605141437CA68003881DA /* KeyboardMouse - Mouse2D */,
+				ED6605151437CA68003881DA /* KeyboardMouse - MouseMethods */,
+				ED6605161437CA68003881DA /* KeyboardMouse - MouseSignals */,
+				ED6605221437CA68003881DA /* Math - Distance1D */,
+				ED6605231437CA68003881DA /* Math - DoubleRandom */,
+				ED6605241437CA68003881DA /* Math - IncrementDecrement */,
+				ED6605251437CA68003881DA /* Math - MixedSineWave */,
+				ED6605261437CA68003881DA /* Math - ModulusFloat */,
+				ED6605271437CA68003881DA /* Math - OperatorPrecedence */,
+				ED6605281437CA68003881DA /* Math - PolarCoordinates */,
+				ED6605291437CA68003881DA /* Math - RandomLines */,
+				ED66052A1437CA68003881DA /* Math - RandomMultiplication */,
+				ED66052B1437CA68003881DA /* Math - SinCosTan */,
+				ED66052C1437CA68003881DA /* Movies - DoubleMovie */,
+				ED66052D1437CA68003881DA /* Movies - MoveAbove */,
+				ED66052E1437CA68003881DA /* Movies - MovieMatrix */,
+				ED66052F1437CA68003881DA /* Movies - MovingMovie */,
+				ED6605301437CA68003881DA /* Movies - SimpleMovie */,
+				ED6605311437CA68003881DA /* Movies - StretchingMovie */,
+				ED6605321437CA68003881DA /* Noise - Noise1D */,
+				ED6605331437CA68003881DA /* Noise - Noise2D */,
+				ED6605341437CA68003881DA /* Noise - Noise3D */,
+				ED6605351437CA68003881DA /* Noise - NoiseWave */,
+				ED6605361437CA68003881DA /* Numbers - NumberObject */,
+				ED6605371437CA68003881DA /* Objects - KeyPressListener */,
+				ED6605381437CA68003881DA /* Objects - ManyBasicObjects */,
+				ED6605391437CA68003881DA /* Objects - ManyBasicObjectsAnimated */,
+				ED66053A1437CA68003881DA /* Objects - MouseTracker */,
+				ED66053B1437CA68003881DA /* Objects - ObjectUpdate */,
+				ED66053C1437CA68003881DA /* OpenGL - SimpleGL */,
+				ED66053D1437CA68003881DA /* Shapes - BlackWhiteCircles */,
+				ED66053E1437CA68003881DA /* Shapes - DrawingAnAlien */,
+				ED66053F1437CA68003881DA /* Shapes - PieChart */,
+				ED6605401437CA68003881DA /* Shapes - PointsAndLines */,
+				ED6605411437CA68003881DA /* Shapes - ShapeModes */,
+				ED6605421437CA68003881DA /* Shapes - ShapePrimitives */,
+				ED6605431437CA68003881DA /* Shapes - SimpleCurves */,
+				ED6605441437CA68003881DA /* Shapes - SineCosineCurves */,
+				ED6605451437CA68003881DA /* Shapes - VertexShapes */,
+				ED6605461437CA68003881DA /* Sounds - AudioControl */,
+				ED6605471437CA68003881DA /* Sounds - FadeInOut */,
+				ED6605481437CA68003881DA /* Sounds - PlayLoop */,
+				ED6605491437CA68003881DA /* Sounds - SystemSound */,
+				ED66054A1437CA68003881DA /* Transforms - Arm */,
+				ED66054B1437CA68003881DA /* Transforms - AutoRotate */,
+				ED66054C1437CA68003881DA /* Transforms - DynamicTransform */,
+				ED66054D1437CA68003881DA /* Vectors - Orbs */,
+				ED66054E1437CA68003881DA /* Vectors - Swarm */,
+				ED66054F1437CA68003881DA /* Voice - Cacaphony */,
+				ED6605501437CA68003881DA /* Voice - PausableVoice */,
+				ED6605511437CA68003881DA /* Voice - QuietPrincess */,
+				ED6605521437CA68003881DA /* Voice - SimpleVoice */,
+				ED6605171437CA68003881DA /* KeyboardMouse - StoringMouseCoords */,
+			);
+			name = "C4 Examples";
+			sourceTree = "<group>";
+		};
+		ED6605171437CA68003881DA /* KeyboardMouse - StoringMouseCoords */ = {
+			isa = PBXGroup;
+			children = (
+				ED6605181437CA68003881DA /* AbstractKeyboard1 */,
+				ED6605191437CA68003881DA /* AbstractKeyboard2 */,
+				ED66051A1437CA68003881DA /* ConstantType */,
+				ED66051B1437CA68003881DA /* ConstrainedCircle */,
+				ED66051C1437CA68003881DA /* EasingCircle */,
+				ED66051D1437CA68003881DA /* Mouse1D */,
+				ED66051E1437CA68003881DA /* Mouse2D */,
+				ED66051F1437CA68003881DA /* MouseMethods */,
+				ED6605201437CA68003881DA /* MouseSignals */,
+				ED6605211437CA68003881DA /* StoringMouseCoords */,
+			);
+			path = "KeyboardMouse - StoringMouseCoords";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED6604451437CA67003881DA /* C4Development */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED66055E1437CA69003881DA /* Build configuration list for PBXNativeTarget "C4Development" */;
+			buildPhases = (
+				ED6604421437CA67003881DA /* Sources */,
+				ED6604431437CA67003881DA /* Frameworks */,
+				ED6604441437CA67003881DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = C4Development;
+			productName = C4Development;
+			productReference = ED6604461437CA67003881DA /* C4Development.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED66043D1437CA67003881DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = mediart;
+			};
+			buildConfigurationList = ED6604401437CA67003881DA /* Build configuration list for PBXProject "C4Development" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ED66043B1437CA67003881DA;
+			productRefGroup = ED6604471437CA67003881DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED6604451437CA67003881DA /* C4Development */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED6604441437CA67003881DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED6604651437CA67003881DA /* InfoPlist.strings in Resources */,
+				ED6604B51437CA68003881DA /* C4.mov in Resources */,
+				ED6604B81437CA68003881DA /* C4Black.png in Resources */,
+				ED6604BA1437CA68003881DA /* C4Blue.png in Resources */,
+				ED6604BC1437CA68003881DA /* C4Orange.png in Resources */,
+				ED6604BE1437CA68003881DA /* C4Red.png in Resources */,
+				ED6604C01437CA68003881DA /* C4Sky.png in Resources */,
+				ED6604C21437CA68003881DA /* C4Wood.png in Resources */,
+				ED6604C41437CA68003881DA /* loop.aif in Resources */,
+				ED6605551437CA68003881DA /* C4Development.icns in Resources */,
+				ED6605581437CA69003881DA /* Credits.rtf in Resources */,
+				ED66055B1437CA69003881DA /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED6604421437CA67003881DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED6604691437CA67003881DA /* main.m in Sources */,
+				ED66046C1437CA67003881DA /* C4DevelopmentAppDelegate.m in Sources */,
+				ED6604701437CA67003881DA /* CFACanvas.m in Sources */,
+				ED6604731437CA67003881DA /* CFAColor.m in Sources */,
+				ED6604761437CA67003881DA /* CFADateTime.m in Sources */,
+				ED66047A1437CA67003881DA /* CFAFont.m in Sources */,
+				ED66047D1437CA67003881DA /* CFAFoundation.m in Sources */,
+				ED6604801437CA67003881DA /* CFAGlobalShapeAttributes.m in Sources */,
+				ED6604831437CA67003881DA /* CFAGlobalTypeAttributes.m in Sources */,
+				ED6604861437CA67003881DA /* CFAGlobalStringAttributes.m in Sources */,
+				ED6604891437CA67003881DA /* CFAGradient.m in Sources */,
+				ED66048C1437CA67003881DA /* CFAImage.m in Sources */,
+				ED6604901437CA67003881DA /* CFAMath.m in Sources */,
+				ED6604931437CA67003881DA /* CFAMovie.m in Sources */,
+				ED6604961437CA67003881DA /* CFANoise.m in Sources */,
+				ED6604991437CA67003881DA /* CFAObject.m in Sources */,
+				ED66049C1437CA67003881DA /* CFAOpenGLView.m in Sources */,
+				ED66049F1437CA67003881DA /* CFAQuartz.m in Sources */,
+				ED6604A21437CA67003881DA /* CFAShape.m in Sources */,
+				ED6604A51437CA67003881DA /* CFASound.m in Sources */,
+				ED6604A81437CA67003881DA /* CFAString.m in Sources */,
+				ED6604AB1437CA67003881DA /* CFATransform.m in Sources */,
+				ED6604AE1437CA68003881DA /* CFAVector.m in Sources */,
+				ED6604B11437CA68003881DA /* CFAVoice.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ED6604631437CA67003881DA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED6604641437CA67003881DA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ED6605531437CA68003881DA /* C4Development.icns */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED6605541437CA68003881DA /* en */,
+			);
+			name = C4Development.icns;
+			sourceTree = "<group>";
+		};
+		ED6605561437CA68003881DA /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED6605571437CA69003881DA /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		ED6605591437CA69003881DA /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED66055A1437CA69003881DA /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED66055C1437CA69003881DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		ED66055D1437CA69003881DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		ED66055F1437CA69003881DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "C4Development/C4Development-Prefix.pch";
+				INFOPLIST_FILE = "C4Development/C4Development-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ED6605601437CA69003881DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "C4Development/C4Development-Prefix.pch";
+				INFOPLIST_FILE = "C4Development/C4Development-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED6604401437CA67003881DA /* Build configuration list for PBXProject "C4Development" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED66055C1437CA69003881DA /* Debug */,
+				ED66055D1437CA69003881DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED66055E1437CA69003881DA /* Build configuration list for PBXNativeTarget "C4Development" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED66055F1437CA69003881DA /* Debug */,
+				ED6605601437CA69003881DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED66043D1437CA67003881DA /* Project object */;
+}

@@ -1,0 +1,25 @@
+//
+//  CFACanvas.h
+//  CodeSamples
+//
+//	A Cocoa For Artists project
+//  Created by Travis Kirton
+//
+
+#import "CFACanvas.h"
+
+CFAImage *backgroundImage, *foregroundImage;
+
+@implementation CFACanvas
+-(void)setup {
+[self windowWidth:400 andHeight:320];
+backgroundImage = [CFAImage imageName:@"C4Wood.png"];
+foregroundImage = [CFAImage imageName:@"C4Sky" andType:@"png"];
+}
+-(void)draw {
+[backgroundImage drawAt:NSZeroPoint];
+[foregroundImage drawAt:self.centerPos
+withWidth:self.canvasWidth/2 
+andHeight:self.canvasHeight/2];
+}
+@end

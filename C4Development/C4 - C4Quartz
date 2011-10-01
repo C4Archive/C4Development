@@ -1,0 +1,27 @@
+//
+//  CFACanvas.h
+//  CodeSamples
+//
+//	A Cocoa For Artists project
+//  Created by Travis Kirton
+//
+
+#import "CFACanvas.h"
+#import "CFAQuartz.h"
+
+CFAQuartz *patch;
+
+@implementation CFACanvas
+
+-(void)setup {
+[self drawStyle:ANIMATED];
+[self windowWidth:400 andHeight:320];
+patch = [CFAQuartz patchWithName:@"C4"];
+}
+
+-(void)draw {
+[self background:0];
+[patch render];
+}
+
+@end

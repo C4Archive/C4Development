@@ -1,0 +1,50 @@
+//
+//  CFACanvas.h
+//  CodeSamples
+//
+//	A Cocoa For Artists project
+//  Created by Travis Kirton
+//
+
+#import "CFACanvas.h"
+
+NSArray *C4Images;
+NSPoint center;
+NSInteger currentImage, nextImage;
+CGFloat currentAlpha;
+
+@implementation CFACanvas
+
+-(void)setup {
+[self windowWidth:400 andHeight:320];
+[self drawStyle:DISPLAYRATE];
+
+center = NSMakePoint(self.canvasWidth/2, self.canvasHeight/2);
+
+CFAImage *C4Red, *C4Blue, *C4Orange, *C4Black;
+C4Black = [CFAImage imageName:@"C4Black.png"];
+C4Blue = [CFAImage imageName:@"C4Blue.png"];
+C4Orange = [CFAImage imageName:@"C4Orange.png"];
+C4Red = [CFAImage imageName:@"C4Red.png"];
+
+C4Images = [[NSArray arrayWithObjects:C4Black,C4Red,C4Blue,C4Orange, nil] retain];
+currentImage = 0;
+nextImage = 1;
+currentAlpha = 0.0f;
+}
+
+-(void)draw {
+[self background:1];
+[(CFAImage *)[C4Images objectAtIndex:currentImage] drawAt:center];
+[(CFAImage *)[C4Images objectAtIndex:nextImage] drawAt:center withAlpha:currentAlpha];
+currentAlpha += 0.02;
+if(currentAlpha > 1) {
+currentAlpha = 0;
+currentImage ++;
+if(currentImage ==4) currentImage = 0;
+nextImage ++;
+if(nextImage ==4) nextImage = 0;
+}
+}
+
+@end

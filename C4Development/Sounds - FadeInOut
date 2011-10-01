@@ -1,0 +1,30 @@
+//
+//  CFACanvas.h
+//  CodeSamples
+//
+//	A Cocoa For Artists project
+//  Created by Travis Kirton
+//
+
+#import "CFACanvas.h"
+
+@implementation CFACanvas
+
+CFASound *clip;
+NSInteger dir = 1;
+
+-(void)setup {
+[self drawStyle:DISPLAYRATE];
+clip = [CFASound soundWithName:@"loop" andType:@"aif"];
+[clip setVolume:0.0f];
+[clip play];
+[clip setLoops:YES];
+}
+
+-(void)draw {
+[clip setVolume:[clip volume]+0.005*dir];
+if ([clip volume] == 0 || [clip volume] == 1){
+dir *= -1;
+} 
+}
+@end

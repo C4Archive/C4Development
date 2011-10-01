@@ -1,0 +1,40 @@
+//
+//  CFACanvas.h
+//  CodeSamples
+//
+//	A Cocoa For Artists project
+//  Created by Travis Kirton
+//
+
+#import "CFACanvas.h"
+
+CFAString *thingsToSay;
+CFAVoice *orator;
+
+@implementation CFACanvas
+
+-(void)setup {
+thingsToSay = [[CFAString stringWithString:
+@"The voice synthesizer can speak any sentence you give it."] retain];
+orator = [[[CFAVoice alloc] initWithVoice:RALPH] retain];
+
+[orator speak:thingsToSay];
+}
+
+-(void)draw {
+}
+
+-(void)mousePressed {
+if([orator isSpeaking]){
+[orator pause:ENDOFWORD];
+} else {
+[orator continueSpeaking];
+}
+}
+
+-(void)keyPressed {
+if(![orator isSpeaking] && keyChar == SPACEBAR) {
+[orator speak:thingsToSay];
+}
+}
+@end

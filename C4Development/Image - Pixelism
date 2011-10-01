@@ -1,0 +1,71 @@
+//
+//  CFACanvas.h
+//  CodeSamples
+//
+//	A Cocoa For Artists project
+//  Created by Travis Kirton
+//
+
+#import "CFACanvas.h"
+
+NSInteger blockWidth;
+NSInteger blockHeight;
+NSInteger block;
+NSInteger stripeWidth;
+NSInteger left;
+NSInteger top;
+
+CFAImage *image;
+
+@implementation CFACanvas
+
+-(void)setup {
+//Usually you should set up your canvas first
+//But, since we use the image dimensions to set the canvas size, we should create the image first...
+image = [CFAImage imageName:@"C4Sky" andType:@"png"];
+
+[self windowWidth:image.imageWidth andHeight:image.imageHeight];
+[self background:1.0f];
+
+//stripe = width of 1 color
+stripeWidth = 1;
+//block = 3 * 3 colors (keeping things square)
+blockHeight = stripeWidth*3;
+blockWidth = blockHeight;
+
+[image loadPixelData];
+[CFAShape fill];
+[CFAShape noStroke];
+}
+
+-(void)draw {
+[self background:0];
+//iterate through the y coordinates of our image
+for(int y = 0; y <= self.canvasHeight; y+=blockHeight) {
+//iterate through the x coordinates of our image
+for(int x = 0; x <= self.canvasWidth; x+=blockWidth) {            
+//grab the color from our image at (x,y)
+CFAColor *pixelColor = [image colorAtX:x andY:y];
+
+//create a block of colors
+[CFAShape fillRed:[[pixelColor nsColor] redComponent] green:0 blue:0];
+[CFAShape rectWithXPos:x+stripeWidth*0 
+yPos:y 
+width:stripeWidth 
+andHeight:blockHeight];
+
+[CFAShape fillRed:0 green:[[pixelColor nsColor] greenComponent] blue:0];
+[CFAShape rectWithXPos:x+stripeWidth*1 
+yPos:y 
+width:stripeWidth 
+andHeight:blockHeight];
+
+[CFAShape fillRed:0 green:0 blue:[[pixelColor nsColor] blueComponent]];
+[CFAShape rectWithXPos:x+stripeWidth*2
+yPos:y 
+width:stripeWidth 
+andHeight:blockHeight];
+}
+}
+}
+@end

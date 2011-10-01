@@ -1,0 +1,37 @@
+//
+//  CFACanvas.h
+//  CodeSamples
+//
+//	A Cocoa For Artists project
+//  Created by Travis Kirton
+//
+
+#import "CFACanvas.h"
+@implementation CFACanvas
+
+-(void)setup {
+[self windowWidth:400 andHeight:320];
+
+CFALog(@"Indiviual calls to CFALog()");
+CFALog(@"aNumber = %d",0);
+CFALog(@"aNumber = %d",1);
+CFALog(@"aNumber = %d",2);
+CFALog(@"aNumber = %d",3);
+CFALog(@"aNumber = %d",4);
+
+CFALog(@"");
+CFALog(@"Calls to CFALog() made with FOR loops");
+for(int number = 0; number < 5; number++) {
+CFALog(@"aNumber = %d",number);
+}
+
+[CFAString fill:1.0f];
+}
+
+-(void)draw {
+[[CFAString stringWithString:
+@"Draw was called once\nLook in the debug window for logged messages"] 
+drawAtPoint:NSMakePoint(20, self.centerPos.y)];
+}
+
+@end

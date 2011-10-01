@@ -1,0 +1,37 @@
+//
+//  CFACanvas.h
+//  CodeSamples
+//
+//	A Cocoa For Artists project
+//  Created by Travis Kirton
+//
+
+#import "CFACanvas.h"
+
+CFAImage *myImage;
+
+@implementation CFACanvas
+-(void)setup {
+//Usually you should set up your canvas first
+//But, since we use the image dimensions to set the canvas size, we should create the image first...
+myImage = [CFAImage imageName:@"C4Sky.png"];
+
+[self windowWidth:myImage.imageWidth andHeight:myImage.imageHeight];
+[self drawStyle:DISPLAYRATE];
+[self background:1.0f];
+
+[myImage loadPixelData];
+
+[CFAShape strokeWidth:1];
+[CFAShape stroke:1];
+}
+
+-(void)draw {
+int x = [CFAMath randomInt:self.canvasWidth];
+int y = [CFAMath randomInt:self.canvasHeight];
+CFAColor *color = [myImage colorAtX:x andY:y];
+float pointilize = [CFAMath map:mousePos.x fromMin:0 max:self.canvasWidth toMin:2 max:18];
+[CFAShape fillColor:color];
+[CFAShape circleAt:NSMakePoint(x, y) radius:pointilize];
+}
+@end

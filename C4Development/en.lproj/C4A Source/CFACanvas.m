@@ -1,0 +1,41 @@
+//
+//  CFACanvas.h
+//  CodeSamples
+//
+//	A Cocoa For Artists project
+//  Created by Travis Kirton
+//
+
+#import "CFACanvas.h"
+
+float radius;
+float theta;
+float theta_vel;
+float theta_acc;
+
+@implementation CFACanvas
+-(void)setup {
+    [self drawStyle:DISPLAYRATE];
+    [self windowWidth:400 andHeight:320];
+    radius = 50.0f;
+    theta = 0.0f;
+    theta_vel = 0.0f;
+    theta_acc = 0.0001f;
+}
+
+-(void)draw {
+    [self background:0 alpha:0.1f];
+    [CFAShape fill:0.8f];
+    
+    NSPoint p1 = NSMakePoint(radius*[CFAMath cos:theta] + self.canvasWidth/2,
+                             radius*[CFAMath sin:theta] + self.canvasHeight/2);
+    
+    NSPoint p2 = NSMakePoint(radius*2*[CFAMath cos:-theta] + self.canvasWidth/2,
+                             radius*2*[CFAMath sin:-theta] + self.canvasHeight/2);
+    
+    [CFAShape circleAt:p1 radius:8];
+    [CFAShape circleAt:p2 radius:16];
+    theta_vel += theta_acc;
+    theta += theta_vel;
+}
+@end

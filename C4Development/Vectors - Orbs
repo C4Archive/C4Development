@@ -1,0 +1,129 @@
+//
+//  Orb.m
+//  Vulcan
+//
+//  Created by moi on 11-04-17.
+//  Copyright 2011 mediart. All rights reserved.
+//
+
+#import <Cocoa/Cocoa.h>
+
+////////////////////////////////////////////////////////////////
+// The Orb object
+////////////////////////////////////////////////////////////////
+
+@interface Orb : CFAObject {
+@private
+CFAVector *location;        // XYZ coordinates of the particle.
+CGFloat theta, thetaInc;    // Angle sideways
+CGFloat phi, phiInc;        // Angle longways
+CGFloat orbSize, orbAlpha;
+CFAColor *orbColor;
+}
+
+-(void)drawOrb;
+-(CGFloat)floatValue;
+-(CFAVector *)location;
+@end
+
+@implementation Orb
+
+- (id)init
+{
+self = [super init];
+if (self) {
+theta = ((CGFloat)[CFAMath randomInt:1000])/100.0f;
+phi =   ((CGFloat)[CFAMath randomInt:1000])/100.0f;
+
+thetaInc = ((float)[CFAMath randomInt:50])/1500.0f+0.01f;
+phiInc = ((float)[CFAMath randomInt:50])/1500.0f+0.01f;
+
+location = [CFAVector vectorWithX:0 Y:0 Z:0];
+
+NSInteger rand = [CFAMath randomInt:2];
+//        NSInteger rand = [CFAMath randomInt:3];
+switch (rand) {
+case 0:
+orbColor = [[CFAColor colorWithRed:1.0f green:0.2f blue:0.2f] retain];
+break;
+case 1:
+orbColor = [[CFAColor colorWithRed:0.2f green:0.4f blue:1.0f] retain];
+break;
+case 2:
+orbColor = [[CFAColor colorWithRed:0.3f green:0.3f blue:0.3f] retain];
+break;
+default:
+break;
+}
+
+[self updateAutomaticallyUsingFrames:1];
+}
+
+return self;
+}
+
+- (void)dealloc
+{
+[super dealloc];
+}
+
+-(void) update {
+CGFloat sinPhi = [CFAMath sin:phi];
+[location setX:120.0f*[CFAMath cos:theta]*sinPhi
+Y:120.0f*[CFAMath sin:theta]*sinPhi
+Z:[CFAMath cos:phi]];
+theta += thetaInc;
+phi += phiInc;
+orbSize = (location.z+1.0f)*10.0f+4.0f;
+orbAlpha = (location.z + 1.0f)/4.0f+0.5f;
+}
+
+-(void)drawOrb {
+[CFAShape fill:1.0f alpha:orbAlpha];
+//[CFAShape fillColor:orbColor alpha:orbAlpha];
+[CFAShape ellipseAt:[location point2D] size:NSMakeSize(orbSize, orbSize)];
+}
+
+-(CFAVector *)location {
+return location;
+}
+
+-(CGFloat)floatValue {
+return location.z;
+}
+
+@end
+
+////////////////////////////////////////////////////////////////
+// The Canvas
+////////////////////////////////////////////////////////////////
+
+NSMutableArray *orbArray;
+
+@implementation CFACanvas
+
+-(void)setup {
+[self windowWidth:400 andHeight:320];
+[self drawStyle:DISPLAYRATE];
+
+[CFAShape stroke:0.5];
+[CFAShape stroke:0 alpha:0.25];
+
+orbArray = [[[NSMutableArray alloc] initWithCapacity:0] retain];
+
+for(int i = 0; i < 30; i++) {
+[orbArray addObject:[[Orb alloc] init]];
+}
+}
+
+-(void)draw {
+[self background:0 alpha:0.05];
+[CFATransform begin];
+[CFATransform translateBy:self.centerPos];
+[CFATransform concat];
+for(Orb *o in [orbArray sortedArrayUsingFunction:basicSort context:NULL]){
+[o drawOrb];
+}
+[CFATransform end];
+}
+@end

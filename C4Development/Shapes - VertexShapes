@@ -1,0 +1,38 @@
+//
+//  CFACanvas.h
+//  CodeSamples
+//
+//	A Cocoa For Artists project
+//  Created by Travis Kirton
+//
+
+#import "CFACanvas.h"
+@implementation CFACanvas
+-(void)setup {
+[self windowWidth:400 andHeight:320];
+[self background:0];
+}
+-(void)draw {
+[CFATransform begin];
+[CFATransform translateByX:100 andY:60];
+[CFATransform concat];
+[CFAShape noStroke];
+[CFAShape fill:0.4f];
+[CFAShape beginShape];
+[CFAShape vertexAt:NSMakePoint(60,40)];
+[CFAShape vertexAt:NSMakePoint(160,10)];
+[CFAShape vertexAt:NSMakePoint(170,150)];
+[CFAShape vertexAt:NSMakePoint(60,150)];
+[CFAShape endShape];
+[CFAShape noFill];
+[CFAShape stroke];
+[CFAShape stroke:0.8f];
+[CFAShape beginShape];
+[CFAShape vertexAt:NSMakePoint(40,60)];
+[CFAShape vertexAt:NSMakePoint(10,160)];
+[CFAShape vertexAt:NSMakePoint(150,170)];
+[CFAShape vertexAt:NSMakePoint(150,60)];
+[CFAShape endShape];
+[CFATransform end];
+}
+@end

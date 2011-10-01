@@ -1,0 +1,95 @@
+//
+//  CFACanvas.h
+//  CodeSamples
+//
+//	A Cocoa For Artists project
+//  Created by Travis Kirton
+//
+
+#import "CFACanvas.h"
+@interface CFACanvas (private)
+-(void)drawShadeWheel;
+-(void)drawTintWheel;
+@end
+
+int segments;
+int steps;
+float radius;
+float segmentWidth;
+float interval;
+float rotationAdjustment;
+
+@implementation CFACanvas
+
+-(void)setup {
+[self windowWidth:400 andHeight:320];
+[CFAShape noStroke];
+segments = 12;
+steps = 12;
+radius = [CFAMath minOfA:self.canvasWidth andB:self.canvasHeight]*0.45f;
+segmentWidth = radius / steps;
+interval = TWO_PI / segments;
+rotationAdjustment = interval / 2;
+}
+
+-(void)draw {
+radius = [CFAMath minOfA:self.canvasWidth andB:self.canvasHeight]*0.45f;
+[self drawShadeWheel];
+//[self drawTintWheel];
+}
+
+-(void)drawShadeWheel {
+for(int j = 0; j < steps; j++) {
+NSArray *colorArray = [NSArray arrayWithObjects:
+[CFAColor colorWithRed:1.0f-(1.0f/steps)*j green:1.0f-(1.0f/steps)*j blue:0],
+[CFAColor colorWithRed:1.0f-(1.0f/steps)*j green:1.0f/1.5-((1.0f/1.5)/steps)*j blue:0],
+[CFAColor colorWithRed:1.0f-(1.0f/steps)*j green:1.0f/2-((1.0f/2)/steps)*j blue:0],
+[CFAColor colorWithRed:1.0f-(1.0f/steps)*j green:1.0f/2.5-((1.0f/2.5)/steps)*j blue:0],
+[CFAColor colorWithRed:1.0f-(1.0f/steps)*j green:0 blue:0],
+[CFAColor colorWithRed:1.0f-(1.0f/steps)*j green:0 blue:1.0f/2-((1.0f/2)/steps)*j],
+[CFAColor colorWithRed:1.0f-(1.0f/steps)*j green:0 blue:1.0f-(1.0f/steps)*j],
+[CFAColor colorWithRed:(1.0f/2)-((1.0f/2)/steps)*j green:0 blue:1.0f-(1.0f/steps)*j],
+[CFAColor colorWithRed:0 green:0 blue:1.0f-(1.0f/steps)*j],
+[CFAColor colorWithRed:0 green:1.0f-(1.0f/steps)*j blue:1.0f/2.5-((1.0f/2.5)/steps)*j],
+[CFAColor colorWithRed:0 green:1.0f-(1.0f/steps)*j blue:0],
+[CFAColor colorWithRed:1.0f/2-((1.0f/2)/steps)*j green:1.0f-(1.0f/steps)*j blue:0],
+nil];
+NSPoint centerPoint = NSMakePoint(self.canvasWidth/2, self.canvasHeight/2);
+for(int i = 0; i < segments; i++) {
+[CFAShape fillColor:[colorArray objectAtIndex:i]];
+[CFAShape arcWithCenterAt:centerPoint radius:radius 
+startAngle:RADIANS_TO_DEGREES(interval*i+rotationAdjustment) 
+endAngle:RADIANS_TO_DEGREES(interval*(i+1)+rotationAdjustment)];
+}
+radius -= segmentWidth;
+}
+}
+
+-(void)drawTintWheel {
+for(int j = 0; j < steps; j++) {
+NSArray *colorArray = [NSArray arrayWithObjects:
+[CFAColor colorWithRed:(1.0f/steps)*j green:(1.0f/steps)*j blue:0],
+[CFAColor colorWithRed:(1.0f/steps)*j green:((1.0f/1.5)/steps)*j blue:0],
+[CFAColor colorWithRed:(1.0f/steps)*j green:((1.0f/2)/steps)*j blue:0],
+[CFAColor colorWithRed:(1.0f/steps)*j green:((1.0f/2.5)/steps)*j blue:0],
+[CFAColor colorWithRed:(1.0f/steps)*j green:0 blue:0],
+[CFAColor colorWithRed:(1.0f/steps)*j green:0 blue:((1.0f/2)/steps)*j],
+[CFAColor colorWithRed:(1.0f/steps)*j green:0 blue:(1.0f/steps)*j],
+[CFAColor colorWithRed:((1.0f/2)/steps)*j green:0 blue:(1.0f/steps)*j],
+[CFAColor colorWithRed:0 green:0 blue:(1.0f/steps)*j],
+[CFAColor colorWithRed:0 green:(1.0f/steps)*j blue:((1.0f/2.5)/steps)*j],
+[CFAColor colorWithRed:0 green:(1.0f/steps)*j blue:0],
+[CFAColor colorWithRed:((1.0f/2)/steps)*j green:(1.0f/steps)*j blue:0],
+nil];
+NSPoint centerPoint = NSMakePoint(self.canvasWidth/2, self.canvasHeight/2);
+for(int i = 0; i < segments; i++) {
+[CFAShape fillColor:[colorArray objectAtIndex:i]];
+[CFAShape arcWithCenterAt:centerPoint radius:radius 
+startAngle:RADIANS_TO_DEGREES(interval*i+rotationAdjustment) 
+endAngle:RADIANS_TO_DEGREES(interval*(i+1)+rotationAdjustment)];
+}
+radius -= segmentWidth;
+}
+}
+
+@end

@@ -1,0 +1,34 @@
+//
+//  CFACanvas.h
+//  CodeSamples
+//
+//	A Cocoa For Artists project
+//  Created by Travis Kirton
+//
+
+#import "CFACanvas.h"
+
+CFAMovie *smallMovieA, *smallMovieB;
+
+@implementation CFACanvas
+
+-(void)setup {
+[self drawStyle:ANIMATED];
+[self windowWidth:400 andHeight:320];
+smallMovieA = [CFAMovie movieName:@"C4.mov"];
+smallMovieB = [CFAMovie movieName:@"C4.mov"];
+
+[smallMovieA setLoops:YES];
+[smallMovieA setY:self.centerPos.y-80];
+
+[smallMovieB setLoops:YES];
+[smallMovieB setX:self.centerPos.x];
+[smallMovieB setY:self.centerPos.y-80];
+
+[smallMovieB goToTime:2.0f];
+
+[smallMovieA play];
+[smallMovieB play];
+}
+
+@end

@@ -1,0 +1,14 @@
+//
+//  CFACanvas.h
+//  CodeSamples
+//
+//	A Cocoa For Artists project
+//  Created by Travis Kirton
+//
+
+#import "CFACanvas.h"
+@implementation CFACanvas
+-(void)setup {
+[CFAVoice speak:@"oh my god you're amazing, please look into my isight"];
+}
+@end

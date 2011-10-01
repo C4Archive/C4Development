@@ -1,0 +1,47 @@
+//
+//  CFACanvas.h
+//  CodeSamples
+//
+//	A Cocoa For Artists project
+//  Created by Travis Kirton
+//
+
+#import <Cocoa/Cocoa.h>
+
+@implementation CFACanvas
+
+CFAFont *yourUserFont, *yourBoldFont, *yourMessageFont, *yourSystemFont;
+
+-(void)setup {
+[self windowWidth:400 andHeight:320];
+
+yourUserFont = [[CFAFont userFontOfSize:16] retain];
+yourBoldFont = [[CFAFont boldSystemFontOfSize:16] retain];
+yourMessageFont = [[CFAFont messageFontOfSize:16] retain];
+yourSystemFont = [[CFAFont systemFontOfSize:16] retain];
+}
+
+-(void)draw {
+[CFAString fill:1.0f];
+
+[CFAString font:yourUserFont];    
+CFAString *currentString = [CFAString stringWithFormat:
+@"Your User Font is: %@", [yourUserFont fontName]];
+[currentString drawAtPoint:NSMakePoint(20, self.canvasHeight/5*4)];
+
+[CFAString font:yourBoldFont];
+currentString = [CFAString stringWithFormat:@"Your Bold Font is: %@", 
+[yourBoldFont fontName]];
+[currentString drawAtPoint:NSMakePoint(20, self.canvasHeight/5*3)];
+
+[CFAString font:yourMessageFont];
+currentString = [CFAString stringWithFormat:@"Your Message Font is: %@", 
+[yourMessageFont fontName]];
+[currentString drawAtPoint:NSMakePoint(20, self.canvasHeight/5*2)];
+
+[CFAString font:yourSystemFont];
+currentString = [CFAString stringWithFormat:@"Your System Font is: %@", 
+[yourSystemFont fontName]];
+[currentString drawAtPoint:NSMakePoint(20, self.canvasHeight/5*1)];
+}
+@end

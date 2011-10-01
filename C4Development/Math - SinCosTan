@@ -1,0 +1,74 @@
+//
+//  CFACanvas.h
+//  CodeSamples
+//
+//	A Cocoa For Artists project
+//  Created by Travis Kirton
+//
+
+#import "CFACanvas.h"
+
+@interface CFACanvas () {}
+-(CGFloat)sinY;
+-(CGFloat)cosY;
+-(CGFloat)tanY;
+@end
+
+NSInteger x;
+NSInteger radius;
+
+@implementation CFACanvas 
+-(void)setup {
+[self drawStyle:DISPLAYRATE];
+[self windowWidth:400 andHeight:320];
+[CFAShape noStroke];
+radius = 5;
+x = -10;
+}
+
+-(void)draw {
+[self background:0 alpha:0.025];
+x++;
+if(x > self.canvasWidth+radius) x = -1*radius;
+
+[CFAShape fillRed:1.0f green:0.2f blue:0.2f];
+[CFAShape circleAt:NSMakePoint(x, [self sinY]) radius:radius];
+
+[CFAShape fillRed:0.2f green:0.4f blue:1.0f];
+[CFAShape circleAt:NSMakePoint(x, [self cosY]) radius:radius];
+
+[CFAShape fill:0.3f];
+[CFAShape circleAt:NSMakePoint(x, [self tanY]) radius:radius];
+}
+
+-(CGFloat)sinY {
+CGFloat theta = [CFAMath map:x 
+fromMin:0 
+max:self.canvasWidth 
+toMin:0 
+max:2*PI];
+CGFloat radianY = [CFAMath sin:theta];
+return [CFAMath map:radianY fromMin:-1 max:1 toMin:0 max:self.canvasHeight];
+}
+
+-(CGFloat)cosY {
+CGFloat theta = [CFAMath map:x 
+fromMin:0 
+max:self.canvasWidth 
+toMin:0 
+max:2*PI];
+CGFloat radianY = [CFAMath cos:theta];
+return [CFAMath map:radianY fromMin:-1 max:1 toMin:0 max:self.canvasHeight];
+}
+
+-(CGFloat)tanY {
+CGFloat theta = [CFAMath map:x 
+fromMin:0 
+max:self.canvasWidth 
+toMin:0 
+max:2*PI];
+CGFloat radianY = [CFAMath tan:theta];
+return [CFAMath map:radianY fromMin:-1 max:1 toMin:0 max:self.canvasHeight];
+}
+
+@end

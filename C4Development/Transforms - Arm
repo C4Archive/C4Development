@@ -1,0 +1,54 @@
+//
+//  CFACanvas.h
+//  CodeSamples
+//
+//	A Cocoa For Artists project
+//  Created by Travis Kirton
+//
+
+#import "CFACanvas.h"
+
+CGFloat x, y, angle1, angle2, segLength;
+
+@implementation CFACanvas
+
+-(void)setup {
+[self drawStyle:ANIMATED];
+self.frameRate = 5;
+[self windowWidth:400 andHeight:320];
+
+x = 50.0f;
+y = self.centerPos.y;
+angle1 = 0.0f;
+angle2 = 0.0f;
+segLength = 80;
+
+[CFAShape strokeWidth:20.0f];
+[CFAShape stroke:1 alpha:0.33];
+[CFAShape strokeCapMode:CAPROUND];
+}
+
+-(void)draw {
+[self background:0 alpha:0.05];
+angle1 = (mousePos.x/self.canvasWidth-0.5)*-1*PI;
+angle2 = (mousePos.y/self.canvasHeight-0.5)*PI;
+
+[CFATransform begin];
+
+[CFATransform translateBy:NSMakePoint(x, y)];
+
+[CFATransform rotateByAngle:angle1];
+[CFATransform concat];
+[CFAShape lineFromX:0 Y:0 toX:segLength Y:0];
+[CFATransform end];
+
+[CFATransform begin];
+[CFATransform translateBy:NSMakePoint(x, y)];
+[CFATransform rotateByAngle:angle1];
+[CFATransform translateBy:NSMakePoint(segLength, 0)];
+[CFATransform rotateByAngle:angle2];
+[CFATransform concat];
+[CFAShape lineFromX:0 Y:0 toX:segLength Y:0];
+[CFATransform end];
+}
+@end

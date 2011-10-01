@@ -1,0 +1,31 @@
+//
+//  CFACanvas.h
+//  CodeSamples
+//
+//	A Cocoa For Artists project
+//  Created by Travis Kirton
+//
+
+#import "CFACanvas.h"
+
+CFAString *theString;
+
+@implementation CFACanvas
+
+-(void)setup {
+[self drawStyle:EVENTBASED];
+[self windowWidth:400 andHeight:320];
+[CFAString fill:1];
+theString = [[CFAString stringWithString:@""] retain];
+}
+
+-(void)draw {
+[self background:0];
+[theString drawInRect:self.canvasRect];
+}
+
+-(void)keyPressed {
+if(keyChar == RETURN) theString = [[CFAString stringWithString:@""] retain];
+else theString = [[theString stringByAppendingFormat:@"%c",keyChar] retain];
+}
+@end

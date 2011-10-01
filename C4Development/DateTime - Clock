@@ -1,0 +1,67 @@
+//
+//  CFACanvas.h
+//  CodeSamples
+//
+//	A Cocoa For Artists project
+//  Created by Travis Kirton
+//
+
+#import "CFACanvas.h"
+
+CGFloat radius;
+
+@implementation CFACanvas
+-(void)setup {
+[self drawStyle:DISPLAYRATE];
+[self windowWidth:400 andHeight:320];
+[CFAShape stroke:1.0f];
+radius = [CFAMath minOfA:self.canvasWidth andB:self.canvasHeight]/2*0.9;
+[CFAShape fill:0.33f];
+}
+-(void)draw {
+[self background:0];
+float s = -1*[CFAMath map:[CFADateTime second] 
+fromMin:0 
+max:60 
+toMin:0 
+max:TWO_PI]-3*HALF_PI;
+
+float m = -1*[CFAMath map:[CFADateTime minute] 
+fromMin:0 
+max:60 
+toMin:0 
+max:TWO_PI]-3*HALF_PI;
+
+float h = -1*[CFAMath map:[CFADateTime hour] 
+fromMin:0 
+max:24 
+toMin:0 
+max:TWO_PI*2]-3*HALF_PI;
+
+[CFAShape stroke];
+[CFAShape strokeRed:0.3f green:0.3f blue:0.3f];
+[CFAShape lineFromX:self.centerPos.x 
+Y:self.centerPos.y 
+toX:[CFAMath cos:s]*(radius*0.9)+self.canvasWidth/2 
+Y:[CFAMath sin:s]*(radius*0.9)+self.canvasHeight/2];
+
+[CFAShape strokeRed:0.20f green:0.4f blue:1.0f];
+[CFAShape lineFromX:self.centerPos.x 
+Y:self.centerPos.y 
+toX:[CFAMath cos:m]*(radius*0.75)+self.canvasWidth/2 
+Y:[CFAMath sin:m]*(radius*0.75)+self.canvasHeight/2];
+
+[CFAShape strokeRed:1.0f green:0.2f blue:0.2f];
+[CFAShape lineFromX:self.centerPos.x 
+Y:self.centerPos.y 
+toX:[CFAMath cos:h]*(radius*0.6)+self.canvasWidth/2 
+Y:[CFAMath sin:h]*(radius*0.6)+self.canvasHeight/2];
+
+[CFAShape fill:1.0f];
+for (int a = 0; a < 360; a+=6) {
+float x = self.centerPos.x + [CFAMath cos:[CFAMath radians:a]] * (radius*0.95) ;
+float y = self.centerPos.y + [CFAMath sin:[CFAMath radians:a]] * (radius*0.95);
+[CFAShape pointAt:NSMakePoint(x, y)];
+}
+}
+@end

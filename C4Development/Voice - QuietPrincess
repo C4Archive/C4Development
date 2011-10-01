@@ -1,0 +1,19 @@
+//
+//  CFACanvas.h
+//  CodeSamples
+//
+//	A Cocoa For Artists project
+//  Created by Travis Kirton
+//
+
+#import "CFACanvas.h"
+
+CFAVoice *princess;
+
+@implementation CFACanvas
+-(void)setup {
+princess = [[[CFAVoice alloc] initWithVoice:PRINCESS] retain];
+[princess setVolume:0.05];
+[princess speak:@"where are my glass slippers?"];
+}
+@end

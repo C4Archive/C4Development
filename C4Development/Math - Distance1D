@@ -1,12 +1,12 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
 int thin = 8;
 int thick = 36;
@@ -15,11 +15,11 @@ float x2 = 44.0f;
 float x3 = 58.0f;
 float x4 = 120.0f;
 
-@implementation CFACanvas 
+@implementation C4Canvas 
 -(void)setup {
 [self drawStyle:DISPLAYRATE];
 [self windowWidth:400 andHeight:320];
-[CFAShape noStroke];
+[C4Shape noStroke];
 }
 
 -(void)draw {
@@ -27,14 +27,14 @@ float x4 = 120.0f;
 
 float mx = mousePos.x * 0.4 - self.canvasWidth/5;
 
-[CFAShape fill:0.4f];
-[CFAShape rectWithXPos:x2 yPos:0 width:thick andHeight:self.canvasHeight/2];
-[CFAShape fill:0.8f];
-[CFAShape rectWithXPos:x1 yPos:0 width:thick andHeight:self.canvasHeight/2];
-[CFAShape fill:0.4f];
-[CFAShape rectWithXPos:x4 yPos:self.canvasHeight/2 width:thin andHeight:self.canvasHeight/2];
-[CFAShape fill:0.8f];
-[CFAShape rectWithXPos:x3 yPos:self.canvasHeight/2 width:thick andHeight:self.canvasHeight/2];
+[C4Shape fill:0.4f];
+[C4Shape rectWithXPos:x2 yPos:0 width:thick andHeight:self.canvasHeight/2];
+[C4Shape fill:0.8f];
+[C4Shape rectWithXPos:x1 yPos:0 width:thick andHeight:self.canvasHeight/2];
+[C4Shape fill:0.4f];
+[C4Shape rectWithXPos:x4 yPos:self.canvasHeight/2 width:thin andHeight:self.canvasHeight/2];
+[C4Shape fill:0.8f];
+[C4Shape rectWithXPos:x3 yPos:self.canvasHeight/2 width:thick andHeight:self.canvasHeight/2];
 
 x1 += mx/16;
 x2 += mx/64;

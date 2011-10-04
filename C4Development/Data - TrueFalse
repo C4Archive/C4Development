@@ -1,16 +1,16 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
 BOOL x = NO;
 
-@implementation CFACanvas
+@implementation C4Canvas
 -(void)setup {
 [self flipCoordinates];
 [self windowWidth:400 andHeight:320];
@@ -23,12 +23,12 @@ x = YES;
 x = NO;
 }
 if(x) {
-[CFAShape stroke:1.0f];
-[CFAShape lineFromX:i Y:1 toX:i Y:self.canvasHeight-1];
+[C4Shape stroke:1.0f];
+[C4Shape lineFromX:i Y:1 toX:i Y:self.canvasHeight-1];
 }
 if(!x) {
-[CFAShape stroke:0.5f];
-[CFAShape lineFromX:self.canvasWidth/2 Y:i toX:self.canvasWidth-1 Y:i];
+[C4Shape stroke:0.5f];
+[C4Shape lineFromX:self.canvasWidth/2 Y:i toX:self.canvasWidth-1 Y:i];
 }
 }
 }

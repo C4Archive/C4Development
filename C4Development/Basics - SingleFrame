@@ -1,33 +1,33 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
-@implementation CFACanvas
+#import "C4Canvas.h"
+@implementation C4Canvas
 
 float y;
 
 -(void)setup {
 [self windowWidth:400 andHeight:320];
-[CFAString fill:1.0f];
-[CFAShape strokeRed:1.0f green:0.2f blue:0.2f];
+[C4String fill:1.0f];
+[C4Shape strokeRed:1.0f green:0.2f blue:0.2f];
 y = self.centerPos.y;
 
 }
 
 -(void)draw {
-[CFAShape lineFromX:0 Y:y toX:self.canvasWidth Y:y];
+[C4Shape lineFromX:0 Y:y toX:self.canvasWidth Y:y];
 y++;
 if(y < self.canvasHeight) y = 0;
 
-CFALog(@"The default draw style is SINGLEFRAME");
-CFALog(@"This sketch should send only 1 message");
+C4Log(@"The default draw style is SINGLEFRAME");
+C4Log(@"This sketch should send only 1 message");
 
-[[CFAString stringWithString:
+[[C4String stringWithString:
 @"The default draw style is SINGLEFRAME\nThis sketch should send only 1 message"] 
 drawAtPoint:NSMakePoint(20, self.canvasHeight/2)];
 }

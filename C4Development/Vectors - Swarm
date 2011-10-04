@@ -1,5 +1,5 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
@@ -10,9 +10,9 @@
 // The Particle object
 ////////////////////////////////////////////////////////////////
 
-@interface Particle : CFAObject {
+@interface Particle : C4Object {
 @private
-CFAVector *location, *velocity, *acceleration, *prevLocation;
+C4Vector *location, *velocity, *acceleration, *prevLocation;
 NSPoint target;
 float topSpeed;
 }
@@ -26,14 +26,14 @@ if(!(self = [super init])) {
 return nil;
 }
 
-location = [CFAVector vectorWithX:[CFAMath randomInt:400]
-Y:[CFAMath randomInt:320]
+location = [C4Vector vectorWithX:[C4Math randomInt:400]
+Y:[C4Math randomInt:320]
 Z:0];
 
-prevLocation = [CFAVector vectorWithX:0 Y:0 Z:0];
+prevLocation = [C4Vector vectorWithX:0 Y:0 Z:0];
 
-velocity = [CFAVector vectorWithX:0 Y:0 Z:0];
-topSpeed = [CFAMath randomInt:3]+3.0f;
+velocity = [C4Vector vectorWithX:0 Y:0 Z:0];
+topSpeed = [C4Math randomInt:3]+3.0f;
 
 [self listenFor:MOUSEMOVED andRunMethod:@"setTarget:"];
 [self updateAutomaticallyUsingFrames:1];
@@ -49,8 +49,8 @@ objectForKey:@"mouseEvent"] locationInWindow];
 
 [prevLocation setX:location.x Y:location.y Z:location.z];
 
-CFAVector *mouse = [CFAVector vectorWithX:target.x Y:target.y Z:0];
-CFAVector *dir = mouse;
+C4Vector *mouse = [C4Vector vectorWithX:target.x Y:target.y Z:0];
+C4Vector *dir = mouse;
 [dir subtract:location];
 [dir normalize];
 [dir multiplyScalar:-0.6];
@@ -76,7 +76,7 @@ location.y = 0;
 }
 
 -(void)draw {
-[CFAShape ellipseWithXPos:location.x yPos:location.y width:6 andHeight:6];
+[C4Shape ellipseWithXPos:location.x yPos:location.y width:6 andHeight:6];
 }
 @end
 
@@ -86,16 +86,16 @@ location.y = 0;
 
 NSMutableArray *particleArray;
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
-@implementation CFACanvas
+@implementation C4Canvas
 
 -(void)setup {
 [self drawStyle:DISPLAYRATE];
 [self windowWidth:400 andHeight:320];
 
-[CFAShape noStroke];
-[CFAShape fill:1.0f];
+[C4Shape noStroke];
+[C4Shape fill:1.0f];
 
 particleArray = [[[NSMutableArray alloc] initWithCapacity:0] retain];
 

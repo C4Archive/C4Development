@@ -1,35 +1,35 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
-@implementation CFACanvas
+#import "C4Canvas.h"
+@implementation C4Canvas
 
 -(void)setup {
 [self windowWidth:400 andHeight:320];
 
-CFALog(@"Indiviual calls to CFALog()");
-CFALog(@"aNumber = %d",0);
-CFALog(@"aNumber = %d",1);
-CFALog(@"aNumber = %d",2);
-CFALog(@"aNumber = %d",3);
-CFALog(@"aNumber = %d",4);
+C4Log(@"Indiviual calls to C4Log()");
+C4Log(@"aNumber = %d",0);
+C4Log(@"aNumber = %d",1);
+C4Log(@"aNumber = %d",2);
+C4Log(@"aNumber = %d",3);
+C4Log(@"aNumber = %d",4);
 
-CFALog(@"");
-CFALog(@"Calls to CFALog() made with FOR loops");
+C4Log(@"");
+C4Log(@"Calls to C4Log() made with FOR loops");
 for(int number = 0; number < 5; number++) {
-CFALog(@"aNumber = %d",number);
+C4Log(@"aNumber = %d",number);
 }
 
-[CFAString fill:1.0f];
+[C4String fill:1.0f];
 }
 
 -(void)draw {
-[[CFAString stringWithString:
+[[C4String stringWithString:
 @"Draw was called once\nLook in the debug window for logged messages"] 
 drawAtPoint:NSMakePoint(20, self.centerPos.y)];
 }

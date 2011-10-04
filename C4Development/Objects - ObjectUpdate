@@ -1,5 +1,5 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
@@ -10,9 +10,9 @@
 // The BLUE object
 ////////////////////////////////////////////////////////////////
 
-@interface BlueObject : CFAObject {
+@interface BlueObject : C4Object {
 int count;
-CFAColor *blueFill;
+C4Color *blueFill;
 NSPoint currentPosition;
 }
 @end
@@ -24,7 +24,7 @@ NSPoint currentPosition;
 self = [super init];
 if (self) {
 count = 0;
-blueFill = [[CFAColor colorWithRed:0.2f green:0.4f blue:1.0f] retain];
+blueFill = [[C4Color colorWithRed:0.2f green:0.4f blue:1.0f] retain];
 currentPosition = NSMakePoint(0, -10);
 }
 return self;
@@ -41,9 +41,9 @@ if(currentPosition.y >= 320) currentPosition.y = -10;
 }
 
 -(void)draw {
-[CFAShape noStroke];
-[CFAShape fillColor:blueFill];
-[CFAShape rectAt:currentPosition size:NSMakeSize(400, 10)];
+[C4Shape noStroke];
+[C4Shape fillColor:blueFill];
+[C4Shape rectAt:currentPosition size:NSMakeSize(400, 10)];
 }
 @end
 
@@ -51,9 +51,9 @@ if(currentPosition.y >= 320) currentPosition.y = -10;
 // The RED object
 ////////////////////////////////////////////////////////////////
 
-@interface RedObject : CFAObject {
+@interface RedObject : C4Object {
 int count;
-CFAColor *redFill;
+C4Color *redFill;
 NSPoint currentPosition;
 }
 @end
@@ -65,7 +65,7 @@ NSPoint currentPosition;
 self = [super init];
 if (self) {
 count = 0;
-redFill = [[CFAColor colorWithRed:1.0f green:0.2f blue:0.2f] retain];
+redFill = [[C4Color colorWithRed:1.0f green:0.2f blue:0.2f] retain];
 currentPosition = NSMakePoint(0, -10);
 }
 return self;
@@ -82,9 +82,9 @@ if(currentPosition.y >= 320) currentPosition.y = -10;
 }
 
 -(void)draw {
-[CFAShape noStroke];
-[CFAShape fillColor:redFill];
-[CFAShape rectAt:currentPosition size:NSMakeSize(400, 10)];
+[C4Shape noStroke];
+[C4Shape fillColor:redFill];
+[C4Shape rectAt:currentPosition size:NSMakeSize(400, 10)];
 }
 @end
 
@@ -92,12 +92,12 @@ if(currentPosition.y >= 320) currentPosition.y = -10;
 // The CANVAS
 ////////////////////////////////////////////////////////////////
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
 BlueObject  *blueObj;
 RedObject   *redObj;
 
-@implementation CFACanvas
+@implementation C4Canvas
 -(void)setup {
 [self drawStyle:DISPLAYRATE];
 [self windowWidth:400 andHeight:320];

@@ -1,5 +1,5 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
@@ -8,30 +8,30 @@
 
 #import <Cocoa/Cocoa.h>
 
-@implementation CFACanvas
+@implementation C4Canvas
 
 NSArray *allFontNames;
 
 -(void)setup {
 [self windowWidth:400 andHeight:320];
 
-allFontNames = [[CFAFont availableFonts] retain];
+allFontNames = [[C4Font availableFonts] retain];
 }
 
 -(void)draw {
 [self background:0];
 
-NSInteger rand = [CFAMath randomInt:[allFontNames count]];
+NSInteger rand = [C4Math randomInt:[allFontNames count]];
 
-CFAString *fontName = [allFontNames objectAtIndex:rand];
-CFAFont *currentFont = [CFAFont fontWithName:fontName size:16];
+C4String *fontName = [allFontNames objectAtIndex:rand];
+C4Font *currentFont = [C4Font fontWithName:fontName size:16];
 
-[CFAString font:currentFont];
-[CFAString fill:1.0f];
+[C4String font:currentFont];
+[C4String fill:1.0f];
 
 NSPoint drawPoint = NSMakePoint(20, self.centerPos.y - 2* [currentFont ascender]);
 
-[[CFAString stringWithFormat:
+[[C4String stringWithFormat:
 @"Current Font: %@ \nFamily Name: %@ \nDisplay Name: %@ \n#%d of %d", 
 fontName, [currentFont familyName], 
 [currentFont displayName], 

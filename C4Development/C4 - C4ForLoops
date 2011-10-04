@@ -1,14 +1,14 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
-@implementation CFACanvas
+@implementation C4Canvas
 
 -(void)setup {
 [self windowWidth:400 andHeight:320];
@@ -17,13 +17,13 @@
 -(void)draw {
 //draw a C
 NSPoint startingPoint, currentPoint;
-[CFAShape fillRed:1.0f green:0.2f blue:0.2f];
+[C4Shape fillRed:1.0f green:0.2f blue:0.2f];
 startingPoint = NSMakePoint(80, 80);
 
 for(int i = 0; i <= 32; i++) {
 currentPoint.x = startingPoint.x;
 currentPoint.y = startingPoint.y + i*5;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }
 
 startingPoint.x = currentPoint.x;
@@ -32,7 +32,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 24; i++) {
 currentPoint.x = startingPoint.x + i*5;
 currentPoint.y = startingPoint.y;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }
 
 startingPoint.x = currentPoint.x;
@@ -41,7 +41,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 8; i++) {
 currentPoint.x = startingPoint.x;
 currentPoint.y = startingPoint.y - i*5;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }
 
 startingPoint.x = currentPoint.x;
@@ -50,7 +50,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 16; i++) {
 currentPoint.x = startingPoint.x - i*5;
 currentPoint.y = startingPoint.y;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }
 
 startingPoint.x = currentPoint.x;
@@ -59,7 +59,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 16; i++) {
 currentPoint.x = startingPoint.x;
 currentPoint.y = startingPoint.y - i*5;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }
 
 startingPoint.x = currentPoint.x;
@@ -68,7 +68,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 16; i++) {
 currentPoint.x = startingPoint.x + i*5;
 currentPoint.y = startingPoint.y;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }
 
 startingPoint.x = currentPoint.x;
@@ -77,7 +77,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 8; i++) {
 currentPoint.x = startingPoint.x;
 currentPoint.y = startingPoint.y - i*5;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }
 
 startingPoint.x = currentPoint.x;
@@ -86,18 +86,18 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 24; i++) {
 currentPoint.x = startingPoint.x - i*5;
 currentPoint.y = startingPoint.y;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }
 
 //Draw a 4
-[CFAShape fillRed:0.2f green:0.4f blue:1.0f];
+[C4Shape fillRed:0.2f green:0.4f blue:1.0f];
 
 startingPoint = NSMakePoint(240,80);
 currentPoint = startingPoint;
 for(int i = 0; i <= 8; i++) {
 currentPoint.x = startingPoint.x;
 currentPoint.y = startingPoint.y + i*5;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }
 
 startingPoint.x = currentPoint.x;
@@ -106,7 +106,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 16; i++) {
 currentPoint.x = startingPoint.x - i*5;
 currentPoint.y = startingPoint.y;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }
 
 startingPoint.x = currentPoint.x;
@@ -115,7 +115,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 24; i++) {
 currentPoint.x = startingPoint.x;
 currentPoint.y = startingPoint.y + i*5;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }
 
 startingPoint.x = currentPoint.x;
@@ -124,7 +124,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 8; i++) {
 currentPoint.x = startingPoint.x + i*5;
 currentPoint.y = startingPoint.y;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }
 
 startingPoint.x = currentPoint.x;
@@ -133,7 +133,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 16; i++) {
 currentPoint.x = startingPoint.x;
 currentPoint.y = startingPoint.y - i*5;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }
 
 startingPoint.x = currentPoint.x;
@@ -142,7 +142,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 8; i++) {
 currentPoint.x = startingPoint.x + i*5;
 currentPoint.y = startingPoint.y;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }
 
 startingPoint.x = currentPoint.x;
@@ -151,7 +151,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 16; i++) {
 currentPoint.x = startingPoint.x;
 currentPoint.y = startingPoint.y + i*5;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }
 
 startingPoint.x = currentPoint.x;
@@ -160,7 +160,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 8; i++) {
 currentPoint.x = startingPoint.x + i*5;
 currentPoint.y = startingPoint.y;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }
 
 startingPoint.x = currentPoint.x;
@@ -169,7 +169,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 16; i++) {
 currentPoint.x = startingPoint.x;
 currentPoint.y = startingPoint.y - i*5;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }
 
 startingPoint.x = currentPoint.x;
@@ -178,7 +178,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 8; i++) {
 currentPoint.x = startingPoint.x + i*5;
 currentPoint.y = startingPoint.y;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }    
 
 startingPoint.x = currentPoint.x;
@@ -187,7 +187,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 8; i++) {
 currentPoint.x = startingPoint.x;
 currentPoint.y = startingPoint.y - i*5;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }    
 
 startingPoint.x = currentPoint.x;
@@ -196,7 +196,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 8; i++) {
 currentPoint.x = startingPoint.x - i*5;
 currentPoint.y = startingPoint.y;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }    
 
 startingPoint.x = currentPoint.x;
@@ -205,7 +205,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 8; i++) {
 currentPoint.x = startingPoint.x;
 currentPoint.y = startingPoint.y - i*5;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }    
 
 startingPoint.x = currentPoint.x;
@@ -214,7 +214,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 8; i++) {
 currentPoint.x = startingPoint.x - i*5;
 currentPoint.y = startingPoint.y;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }    
 
 startingPoint.x = currentPoint.x;
@@ -223,18 +223,18 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 8; i++) {
 currentPoint.x = startingPoint.x;
 currentPoint.y = startingPoint.y + i*5;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }    
 
 
 //Draw A Square
-[CFAShape fillRed:0.3f green:0.3f blue:0.3f];
+[C4Shape fillRed:0.3f green:0.3f blue:0.3f];
 startingPoint = NSMakePoint(160, 240);
 
 for(int i = 0; i <= 8; i++) {
 currentPoint.x = startingPoint.x + i*5;
 currentPoint.y = startingPoint.y;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }
 
 startingPoint.x = currentPoint.x;
@@ -243,7 +243,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 8; i++) {
 currentPoint.x = startingPoint.x;
 currentPoint.y = startingPoint.y - i*5;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }
 
 startingPoint.x = currentPoint.x;
@@ -252,7 +252,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 8; i++) {
 currentPoint.x = startingPoint.x - i*5;
 currentPoint.y = startingPoint.y;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }
 
 startingPoint.x = currentPoint.x;
@@ -261,7 +261,7 @@ startingPoint.y = currentPoint.y;
 for(int i = 0; i <= 8; i++) {
 currentPoint.x = startingPoint.x;
 currentPoint.y = startingPoint.y + i*5;
-[CFAShape pointAt:currentPoint];
+[C4Shape pointAt:currentPoint];
 }    
 }
 @end

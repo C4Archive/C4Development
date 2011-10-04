@@ -1,22 +1,22 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
-CFAImage *background, *foreground;
+C4Image *background, *foreground;
 float offset;
 
-@implementation CFACanvas
+@implementation C4Canvas
 -(void)setup {
 [self drawStyle:ANIMATED];
 [self windowWidth:400 andHeight:320];
-background = [CFAImage imageName:@"C4Wood.png"];
-foreground = [CFAImage imageName:@"C4Sky.png"];
+background = [C4Image imageName:@"C4Wood.png"];
+foreground = [C4Image imageName:@"C4Sky.png"];
 }
 -(void)draw {
 [self backgroundImage:background];

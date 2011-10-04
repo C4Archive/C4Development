@@ -1,21 +1,21 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
-@interface CFACanvas () {} 
+@interface C4Canvas () {} 
 -(void)drawC;
 -(void)draw4;
 -(void)drawSquare;
 -(void)setupC4Points;
 @end
 
-@implementation CFACanvas
+@implementation C4Canvas
 
 NSPoint points[371];
 NSInteger totalPoints;
@@ -33,26 +33,26 @@ NSInteger totalPoints;
 
 //Draws a red C, using only points
 -(void)drawC {
-[CFAShape fillRed:1.0f green:0.2f blue:0.2f];
+[C4Shape fillRed:1.0f green:0.2f blue:0.2f];
 for(int i = 0; i < 152; i++) {
-[CFAShape pointAt:points[i]];
+[C4Shape pointAt:points[i]];
 }
 
 }
 
 //Draws a green 4, using only points
 -(void)draw4 {
-[CFAShape fillRed:0.2f green:0.4f blue:1.0f];
+[C4Shape fillRed:0.2f green:0.4f blue:1.0f];
 for(int i = 152; i < 335; i++) {
-[CFAShape pointAt:points[i]];
+[C4Shape pointAt:points[i]];
 }
 }
 
 //Draws a yellow square, using only points
 -(void)drawSquare {
-[CFAShape fillRed:0.3f green:0.3f blue:0.3f];
+[C4Shape fillRed:0.3f green:0.3f blue:0.3f];
 for(int i = 335; i < 371; i++) {
-[CFAShape pointAt:points[i]];
+[C4Shape pointAt:points[i]];
 }
 }
 

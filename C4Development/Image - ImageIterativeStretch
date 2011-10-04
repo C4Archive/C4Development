@@ -1,19 +1,19 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
-CFAImage *a;
+C4Image *a;
 
-@implementation CFACanvas
+@implementation C4Canvas
 -(void)setup {
 [self windowWidth:400 andHeight:496];
-a = [CFAImage imageName:@"C4Sky.png"];
+a = [C4Image imageName:@"C4Sky.png"];
 }
 -(void)draw {
 for(int x = 20, y = 0; x < self.canvasWidth; y += x*0.8, x += x) {

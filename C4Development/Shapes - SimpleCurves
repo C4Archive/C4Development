@@ -1,13 +1,13 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
-@interface CFACanvas (private)
+#import "C4Canvas.h"
+@interface C4Canvas (private)
 -(float)sinGraph:(float)value;
 -(float)quad:(float)value;
 -(float)quadHump:(float)value;
@@ -16,64 +16,64 @@
 @end
 
 
-@implementation CFACanvas
+@implementation C4Canvas
 -(void)setup {
 [self windowWidth:400 andHeight:320];
 [self background:0];
-[CFAShape noFill];
-[CFAShape strokeWidth:1];
+[C4Shape noFill];
+[C4Shape strokeWidth:1];
 }
 
 -(void)draw {
-[CFAShape stroke:0.2f];
-[CFAShape beginShape];
+[C4Shape stroke:0.2f];
+[C4Shape beginShape];
 for(int i = 0; i < self.canvasWidth; i++) {
 float value = [self sinGraph:((float)i/self.canvasWidth)]*self.canvasHeight;
-[CFAShape vertexAtX:i Y:value];
+[C4Shape vertexAtX:i Y:value];
 }
-[CFAShape endShape];
+[C4Shape endShape];
 
-[CFAShape stroke:0.4f];
-[CFAShape beginShape];
+[C4Shape stroke:0.4f];
+[C4Shape beginShape];
 for(int i = 0; i < self.canvasWidth; i++) {
 float value = [self quad:((float)i)/self.canvasWidth]*self.canvasHeight;
-[CFAShape vertexAtX:i Y:value];
+[C4Shape vertexAtX:i Y:value];
 }
-[CFAShape endShape];
+[C4Shape endShape];
 
-[CFAShape stroke:0.6f];
-[CFAShape beginShape];
+[C4Shape stroke:0.6f];
+[C4Shape beginShape];
 for(int i = 0; i < self.canvasWidth; i++) {
 float value = [self quadHump:((float)i)/self.canvasWidth]*self.canvasHeight;
-[CFAShape vertexAtX:i Y:value];
+[C4Shape vertexAtX:i Y:value];
 }
-[CFAShape endShape];
+[C4Shape endShape];
 
-[CFAShape stroke:0.8f];
-[CFAShape beginShape];
+[C4Shape stroke:0.8f];
+[C4Shape beginShape];
 for(int i = 0; i < self.canvasWidth; i++) {
 float value = [self hump:((float)i)/self.canvasWidth]*self.canvasHeight;
-[CFAShape vertexAtX:i Y:value];
+[C4Shape vertexAtX:i Y:value];
 }
-[CFAShape endShape];
+[C4Shape endShape];
 
-[CFAShape stroke:1.0f];
-[CFAShape beginShape];
+[C4Shape stroke:1.0f];
+[C4Shape beginShape];
 for(int i = 0; i < self.canvasWidth; i++) {
 float value = [self squared:((float)i)/self.canvasWidth]*self.canvasHeight;
-[CFAShape vertexAtX:i Y:value];
+[C4Shape vertexAtX:i Y:value];
 }
-[CFAShape endShape];
+[C4Shape endShape];
 }
 
 -(float)sinGraph:(float)value {
 value = (value - 0.5) * 1.0; //scale from -1 to 1
-value = [CFAMath sin:(value*PI)]/2 + 0.5;
+value = [C4Math sin:(value*PI)]/2 + 0.5;
 return value;
 }
 
 -(float)squared:(float)value {
-value = [CFAMath pow:value raiseTo:2];
+value = [C4Math pow:value raiseTo:2];
 // Following line is equal to the above line
 // value = value * value;
 return value;

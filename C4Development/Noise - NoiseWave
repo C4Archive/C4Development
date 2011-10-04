@@ -1,24 +1,24 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
 float width, xSpacing, yOff;
 
-@implementation CFACanvas
+@implementation C4Canvas
 -(void)setup {
 [self drawStyle:DISPLAYRATE];
 [self windowWidth:400 andHeight:320];
 width = self.canvasWidth+16;
 xSpacing = 8;
 yOff = 0.0f;
-[CFAShape fill:1 alpha:0.2];
-[CFAShape noStroke];
+[C4Shape fill:1 alpha:0.2];
+[C4Shape noStroke];
 }
 
 -(void)draw {
@@ -30,9 +30,9 @@ float xOff = yOff;
 NSPoint location;
 for(int i = 0; i < width/xSpacing; i++) {
 location.x = i*xSpacing;
-location.y = (2*[CFANoise noiseX:xOff])*self.canvasHeight/2+self.canvasHeight/2;
+location.y = (2*[C4Noise noiseX:xOff])*self.canvasHeight/2+self.canvasHeight/2;
 xOff+=dx;
-[CFAShape circleAt:location radius:16];
+[C4Shape circleAt:location radius:16];
 }
 }
 @end

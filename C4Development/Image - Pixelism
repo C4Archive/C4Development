@@ -1,12 +1,12 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
 NSInteger blockWidth;
 NSInteger blockHeight;
@@ -15,14 +15,14 @@ NSInteger stripeWidth;
 NSInteger left;
 NSInteger top;
 
-CFAImage *image;
+C4Image *image;
 
-@implementation CFACanvas
+@implementation C4Canvas
 
 -(void)setup {
 //Usually you should set up your canvas first
 //But, since we use the image dimensions to set the canvas size, we should create the image first...
-image = [CFAImage imageName:@"C4Sky" andType:@"png"];
+image = [C4Image imageName:@"C4Sky" andType:@"png"];
 
 [self windowWidth:image.imageWidth andHeight:image.imageHeight];
 [self background:1.0f];
@@ -34,8 +34,8 @@ blockHeight = stripeWidth*3;
 blockWidth = blockHeight;
 
 [image loadPixelData];
-[CFAShape fill];
-[CFAShape noStroke];
+[C4Shape fill];
+[C4Shape noStroke];
 }
 
 -(void)draw {
@@ -45,23 +45,23 @@ for(int y = 0; y <= self.canvasHeight; y+=blockHeight) {
 //iterate through the x coordinates of our image
 for(int x = 0; x <= self.canvasWidth; x+=blockWidth) {            
 //grab the color from our image at (x,y)
-CFAColor *pixelColor = [image colorAtX:x andY:y];
+C4Color *pixelColor = [image colorAtX:x andY:y];
 
 //create a block of colors
-[CFAShape fillRed:[[pixelColor nsColor] redComponent] green:0 blue:0];
-[CFAShape rectWithXPos:x+stripeWidth*0 
+[C4Shape fillRed:[[pixelColor nsColor] redComponent] green:0 blue:0];
+[C4Shape rectWithXPos:x+stripeWidth*0 
 yPos:y 
 width:stripeWidth 
 andHeight:blockHeight];
 
-[CFAShape fillRed:0 green:[[pixelColor nsColor] greenComponent] blue:0];
-[CFAShape rectWithXPos:x+stripeWidth*1 
+[C4Shape fillRed:0 green:[[pixelColor nsColor] greenComponent] blue:0];
+[C4Shape rectWithXPos:x+stripeWidth*1 
 yPos:y 
 width:stripeWidth 
 andHeight:blockHeight];
 
-[CFAShape fillRed:0 green:0 blue:[[pixelColor nsColor] blueComponent]];
-[CFAShape rectWithXPos:x+stripeWidth*2
+[C4Shape fillRed:0 green:0 blue:[[pixelColor nsColor] blueComponent]];
+[C4Shape rectWithXPos:x+stripeWidth*2
 yPos:y 
 width:stripeWidth 
 andHeight:blockHeight];

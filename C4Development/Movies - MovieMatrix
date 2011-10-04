@@ -1,17 +1,17 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
 NSMutableArray *movies;
 NSInteger iterations, startWidth;
 
-@implementation CFACanvas
+@implementation C4Canvas
 
 -(void)setup {
 [self drawStyle:ANIMATED];
@@ -22,8 +22,8 @@ movies = [[[NSMutableArray alloc] initWithCapacity:0] retain];
 iterations = 4;
 startWidth = 320;
 for (int i = 0; i < 4; i++) {
-[movies addObject:[CFAMovie movieName:@"C4.mov"]];
-[movies addObject:[CFAMovie movieName:@"C4.mov"]];
+[movies addObject:[C4Movie movieName:@"C4.mov"]];
+[movies addObject:[C4Movie movieName:@"C4.mov"]];
 }
 
 [[movies objectAtIndex:0] setX:0 
@@ -67,10 +67,10 @@ withWidth:self.canvasWidth-40
 andHeight:30];
 
 for(int i = 0; i < [movies count]; i++) {
-[(CFAMovie*)[movies objectAtIndex:i] goToTime:0.5*([movies count]-1-i)];
+[(C4Movie*)[movies objectAtIndex:i] goToTime:0.5*([movies count]-1-i)];
 }
 
-for(CFAMovie *m in movies) {
+for(C4Movie *m in movies) {
 [m setLoops:YES];
 [m play];
 }

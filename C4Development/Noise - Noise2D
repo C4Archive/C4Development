@@ -1,19 +1,19 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
 float increment;
 
-@implementation CFACanvas
+@implementation C4Canvas
 -(void)setup {
 [self windowWidth:400 andHeight:320];
-increment = [CFAMath randomInt:30]/1000.0f;
+increment = [C4Math randomInt:30]/1000.0f;
 }
 
 -(void)draw {
@@ -23,9 +23,9 @@ xOff += increment;
 float yOff = 0.0f;
 for(int y = 0; y < self.canvasHeight; y++) {
 yOff += increment;
-float bright = [CFANoise noiseX:xOff Y:yOff];
-[CFAShape fill:[CFAMath absf:bright]];
-[CFAShape pointAtX:x Y:y];
+float bright = [C4Noise noiseX:xOff Y:yOff];
+[C4Shape fill:[C4Math absf:bright]];
+[C4Shape pointAtX:x Y:y];
 }
 }
 }

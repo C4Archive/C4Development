@@ -1,21 +1,21 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
-CFAImage *foregroundImage, *backgroundImage;
+C4Image *foregroundImage, *backgroundImage;
 
-@implementation CFACanvas
+@implementation C4Canvas
 
 -(void)setup {
 [self windowWidth:400 andHeight:320];
-backgroundImage = [CFAImage imageName:@"C4Sky.png"];
-foregroundImage = [CFAImage imageName:@"C4Wood.png"];
+backgroundImage = [C4Image imageName:@"C4Sky.png"];
+foregroundImage = [C4Image imageName:@"C4Wood.png"];
 
 [self drawStyle:EVENTBASED];
 }
@@ -37,7 +37,7 @@ backgroundImage.drawFilteredImage = YES;
 //	[backgroundImage gammaAdjust:2.0f];
 //	[backgroundImage hueAdjust:2.0f];
 //	[backgroundImage invert];
-//	[backgroundImage monochrome:[CFAColor colorWithRed:1 green:0 blue:0] intensity:2.0f];
+//	[backgroundImage monochrome:[C4Color colorWithRed:1 green:0 blue:0] intensity:2.0f];
 //	[backgroundImage posterize:2.0f];
 //	[backgroundImage maxGrayscale];
 //	[backgroundImage minGrayscale];

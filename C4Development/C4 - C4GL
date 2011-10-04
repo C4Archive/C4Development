@@ -1,19 +1,19 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
-@interface CFACanvas () {}
+#import "C4Canvas.h"
+@interface C4Canvas () {}
 -(NSPoint)getGLMousePos;
 @end
 
 CGFloat unitDistance;
 
-@implementation CFACanvas
+@implementation C4Canvas
 
 -(void)setup {
 [self drawStyle:DISPLAYRATE];

@@ -1,22 +1,22 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
-CFAString *thingsToSay;
-CFAVoice *orator;
+C4String *thingsToSay;
+C4Voice *orator;
 
-@implementation CFACanvas
+@implementation C4Canvas
 
 -(void)setup {
-thingsToSay = [[CFAString stringWithString:
+thingsToSay = [[C4String stringWithString:
 @"The voice synthesizer can speak any sentence you give it."] retain];
-orator = [[[CFAVoice alloc] initWithVoice:RALPH] retain];
+orator = [[[C4Voice alloc] initWithVoice:RALPH] retain];
 
 [orator speak:thingsToSay];
 }

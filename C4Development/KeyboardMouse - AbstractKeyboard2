@@ -1,12 +1,12 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
 int max_height;
 int min_height;
@@ -18,15 +18,15 @@ int y;
 BOOL newLetter;
 int numChars;
 
-@implementation CFACanvas
+@implementation C4Canvas
 
 -(void)setup {
 [self drawStyle:EVENTBASED];
 [self windowWidth:400 andHeight:320];
 [self background:0];
 
-[CFAShape fill];
-[CFAShape noStroke];
+[C4Shape fill];
+[C4Shape noStroke];
 
 max_height = 20;
 min_height = 10;
@@ -48,10 +48,10 @@ characterIndex = character - 'a';
 letter_height = min_height;
 }
 
-int fill = [CFAMath constrain:characterIndex*10 min:0 max:255];
-[CFAShape fill:FLOAT_FROM_255(fill)];
+int fill = [C4Math constrain:characterIndex*10 min:0 max:255];
+[C4Shape fill:FLOAT_FROM_255(fill)];
 } else {
-[CFAShape fill:0];
+[C4Shape fill:0];
 letter_height = min_height;
 }
 
@@ -70,19 +70,19 @@ y = 0;
 int y_pos;
 if(letter_height == max_height) {
 y_pos = y;
-[CFAShape rectWithXPos:x 
+[C4Shape rectWithXPos:x 
 yPos:y_pos 
 width:letter_width
 andHeight:letter_height];
 } else {
 y_pos = y + min_height;
-[CFAShape rectWithXPos:x 
+[C4Shape rectWithXPos:x 
 yPos:y_pos 
 width:letter_width 
 andHeight:letter_height];
 
-[CFAShape fill:FLOAT_FROM_255(numChars/2)];
-[CFAShape rectWithXPos:x
+[C4Shape fill:FLOAT_FROM_255(numChars/2)];
+[C4Shape rectWithXPos:x
 yPos:y_pos-min_height 
 width:letter_width 
 andHeight:letter_height];

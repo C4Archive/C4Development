@@ -1,14 +1,14 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
-@implementation CFACanvas
+@implementation C4Canvas
 
 NSMutableArray *voices;
 NSMutableArray *thingsToSay;
@@ -16,28 +16,28 @@ NSMutableArray *thingsToSay;
 -(void)setup {
 [self drawStyle:DISPLAYRATE];
 voices = [[[NSMutableArray alloc] initWithCapacity:0] retain];
-[voices addObject:[[CFAVoice alloc] initWithVoice:AGNES]];
-[voices addObject:[[CFAVoice alloc] initWithVoice:ALBERT]];
-[voices addObject:[[CFAVoice alloc] initWithVoice:BADNEWS]];
-[voices addObject:[[CFAVoice alloc] initWithVoice:BAHH]];
-[voices addObject:[[CFAVoice alloc] initWithVoice:BELLS]];
-[voices addObject:[[CFAVoice alloc] initWithVoice:BOING]];
-[voices addObject:[[CFAVoice alloc] initWithVoice:BRUCE]];
-[voices addObject:[[CFAVoice alloc] initWithVoice:BUBBLES]];
-[voices addObject:[[CFAVoice alloc] initWithVoice:CELLOS]];
-[voices addObject:[[CFAVoice alloc] initWithVoice:FRED]];
-[voices addObject:[[CFAVoice alloc] initWithVoice:GOODNEWS]];
-[voices addObject:[[CFAVoice alloc] initWithVoice:HYSTERICAL]];
-[voices addObject:[[CFAVoice alloc] initWithVoice:JUNIOR]];
-[voices addObject:[[CFAVoice alloc] initWithVoice:KATHY]];
-[voices addObject:[[CFAVoice alloc] initWithVoice:ORGAN]];
-[voices addObject:[[CFAVoice alloc] initWithVoice:PRINCESS]];
-[voices addObject:[[CFAVoice alloc] initWithVoice:RALPH]];
-[voices addObject:[[CFAVoice alloc] initWithVoice:TRINOIDS]];
-[voices addObject:[[CFAVoice alloc] initWithVoice:VICKI]];
-[voices addObject:[[CFAVoice alloc] initWithVoice:VICTORIA]];
-[voices addObject:[[CFAVoice alloc] initWithVoice:WHISPER]];
-[voices addObject:[[CFAVoice alloc] initWithVoice:ZARVOX]];
+[voices addObject:[[C4Voice alloc] initWithVoice:AGNES]];
+[voices addObject:[[C4Voice alloc] initWithVoice:ALBERT]];
+[voices addObject:[[C4Voice alloc] initWithVoice:BADNEWS]];
+[voices addObject:[[C4Voice alloc] initWithVoice:BAHH]];
+[voices addObject:[[C4Voice alloc] initWithVoice:BELLS]];
+[voices addObject:[[C4Voice alloc] initWithVoice:BOING]];
+[voices addObject:[[C4Voice alloc] initWithVoice:BRUCE]];
+[voices addObject:[[C4Voice alloc] initWithVoice:BUBBLES]];
+[voices addObject:[[C4Voice alloc] initWithVoice:CELLOS]];
+[voices addObject:[[C4Voice alloc] initWithVoice:FRED]];
+[voices addObject:[[C4Voice alloc] initWithVoice:GOODNEWS]];
+[voices addObject:[[C4Voice alloc] initWithVoice:HYSTERICAL]];
+[voices addObject:[[C4Voice alloc] initWithVoice:JUNIOR]];
+[voices addObject:[[C4Voice alloc] initWithVoice:KATHY]];
+[voices addObject:[[C4Voice alloc] initWithVoice:ORGAN]];
+[voices addObject:[[C4Voice alloc] initWithVoice:PRINCESS]];
+[voices addObject:[[C4Voice alloc] initWithVoice:RALPH]];
+[voices addObject:[[C4Voice alloc] initWithVoice:TRINOIDS]];
+[voices addObject:[[C4Voice alloc] initWithVoice:VICKI]];
+[voices addObject:[[C4Voice alloc] initWithVoice:VICTORIA]];
+[voices addObject:[[C4Voice alloc] initWithVoice:WHISPER]];
+[voices addObject:[[C4Voice alloc] initWithVoice:ZARVOX]];
 
 thingsToSay = [[[NSMutableArray alloc] initWithCapacity:0] retain];
 [thingsToSay addObject:@"To be thus is nothing"];
@@ -70,8 +70,8 @@ thingsToSay = [[[NSMutableArray alloc] initWithCapacity:0] retain];
 
 
 -(void)draw {
-for(CFAVoice *v in voices) {
-NSInteger randomInteger = [CFAMath randomInt:[thingsToSay count]];
+for(C4Voice *v in voices) {
+NSInteger randomInteger = [C4Math randomInt:[thingsToSay count]];
 if(![v isSpeaking]) [v speak:[thingsToSay objectAtIndex:randomInteger]];
 }
 }

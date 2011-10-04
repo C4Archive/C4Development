@@ -16,20 +16,10 @@
 }
 
 - (void)awakeFromNib {
-	/* create instances of singletons */
-	cfaOpenGLView	= [[[CFAOpenGLView alloc] init] retain];
-	cfaDateTime		= [[[CFADateTime alloc] init] retain];
-	cfaFoundation	= [[[CFAFoundation alloc] init] retain];
-	cfaMath			= [[[CFAMath alloc] init] retain];
-	cfaShape		= [[[CFAShape alloc] init] retain];
-	cfaTransform	= [[[CFATransform alloc] init] retain];
-	cfaGlobalTypeAttributes = [[[CFAGlobalTypeAttributes alloc] init] retain];
-	cfaGlobalStringAttributes = [[[CFAGlobalStringAttributes alloc] init] retain];
-	cfaGlobalShapeAttributes = [[[CFAGlobalShapeAttributes alloc] init] retain];
 }
 
 -(void)applicationWillFinishLaunching:(NSNotification *)notification {
-	[cfaCanvas setupRect];
+	[_C4Canvas setupRect];
 }
 
 @end

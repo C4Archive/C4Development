@@ -1,30 +1,30 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
 float xOff;
 float xIncrement;
 
-@implementation CFACanvas
+@implementation C4Canvas
 -(void)setup {
 [self drawStyle:DISPLAYRATE];
 [self windowWidth:400 andHeight:320];
 xOff = 0.0f;
 xIncrement = 0.01f;
-[CFAShape fill:0.8];
-[CFAShape noStroke];
+[C4Shape fill:0.8];
+[C4Shape noStroke];
 }
 
 -(void)draw {
 [self background:0 alpha:0.1];
-float n = [CFANoise noiseX:xOff]*self.canvasWidth;
+float n = [C4Noise noiseX:xOff]*self.canvasWidth;
 xOff += xIncrement;
-[CFAShape ellipseWithXPos:n+self.canvasWidth/2 yPos:self.canvasHeight/2 width:16 andHeight:16];
+[C4Shape ellipseWithXPos:n+self.canvasWidth/2 yPos:self.canvasHeight/2 width:16 andHeight:16];
 }
 @end

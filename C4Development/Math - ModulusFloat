@@ -1,23 +1,23 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
 int num;
 double c;
 
-@implementation CFACanvas 
+@implementation C4Canvas 
 
 -(void)setup {
 [self drawStyle:DISPLAYRATE];
 [self windowWidth:400 andHeight:320];
-[CFAShape fill:1.0f];
-[CFAShape stroke:1.0f];
+[C4Shape fill:1.0f];
+[C4Shape stroke:1.0f];
 num = 20;
 c = 0;
 }
@@ -31,8 +31,8 @@ for(double i = 1; i < self.canvasHeight/num; i++){
 //since it works with only ints, so use fmodf() if you need
 //the following equation translates to (i%c)*i*i
 float x = fmodf(c,(float)i)*i*i; 
-[CFAShape lineFromX:0 Y:i*num toX:x Y:i*num];
-[CFAShape rectWithXPos:x yPos:i*num-num/2 width:8 andHeight:num];
+[C4Shape lineFromX:0 Y:i*num toX:x Y:i*num];
+[C4Shape rectWithXPos:x yPos:i*num-num/2 width:8 andHeight:num];
 }
 }
 

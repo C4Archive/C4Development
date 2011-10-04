@@ -1,5 +1,5 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface C4Path : CFAObject {
+@interface C4Path : C4Object {
 NSPoint points[0];
 NSPoint tempPoints[1000];
 NSInteger currentPointCount, totalPoints;
@@ -76,11 +76,11 @@ return currentPointCount;
 
 @end
 
-@interface CFACanvas (){}
+@interface C4Canvas (){}
 -(void)saveAndClearPath;
 @end
 
-@implementation CFACanvas
+@implementation C4Canvas
 
 NSMutableArray *sketch;
 C4Path *currentPath;
@@ -88,25 +88,25 @@ C4Path *currentPath;
 -(void)setup {
 [self drawStyle:EVENTBASED];
 [self windowWidth:800 andHeight:600];
-[CFAShape stroke:0 alpha:0.5];
-[CFAShape noFill];
-[CFAShape strokeWidth:10];
-[CFAShape strokeCapMode:CAPROUND];
-[CFAShape strokeJoinMode:JOINROUND];
+[C4Shape stroke:0 alpha:0.5];
+[C4Shape noFill];
+[C4Shape strokeWidth:10];
+[C4Shape strokeCapMode:CAPROUND];
+[C4Shape strokeJoinMode:JOINROUND];
 sketch = [[[NSMutableArray alloc] initWithCapacity:0] retain];
 }
 
 -(void)draw {
 [self background:1];
 for(C4Path *path in sketch) {
-[CFAShape beginShape];
-[CFAShape vertices:[path allPoints] length:[path totalPointCount]];
-[CFAShape endShape];
+[C4Shape beginShape];
+[C4Shape vertices:[path allPoints] length:[path totalPointCount]];
+[C4Shape endShape];
 }
 if(currentPath != nil && [currentPath totalPointCount] > 1) {
-[CFAShape beginShape];
-[CFAShape vertices:[currentPath allPoints] length:[currentPath totalPointCount]];
-[CFAShape endShape];
+[C4Shape beginShape];
+[C4Shape vertices:[currentPath allPoints] length:[currentPath totalPointCount]];
+[C4Shape endShape];
 }
 }
 
@@ -119,7 +119,7 @@ currentPath = [[[C4Path alloc] init] retain];
 
 -(void)mouseDragged {
 if(currentPath != nil) {
-if([CFAVector distanceBetweenA:[currentPath currentPoint] andB:mousePos] > 0.0)           
+if([C4Vector distanceBetweenA:[currentPath currentPoint] andB:mousePos] > 0.0)           
 [currentPath addPoint:mousePos];
 }
 }

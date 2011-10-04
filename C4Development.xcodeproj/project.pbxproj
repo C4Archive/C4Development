@@ -21,39 +21,41 @@
 		ED6604651437CA67003881DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED6604631437CA67003881DA /* InfoPlist.strings */; };
 		ED6604691437CA67003881DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604681437CA67003881DA /* main.m */; };
 		ED66046C1437CA67003881DA /* C4DevelopmentAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED66046B1437CA67003881DA /* C4DevelopmentAppDelegate.m */; };
-		ED6604701437CA67003881DA /* CFACanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = ED66046F1437CA67003881DA /* CFACanvas.m */; };
-		ED6604731437CA67003881DA /* CFAColor.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604721437CA67003881DA /* CFAColor.m */; };
-		ED6604761437CA67003881DA /* CFADateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604751437CA67003881DA /* CFADateTime.m */; };
-		ED66047A1437CA67003881DA /* CFAFont.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604791437CA67003881DA /* CFAFont.m */; };
-		ED66047D1437CA67003881DA /* CFAFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = ED66047C1437CA67003881DA /* CFAFoundation.m */; };
-		ED6604801437CA67003881DA /* CFAGlobalShapeAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = ED66047F1437CA67003881DA /* CFAGlobalShapeAttributes.m */; };
-		ED6604831437CA67003881DA /* CFAGlobalTypeAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604821437CA67003881DA /* CFAGlobalTypeAttributes.m */; };
-		ED6604861437CA67003881DA /* CFAGlobalStringAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604851437CA67003881DA /* CFAGlobalStringAttributes.m */; };
-		ED6604891437CA67003881DA /* CFAGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604881437CA67003881DA /* CFAGradient.m */; };
-		ED66048C1437CA67003881DA /* CFAImage.m in Sources */ = {isa = PBXBuildFile; fileRef = ED66048B1437CA67003881DA /* CFAImage.m */; };
-		ED6604901437CA67003881DA /* CFAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = ED66048F1437CA67003881DA /* CFAMath.m */; };
-		ED6604931437CA67003881DA /* CFAMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604921437CA67003881DA /* CFAMovie.m */; };
-		ED6604961437CA67003881DA /* CFANoise.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604951437CA67003881DA /* CFANoise.m */; };
-		ED6604991437CA67003881DA /* CFAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604981437CA67003881DA /* CFAObject.m */; };
-		ED66049C1437CA67003881DA /* CFAOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED66049B1437CA67003881DA /* CFAOpenGLView.m */; };
-		ED66049F1437CA67003881DA /* CFAQuartz.m in Sources */ = {isa = PBXBuildFile; fileRef = ED66049E1437CA67003881DA /* CFAQuartz.m */; };
-		ED6604A21437CA67003881DA /* CFAShape.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604A11437CA67003881DA /* CFAShape.m */; };
-		ED6604A51437CA67003881DA /* CFASound.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604A41437CA67003881DA /* CFASound.m */; };
-		ED6604A81437CA67003881DA /* CFAString.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604A71437CA67003881DA /* CFAString.m */; };
-		ED6604AB1437CA67003881DA /* CFATransform.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604AA1437CA67003881DA /* CFATransform.m */; };
-		ED6604AE1437CA68003881DA /* CFAVector.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604AD1437CA68003881DA /* CFAVector.m */; };
-		ED6604B11437CA68003881DA /* CFAVoice.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6604B01437CA68003881DA /* CFAVoice.m */; };
-		ED6604B51437CA68003881DA /* C4.mov in Resources */ = {isa = PBXBuildFile; fileRef = ED6604B41437CA68003881DA /* C4.mov */; };
-		ED6604B81437CA68003881DA /* C4Black.png in Resources */ = {isa = PBXBuildFile; fileRef = ED6604B71437CA68003881DA /* C4Black.png */; };
-		ED6604BA1437CA68003881DA /* C4Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = ED6604B91437CA68003881DA /* C4Blue.png */; };
-		ED6604BC1437CA68003881DA /* C4Orange.png in Resources */ = {isa = PBXBuildFile; fileRef = ED6604BB1437CA68003881DA /* C4Orange.png */; };
-		ED6604BE1437CA68003881DA /* C4Red.png in Resources */ = {isa = PBXBuildFile; fileRef = ED6604BD1437CA68003881DA /* C4Red.png */; };
-		ED6604C01437CA68003881DA /* C4Sky.png in Resources */ = {isa = PBXBuildFile; fileRef = ED6604BF1437CA68003881DA /* C4Sky.png */; };
-		ED6604C21437CA68003881DA /* C4Wood.png in Resources */ = {isa = PBXBuildFile; fileRef = ED6604C11437CA68003881DA /* C4Wood.png */; };
-		ED6604C41437CA68003881DA /* loop.aif in Resources */ = {isa = PBXBuildFile; fileRef = ED6604C31437CA68003881DA /* loop.aif */; };
 		ED6605551437CA68003881DA /* C4Development.icns in Resources */ = {isa = PBXBuildFile; fileRef = ED6605531437CA68003881DA /* C4Development.icns */; };
 		ED6605581437CA69003881DA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = ED6605561437CA68003881DA /* Credits.rtf */; };
 		ED66055B1437CA69003881DA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6605591437CA69003881DA /* MainMenu.xib */; };
+		EDA5BEAA143BA0260007782C /* KeyboardMouse - StoringMouseCoords in Resources */ = {isa = PBXBuildFile; fileRef = EDA5BEA9143BA0160007782C /* KeyboardMouse - StoringMouseCoords */; };
+		EDBF18AA143B7ACE0004DAF5 /* C4.mov in Resources */ = {isa = PBXBuildFile; fileRef = EDBF18A1143B7ACE0004DAF5 /* C4.mov */; };
+		EDBF18AB143B7ACE0004DAF5 /* C4.qtz in Resources */ = {isa = PBXBuildFile; fileRef = EDBF18A2143B7ACE0004DAF5 /* C4.qtz */; };
+		EDBF18AC143B7ACE0004DAF5 /* C4Black.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBF18A3143B7ACE0004DAF5 /* C4Black.png */; };
+		EDBF18AD143B7ACE0004DAF5 /* C4Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBF18A4143B7ACE0004DAF5 /* C4Blue.png */; };
+		EDBF18AE143B7ACE0004DAF5 /* C4Orange.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBF18A5143B7ACE0004DAF5 /* C4Orange.png */; };
+		EDBF18AF143B7ACE0004DAF5 /* C4Red.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBF18A6143B7ACE0004DAF5 /* C4Red.png */; };
+		EDBF18B0143B7ACE0004DAF5 /* C4Sky.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBF18A7143B7ACE0004DAF5 /* C4Sky.png */; };
+		EDBF18B1143B7ACE0004DAF5 /* C4Wood.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBF18A8143B7ACE0004DAF5 /* C4Wood.png */; };
+		EDBF18B2143B7ACE0004DAF5 /* loop.aif in Resources */ = {isa = PBXBuildFile; fileRef = EDBF18A9143B7ACE0004DAF5 /* loop.aif */; };
+		EDBF18E1143B7AD90004DAF5 /* C4Canvas.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18B4143B7AD90004DAF5 /* C4Canvas.m */; };
+		EDBF18E2143B7AD90004DAF5 /* C4Color.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18B6143B7AD90004DAF5 /* C4Color.m */; };
+		EDBF18E3143B7AD90004DAF5 /* C4DateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18B8143B7AD90004DAF5 /* C4DateTime.m */; };
+		EDBF18E4143B7AD90004DAF5 /* C4Font.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18BB143B7AD90004DAF5 /* C4Font.m */; };
+		EDBF18E5143B7AD90004DAF5 /* C4Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18BD143B7AD90004DAF5 /* C4Foundation.m */; };
+		EDBF18E6143B7AD90004DAF5 /* C4GlobalShapeAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18BF143B7AD90004DAF5 /* C4GlobalShapeAttributes.m */; };
+		EDBF18E7143B7AD90004DAF5 /* C4GlobalStringAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18C1143B7AD90004DAF5 /* C4GlobalStringAttributes.m */; };
+		EDBF18E8143B7AD90004DAF5 /* C4GlobalTypeAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18C3143B7AD90004DAF5 /* C4GlobalTypeAttributes.m */; };
+		EDBF18E9143B7AD90004DAF5 /* C4Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18C5143B7AD90004DAF5 /* C4Gradient.m */; };
+		EDBF18EA143B7AD90004DAF5 /* C4Image.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18C7143B7AD90004DAF5 /* C4Image.m */; };
+		EDBF18EB143B7AD90004DAF5 /* C4Math.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18CA143B7AD90004DAF5 /* C4Math.m */; };
+		EDBF18EC143B7AD90004DAF5 /* C4Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18CC143B7AD90004DAF5 /* C4Movie.m */; };
+		EDBF18ED143B7AD90004DAF5 /* C4Noise.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18CE143B7AD90004DAF5 /* C4Noise.m */; };
+		EDBF18EE143B7AD90004DAF5 /* C4Object.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18D0143B7AD90004DAF5 /* C4Object.m */; };
+		EDBF18EF143B7AD90004DAF5 /* C4OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18D2143B7AD90004DAF5 /* C4OpenGLView.m */; };
+		EDBF18F0143B7AD90004DAF5 /* C4Quartz.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18D4143B7AD90004DAF5 /* C4Quartz.m */; };
+		EDBF18F1143B7AD90004DAF5 /* C4Shape.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18D6143B7AD90004DAF5 /* C4Shape.m */; };
+		EDBF18F2143B7AD90004DAF5 /* C4Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18D8143B7AD90004DAF5 /* C4Sound.m */; };
+		EDBF18F3143B7AD90004DAF5 /* C4String.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18DA143B7AD90004DAF5 /* C4String.m */; };
+		EDBF18F4143B7AD90004DAF5 /* C4Transform.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18DC143B7AD90004DAF5 /* C4Transform.m */; };
+		EDBF18F5143B7AD90004DAF5 /* C4Vector.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18DE143B7AD90004DAF5 /* C4Vector.m */; };
+		EDBF18F6143B7AD90004DAF5 /* C4Voice.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF18E0143B7AD90004DAF5 /* C4Voice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,64 +77,8 @@
 		ED6604681437CA67003881DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED66046A1437CA67003881DA /* C4DevelopmentAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = C4DevelopmentAppDelegate.h; sourceTree = "<group>"; };
 		ED66046B1437CA67003881DA /* C4DevelopmentAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = C4DevelopmentAppDelegate.m; sourceTree = "<group>"; };
-		ED66046E1437CA67003881DA /* CFACanvas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFACanvas.h; path = "en.lproj/C4A Source/CFACanvas.h"; sourceTree = "<group>"; };
-		ED66046F1437CA67003881DA /* CFACanvas.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFACanvas.m; path = "en.lproj/C4A Source/CFACanvas.m"; sourceTree = "<group>"; };
-		ED6604711437CA67003881DA /* CFAColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAColor.h; path = "en.lproj/C4A Source/CFAColor.h"; sourceTree = "<group>"; };
-		ED6604721437CA67003881DA /* CFAColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAColor.m; path = "en.lproj/C4A Source/CFAColor.m"; sourceTree = "<group>"; };
-		ED6604741437CA67003881DA /* CFADateTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFADateTime.h; path = "en.lproj/C4A Source/CFADateTime.h"; sourceTree = "<group>"; };
-		ED6604751437CA67003881DA /* CFADateTime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFADateTime.m; path = "en.lproj/C4A Source/CFADateTime.m"; sourceTree = "<group>"; };
-		ED6604771437CA67003881DA /* CFADefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFADefines.h; path = "en.lproj/C4A Source/CFADefines.h"; sourceTree = "<group>"; };
-		ED6604781437CA67003881DA /* CFAFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAFont.h; path = "en.lproj/C4A Source/CFAFont.h"; sourceTree = "<group>"; };
-		ED6604791437CA67003881DA /* CFAFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAFont.m; path = "en.lproj/C4A Source/CFAFont.m"; sourceTree = "<group>"; };
-		ED66047B1437CA67003881DA /* CFAFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAFoundation.h; path = "en.lproj/C4A Source/CFAFoundation.h"; sourceTree = "<group>"; };
-		ED66047C1437CA67003881DA /* CFAFoundation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAFoundation.m; path = "en.lproj/C4A Source/CFAFoundation.m"; sourceTree = "<group>"; };
-		ED66047E1437CA67003881DA /* CFAGlobalShapeAttributes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAGlobalShapeAttributes.h; path = "en.lproj/C4A Source/CFAGlobalShapeAttributes.h"; sourceTree = "<group>"; };
-		ED66047F1437CA67003881DA /* CFAGlobalShapeAttributes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAGlobalShapeAttributes.m; path = "en.lproj/C4A Source/CFAGlobalShapeAttributes.m"; sourceTree = "<group>"; };
-		ED6604811437CA67003881DA /* CFAGlobalTypeAttributes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAGlobalTypeAttributes.h; path = "en.lproj/C4A Source/CFAGlobalTypeAttributes.h"; sourceTree = "<group>"; };
-		ED6604821437CA67003881DA /* CFAGlobalTypeAttributes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAGlobalTypeAttributes.m; path = "en.lproj/C4A Source/CFAGlobalTypeAttributes.m"; sourceTree = "<group>"; };
-		ED6604841437CA67003881DA /* CFAGlobalStringAttributes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAGlobalStringAttributes.h; path = "en.lproj/C4A Source/CFAGlobalStringAttributes.h"; sourceTree = "<group>"; };
-		ED6604851437CA67003881DA /* CFAGlobalStringAttributes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAGlobalStringAttributes.m; path = "en.lproj/C4A Source/CFAGlobalStringAttributes.m"; sourceTree = "<group>"; };
-		ED6604871437CA67003881DA /* CFAGradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAGradient.h; path = "en.lproj/C4A Source/CFAGradient.h"; sourceTree = "<group>"; };
-		ED6604881437CA67003881DA /* CFAGradient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAGradient.m; path = "en.lproj/C4A Source/CFAGradient.m"; sourceTree = "<group>"; };
-		ED66048A1437CA67003881DA /* CFAImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAImage.h; path = "en.lproj/C4A Source/CFAImage.h"; sourceTree = "<group>"; };
-		ED66048B1437CA67003881DA /* CFAImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAImage.m; path = "en.lproj/C4A Source/CFAImage.m"; sourceTree = "<group>"; };
-		ED66048D1437CA67003881DA /* CFAImports.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAImports.h; path = "en.lproj/C4A Source/CFAImports.h"; sourceTree = "<group>"; };
-		ED66048E1437CA67003881DA /* CFAMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAMath.h; path = "en.lproj/C4A Source/CFAMath.h"; sourceTree = "<group>"; };
-		ED66048F1437CA67003881DA /* CFAMath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAMath.m; path = "en.lproj/C4A Source/CFAMath.m"; sourceTree = "<group>"; };
-		ED6604911437CA67003881DA /* CFAMovie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAMovie.h; path = "en.lproj/C4A Source/CFAMovie.h"; sourceTree = "<group>"; };
-		ED6604921437CA67003881DA /* CFAMovie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAMovie.m; path = "en.lproj/C4A Source/CFAMovie.m"; sourceTree = "<group>"; };
-		ED6604941437CA67003881DA /* CFANoise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFANoise.h; path = "en.lproj/C4A Source/CFANoise.h"; sourceTree = "<group>"; };
-		ED6604951437CA67003881DA /* CFANoise.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFANoise.m; path = "en.lproj/C4A Source/CFANoise.m"; sourceTree = "<group>"; };
-		ED6604971437CA67003881DA /* CFAObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAObject.h; path = "en.lproj/C4A Source/CFAObject.h"; sourceTree = "<group>"; };
-		ED6604981437CA67003881DA /* CFAObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAObject.m; path = "en.lproj/C4A Source/CFAObject.m"; sourceTree = "<group>"; };
-		ED66049A1437CA67003881DA /* CFAOpenGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAOpenGLView.h; path = "en.lproj/C4A Source/CFAOpenGLView.h"; sourceTree = "<group>"; };
-		ED66049B1437CA67003881DA /* CFAOpenGLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAOpenGLView.m; path = "en.lproj/C4A Source/CFAOpenGLView.m"; sourceTree = "<group>"; };
-		ED66049D1437CA67003881DA /* CFAQuartz.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAQuartz.h; path = "en.lproj/C4A Source/CFAQuartz.h"; sourceTree = "<group>"; };
-		ED66049E1437CA67003881DA /* CFAQuartz.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAQuartz.m; path = "en.lproj/C4A Source/CFAQuartz.m"; sourceTree = "<group>"; };
-		ED6604A01437CA67003881DA /* CFAShape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAShape.h; path = "en.lproj/C4A Source/CFAShape.h"; sourceTree = "<group>"; };
-		ED6604A11437CA67003881DA /* CFAShape.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAShape.m; path = "en.lproj/C4A Source/CFAShape.m"; sourceTree = "<group>"; };
-		ED6604A31437CA67003881DA /* CFASound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFASound.h; path = "en.lproj/C4A Source/CFASound.h"; sourceTree = "<group>"; };
-		ED6604A41437CA67003881DA /* CFASound.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFASound.m; path = "en.lproj/C4A Source/CFASound.m"; sourceTree = "<group>"; };
-		ED6604A61437CA67003881DA /* CFAString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAString.h; path = "en.lproj/C4A Source/CFAString.h"; sourceTree = "<group>"; };
-		ED6604A71437CA67003881DA /* CFAString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAString.m; path = "en.lproj/C4A Source/CFAString.m"; sourceTree = "<group>"; };
-		ED6604A91437CA67003881DA /* CFATransform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFATransform.h; path = "en.lproj/C4A Source/CFATransform.h"; sourceTree = "<group>"; };
-		ED6604AA1437CA67003881DA /* CFATransform.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFATransform.m; path = "en.lproj/C4A Source/CFATransform.m"; sourceTree = "<group>"; };
-		ED6604AC1437CA67003881DA /* CFAVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAVector.h; path = "en.lproj/C4A Source/CFAVector.h"; sourceTree = "<group>"; };
-		ED6604AD1437CA68003881DA /* CFAVector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAVector.m; path = "en.lproj/C4A Source/CFAVector.m"; sourceTree = "<group>"; };
-		ED6604AF1437CA68003881DA /* CFAVoice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CFAVoice.h; path = "en.lproj/C4A Source/CFAVoice.h"; sourceTree = "<group>"; };
-		ED6604B01437CA68003881DA /* CFAVoice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CFAVoice.m; path = "en.lproj/C4A Source/CFAVoice.m"; sourceTree = "<group>"; };
-		ED6604B21437CA68003881DA /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Singleton.h; path = "en.lproj/C4A Source/Singleton.h"; sourceTree = "<group>"; };
-		ED6604B41437CA68003881DA /* C4.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = C4.mov; path = "en.lproj/C4A Media/C4.mov"; sourceTree = "<group>"; };
-		ED6604B61437CA68003881DA /* C4.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; name = C4.qtz; path = "en.lproj/C4A Media/C4.qtz"; sourceTree = "<group>"; };
-		ED6604B71437CA68003881DA /* C4Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Black.png; path = "en.lproj/C4A Media/C4Black.png"; sourceTree = "<group>"; };
-		ED6604B91437CA68003881DA /* C4Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Blue.png; path = "en.lproj/C4A Media/C4Blue.png"; sourceTree = "<group>"; };
-		ED6604BB1437CA68003881DA /* C4Orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Orange.png; path = "en.lproj/C4A Media/C4Orange.png"; sourceTree = "<group>"; };
-		ED6604BD1437CA68003881DA /* C4Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Red.png; path = "en.lproj/C4A Media/C4Red.png"; sourceTree = "<group>"; };
-		ED6604BF1437CA68003881DA /* C4Sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Sky.png; path = "en.lproj/C4A Media/C4Sky.png"; sourceTree = "<group>"; };
-		ED6604C11437CA68003881DA /* C4Wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Wood.png; path = "en.lproj/C4A Media/C4Wood.png"; sourceTree = "<group>"; };
-		ED6604C31437CA68003881DA /* loop.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = loop.aif; path = "en.lproj/C4A Media/loop.aif"; sourceTree = "<group>"; };
-		ED6604C61437CA68003881DA /* Advanced - EveryLetterEveryFont */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Advanced - EveryLetterEveryFont"; sourceTree = "<group>"; };
-		ED6604C71437CA68003881DA /* Advanced - Kandinskyish */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Advanced - Kandinskyish"; sourceTree = "<group>"; };
+		ED6604C61437CA68003881DA /* Advanced - EveryLetterEveryFont */ = {isa = PBXFileReference; lastKnownFileType = text; lineEnding = 0; path = "Advanced - EveryLetterEveryFont"; sourceTree = "<group>"; };
+		ED6604C71437CA68003881DA /* Advanced - Kandinskyish */ = {isa = PBXFileReference; lastKnownFileType = text; lineEnding = 0; path = "Advanced - Kandinskyish"; sourceTree = "<group>"; };
 		ED6604C81437CA68003881DA /* Advanced - Oscillator */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Advanced - Oscillator"; sourceTree = "<group>"; };
 		ED6604C91437CA68003881DA /* Advanced - SketchPad */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Advanced - SketchPad"; sourceTree = "<group>"; };
 		ED6604CA1437CA68003881DA /* Advanced - StoringInputAdvanced */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Advanced - StoringInputAdvanced"; sourceTree = "<group>"; };
@@ -142,7 +88,6 @@
 		ED6604CE1437CA68003881DA /* Arrays - MutableArrays */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Arrays - MutableArrays"; sourceTree = "<group>"; };
 		ED6604CF1437CA68003881DA /* Arrays - ObjectArray1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Arrays - ObjectArray1D"; sourceTree = "<group>"; };
 		ED6604D01437CA68003881DA /* Arrays - ObjectArray2D */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Arrays - ObjectArray2D"; sourceTree = "<group>"; };
-		ED6604D11437CA68003881DA /* Arrays - ObjectArrays */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Arrays - ObjectArrays"; sourceTree = "<group>"; };
 		ED6604D21437CA68003881DA /* Basics - Animated */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Basics - Animated"; sourceTree = "<group>"; };
 		ED6604D31437CA68003881DA /* Basics - Coordinates */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Basics - Coordinates"; sourceTree = "<group>"; };
 		ED6604D41437CA68003881DA /* Basics - CustomMethods */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Basics - CustomMethods"; sourceTree = "<group>"; };
@@ -212,16 +157,6 @@
 		ED6605141437CA68003881DA /* KeyboardMouse - Mouse2D */ = {isa = PBXFileReference; lastKnownFileType = text; path = "KeyboardMouse - Mouse2D"; sourceTree = "<group>"; };
 		ED6605151437CA68003881DA /* KeyboardMouse - MouseMethods */ = {isa = PBXFileReference; lastKnownFileType = text; path = "KeyboardMouse - MouseMethods"; sourceTree = "<group>"; };
 		ED6605161437CA68003881DA /* KeyboardMouse - MouseSignals */ = {isa = PBXFileReference; lastKnownFileType = text; path = "KeyboardMouse - MouseSignals"; sourceTree = "<group>"; };
-		ED6605181437CA68003881DA /* AbstractKeyboard1 */ = {isa = PBXFileReference; lastKnownFileType = text; path = AbstractKeyboard1; sourceTree = "<group>"; };
-		ED6605191437CA68003881DA /* AbstractKeyboard2 */ = {isa = PBXFileReference; lastKnownFileType = text; path = AbstractKeyboard2; sourceTree = "<group>"; };
-		ED66051A1437CA68003881DA /* ConstantType */ = {isa = PBXFileReference; lastKnownFileType = text; path = ConstantType; sourceTree = "<group>"; };
-		ED66051B1437CA68003881DA /* ConstrainedCircle */ = {isa = PBXFileReference; lastKnownFileType = text; path = ConstrainedCircle; sourceTree = "<group>"; };
-		ED66051C1437CA68003881DA /* EasingCircle */ = {isa = PBXFileReference; lastKnownFileType = text; path = EasingCircle; sourceTree = "<group>"; };
-		ED66051D1437CA68003881DA /* Mouse1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = Mouse1D; sourceTree = "<group>"; };
-		ED66051E1437CA68003881DA /* Mouse2D */ = {isa = PBXFileReference; lastKnownFileType = text; path = Mouse2D; sourceTree = "<group>"; };
-		ED66051F1437CA68003881DA /* MouseMethods */ = {isa = PBXFileReference; lastKnownFileType = text; path = MouseMethods; sourceTree = "<group>"; };
-		ED6605201437CA68003881DA /* MouseSignals */ = {isa = PBXFileReference; lastKnownFileType = text; path = MouseSignals; sourceTree = "<group>"; };
-		ED6605211437CA68003881DA /* StoringMouseCoords */ = {isa = PBXFileReference; lastKnownFileType = folder; name = StoringMouseCoords; sourceTree = "<group>"; };
 		ED6605221437CA68003881DA /* Math - Distance1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Math - Distance1D"; sourceTree = "<group>"; };
 		ED6605231437CA68003881DA /* Math - DoubleRandom */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Math - DoubleRandom"; sourceTree = "<group>"; };
 		ED6605241437CA68003881DA /* Math - IncrementDecrement */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Math - IncrementDecrement"; sourceTree = "<group>"; };
@@ -249,7 +184,6 @@
 		ED66053A1437CA68003881DA /* Objects - MouseTracker */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Objects - MouseTracker"; sourceTree = "<group>"; };
 		ED66053B1437CA68003881DA /* Objects - ObjectUpdate */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Objects - ObjectUpdate"; sourceTree = "<group>"; };
 		ED66053C1437CA68003881DA /* OpenGL - SimpleGL */ = {isa = PBXFileReference; lastKnownFileType = text; path = "OpenGL - SimpleGL"; sourceTree = "<group>"; };
-		ED66053D1437CA68003881DA /* Shapes - BlackWhiteCircles */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Shapes - BlackWhiteCircles"; sourceTree = "<group>"; };
 		ED66053E1437CA68003881DA /* Shapes - DrawingAnAlien */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Shapes - DrawingAnAlien"; sourceTree = "<group>"; };
 		ED66053F1437CA68003881DA /* Shapes - PieChart */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Shapes - PieChart"; sourceTree = "<group>"; };
 		ED6605401437CA68003881DA /* Shapes - PointsAndLines */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Shapes - PointsAndLines"; sourceTree = "<group>"; };
@@ -274,6 +208,62 @@
 		ED6605541437CA68003881DA /* en */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = en; path = en.lproj/C4Development.icns; sourceTree = "<group>"; };
 		ED6605571437CA69003881DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		ED66055A1437CA69003881DA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		EDA5BEA9143BA0160007782C /* KeyboardMouse - StoringMouseCoords */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KeyboardMouse - StoringMouseCoords"; sourceTree = "<group>"; };
+		EDBF18A1143B7ACE0004DAF5 /* C4.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = C4.mov; path = "en.lproj/C4 Media/C4.mov"; sourceTree = "<group>"; };
+		EDBF18A2143B7ACE0004DAF5 /* C4.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; name = C4.qtz; path = "en.lproj/C4 Media/C4.qtz"; sourceTree = "<group>"; };
+		EDBF18A3143B7ACE0004DAF5 /* C4Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Black.png; path = "en.lproj/C4 Media/C4Black.png"; sourceTree = "<group>"; };
+		EDBF18A4143B7ACE0004DAF5 /* C4Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Blue.png; path = "en.lproj/C4 Media/C4Blue.png"; sourceTree = "<group>"; };
+		EDBF18A5143B7ACE0004DAF5 /* C4Orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Orange.png; path = "en.lproj/C4 Media/C4Orange.png"; sourceTree = "<group>"; };
+		EDBF18A6143B7ACE0004DAF5 /* C4Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Red.png; path = "en.lproj/C4 Media/C4Red.png"; sourceTree = "<group>"; };
+		EDBF18A7143B7ACE0004DAF5 /* C4Sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Sky.png; path = "en.lproj/C4 Media/C4Sky.png"; sourceTree = "<group>"; };
+		EDBF18A8143B7ACE0004DAF5 /* C4Wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = C4Wood.png; path = "en.lproj/C4 Media/C4Wood.png"; sourceTree = "<group>"; };
+		EDBF18A9143B7ACE0004DAF5 /* loop.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = loop.aif; path = "en.lproj/C4 Media/loop.aif"; sourceTree = "<group>"; };
+		EDBF18B3143B7AD90004DAF5 /* C4Canvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4Canvas.h; path = "en.lproj/C4 Source/C4Canvas.h"; sourceTree = "<group>"; };
+		EDBF18B4143B7AD90004DAF5 /* C4Canvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4Canvas.m; path = "en.lproj/C4 Source/C4Canvas.m"; sourceTree = "<group>"; };
+		EDBF18B5143B7AD90004DAF5 /* C4Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4Color.h; path = "en.lproj/C4 Source/C4Color.h"; sourceTree = "<group>"; };
+		EDBF18B6143B7AD90004DAF5 /* C4Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4Color.m; path = "en.lproj/C4 Source/C4Color.m"; sourceTree = "<group>"; };
+		EDBF18B7143B7AD90004DAF5 /* C4DateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4DateTime.h; path = "en.lproj/C4 Source/C4DateTime.h"; sourceTree = "<group>"; };
+		EDBF18B8143B7AD90004DAF5 /* C4DateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4DateTime.m; path = "en.lproj/C4 Source/C4DateTime.m"; sourceTree = "<group>"; };
+		EDBF18B9143B7AD90004DAF5 /* C4Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4Defines.h; path = "en.lproj/C4 Source/C4Defines.h"; sourceTree = "<group>"; };
+		EDBF18BA143B7AD90004DAF5 /* C4Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4Font.h; path = "en.lproj/C4 Source/C4Font.h"; sourceTree = "<group>"; };
+		EDBF18BB143B7AD90004DAF5 /* C4Font.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4Font.m; path = "en.lproj/C4 Source/C4Font.m"; sourceTree = "<group>"; };
+		EDBF18BC143B7AD90004DAF5 /* C4Foundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4Foundation.h; path = "en.lproj/C4 Source/C4Foundation.h"; sourceTree = "<group>"; };
+		EDBF18BD143B7AD90004DAF5 /* C4Foundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4Foundation.m; path = "en.lproj/C4 Source/C4Foundation.m"; sourceTree = "<group>"; };
+		EDBF18BE143B7AD90004DAF5 /* C4GlobalShapeAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4GlobalShapeAttributes.h; path = "en.lproj/C4 Source/C4GlobalShapeAttributes.h"; sourceTree = "<group>"; };
+		EDBF18BF143B7AD90004DAF5 /* C4GlobalShapeAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4GlobalShapeAttributes.m; path = "en.lproj/C4 Source/C4GlobalShapeAttributes.m"; sourceTree = "<group>"; };
+		EDBF18C0143B7AD90004DAF5 /* C4GlobalStringAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4GlobalStringAttributes.h; path = "en.lproj/C4 Source/C4GlobalStringAttributes.h"; sourceTree = "<group>"; };
+		EDBF18C1143B7AD90004DAF5 /* C4GlobalStringAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4GlobalStringAttributes.m; path = "en.lproj/C4 Source/C4GlobalStringAttributes.m"; sourceTree = "<group>"; };
+		EDBF18C2143B7AD90004DAF5 /* C4GlobalTypeAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4GlobalTypeAttributes.h; path = "en.lproj/C4 Source/C4GlobalTypeAttributes.h"; sourceTree = "<group>"; };
+		EDBF18C3143B7AD90004DAF5 /* C4GlobalTypeAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4GlobalTypeAttributes.m; path = "en.lproj/C4 Source/C4GlobalTypeAttributes.m"; sourceTree = "<group>"; };
+		EDBF18C4143B7AD90004DAF5 /* C4Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4Gradient.h; path = "en.lproj/C4 Source/C4Gradient.h"; sourceTree = "<group>"; };
+		EDBF18C5143B7AD90004DAF5 /* C4Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4Gradient.m; path = "en.lproj/C4 Source/C4Gradient.m"; sourceTree = "<group>"; };
+		EDBF18C6143B7AD90004DAF5 /* C4Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4Image.h; path = "en.lproj/C4 Source/C4Image.h"; sourceTree = "<group>"; };
+		EDBF18C7143B7AD90004DAF5 /* C4Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4Image.m; path = "en.lproj/C4 Source/C4Image.m"; sourceTree = "<group>"; };
+		EDBF18C8143B7AD90004DAF5 /* C4Imports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4Imports.h; path = "en.lproj/C4 Source/C4Imports.h"; sourceTree = "<group>"; };
+		EDBF18C9143B7AD90004DAF5 /* C4Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4Math.h; path = "en.lproj/C4 Source/C4Math.h"; sourceTree = "<group>"; };
+		EDBF18CA143B7AD90004DAF5 /* C4Math.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4Math.m; path = "en.lproj/C4 Source/C4Math.m"; sourceTree = "<group>"; };
+		EDBF18CB143B7AD90004DAF5 /* C4Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4Movie.h; path = "en.lproj/C4 Source/C4Movie.h"; sourceTree = "<group>"; };
+		EDBF18CC143B7AD90004DAF5 /* C4Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4Movie.m; path = "en.lproj/C4 Source/C4Movie.m"; sourceTree = "<group>"; };
+		EDBF18CD143B7AD90004DAF5 /* C4Noise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4Noise.h; path = "en.lproj/C4 Source/C4Noise.h"; sourceTree = "<group>"; };
+		EDBF18CE143B7AD90004DAF5 /* C4Noise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4Noise.m; path = "en.lproj/C4 Source/C4Noise.m"; sourceTree = "<group>"; };
+		EDBF18CF143B7AD90004DAF5 /* C4Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4Object.h; path = "en.lproj/C4 Source/C4Object.h"; sourceTree = "<group>"; };
+		EDBF18D0143B7AD90004DAF5 /* C4Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4Object.m; path = "en.lproj/C4 Source/C4Object.m"; sourceTree = "<group>"; };
+		EDBF18D1143B7AD90004DAF5 /* C4OpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4OpenGLView.h; path = "en.lproj/C4 Source/C4OpenGLView.h"; sourceTree = "<group>"; };
+		EDBF18D2143B7AD90004DAF5 /* C4OpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4OpenGLView.m; path = "en.lproj/C4 Source/C4OpenGLView.m"; sourceTree = "<group>"; };
+		EDBF18D3143B7AD90004DAF5 /* C4Quartz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4Quartz.h; path = "en.lproj/C4 Source/C4Quartz.h"; sourceTree = "<group>"; };
+		EDBF18D4143B7AD90004DAF5 /* C4Quartz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4Quartz.m; path = "en.lproj/C4 Source/C4Quartz.m"; sourceTree = "<group>"; };
+		EDBF18D5143B7AD90004DAF5 /* C4Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4Shape.h; path = "en.lproj/C4 Source/C4Shape.h"; sourceTree = "<group>"; };
+		EDBF18D6143B7AD90004DAF5 /* C4Shape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4Shape.m; path = "en.lproj/C4 Source/C4Shape.m"; sourceTree = "<group>"; };
+		EDBF18D7143B7AD90004DAF5 /* C4Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4Sound.h; path = "en.lproj/C4 Source/C4Sound.h"; sourceTree = "<group>"; };
+		EDBF18D8143B7AD90004DAF5 /* C4Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4Sound.m; path = "en.lproj/C4 Source/C4Sound.m"; sourceTree = "<group>"; };
+		EDBF18D9143B7AD90004DAF5 /* C4String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4String.h; path = "en.lproj/C4 Source/C4String.h"; sourceTree = "<group>"; };
+		EDBF18DA143B7AD90004DAF5 /* C4String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4String.m; path = "en.lproj/C4 Source/C4String.m"; sourceTree = "<group>"; };
+		EDBF18DB143B7AD90004DAF5 /* C4Transform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4Transform.h; path = "en.lproj/C4 Source/C4Transform.h"; sourceTree = "<group>"; };
+		EDBF18DC143B7AD90004DAF5 /* C4Transform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4Transform.m; path = "en.lproj/C4 Source/C4Transform.m"; sourceTree = "<group>"; };
+		EDBF18DD143B7AD90004DAF5 /* C4Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4Vector.h; path = "en.lproj/C4 Source/C4Vector.h"; sourceTree = "<group>"; };
+		EDBF18DE143B7AD90004DAF5 /* C4Vector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4Vector.m; path = "en.lproj/C4 Source/C4Vector.m"; sourceTree = "<group>"; };
+		EDBF18DF143B7AD90004DAF5 /* C4Voice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C4Voice.h; path = "en.lproj/C4 Source/C4Voice.h"; sourceTree = "<group>"; };
+		EDBF18E0143B7AD90004DAF5 /* C4Voice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C4Voice.m; path = "en.lproj/C4 Source/C4Voice.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,10 +326,10 @@
 		ED6604601437CA67003881DA /* C4Development */ = {
 			isa = PBXGroup;
 			children = (
-				ED66046F1437CA67003881DA /* CFACanvas.m */,
-				ED6604661437CA67003881DA /* C4A Framework */,
-				ED66046D1437CA67003881DA /* C4A Source */,
-				ED6604B31437CA68003881DA /* C4A Media */,
+				EDBF18B4143B7AD90004DAF5 /* C4Canvas.m */,
+				ED6604661437CA67003881DA /* C4 Framework */,
+				ED66046D1437CA67003881DA /* C4 Source */,
+				ED6604B31437CA68003881DA /* C4 Media */,
 				ED6604C51437CA68003881DA /* C4 Examples */,
 				ED6604611437CA67003881DA /* Supporting Files */,
 			);
@@ -358,84 +348,83 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		ED6604661437CA67003881DA /* C4A Framework */ = {
+		ED6604661437CA67003881DA /* C4 Framework */ = {
 			isa = PBXGroup;
 			children = (
 				ED6604671437CA67003881DA /* C4Development-Prefix.pch */,
 				ED6604681437CA67003881DA /* main.m */,
 				ED66046A1437CA67003881DA /* C4DevelopmentAppDelegate.h */,
 				ED66046B1437CA67003881DA /* C4DevelopmentAppDelegate.m */,
-				ED6604771437CA67003881DA /* CFADefines.h */,
-				ED66048D1437CA67003881DA /* CFAImports.h */,
+				EDBF18B9143B7AD90004DAF5 /* C4Defines.h */,
+				EDBF18C8143B7AD90004DAF5 /* C4Imports.h */,
 			);
-			name = "C4A Framework";
+			name = "C4 Framework";
 			sourceTree = "<group>";
 		};
-		ED66046D1437CA67003881DA /* C4A Source */ = {
+		ED66046D1437CA67003881DA /* C4 Source */ = {
 			isa = PBXGroup;
 			children = (
-				ED66046E1437CA67003881DA /* CFACanvas.h */,
-				ED6604711437CA67003881DA /* CFAColor.h */,
-				ED6604721437CA67003881DA /* CFAColor.m */,
-				ED6604741437CA67003881DA /* CFADateTime.h */,
-				ED6604751437CA67003881DA /* CFADateTime.m */,
-				ED6604781437CA67003881DA /* CFAFont.h */,
-				ED6604791437CA67003881DA /* CFAFont.m */,
-				ED66047B1437CA67003881DA /* CFAFoundation.h */,
-				ED66047C1437CA67003881DA /* CFAFoundation.m */,
-				ED66047E1437CA67003881DA /* CFAGlobalShapeAttributes.h */,
-				ED66047F1437CA67003881DA /* CFAGlobalShapeAttributes.m */,
-				ED6604811437CA67003881DA /* CFAGlobalTypeAttributes.h */,
-				ED6604821437CA67003881DA /* CFAGlobalTypeAttributes.m */,
-				ED6604841437CA67003881DA /* CFAGlobalStringAttributes.h */,
-				ED6604851437CA67003881DA /* CFAGlobalStringAttributes.m */,
-				ED6604871437CA67003881DA /* CFAGradient.h */,
-				ED6604881437CA67003881DA /* CFAGradient.m */,
-				ED66048A1437CA67003881DA /* CFAImage.h */,
-				ED66048B1437CA67003881DA /* CFAImage.m */,
-				ED66048E1437CA67003881DA /* CFAMath.h */,
-				ED66048F1437CA67003881DA /* CFAMath.m */,
-				ED6604911437CA67003881DA /* CFAMovie.h */,
-				ED6604921437CA67003881DA /* CFAMovie.m */,
-				ED6604941437CA67003881DA /* CFANoise.h */,
-				ED6604951437CA67003881DA /* CFANoise.m */,
-				ED6604971437CA67003881DA /* CFAObject.h */,
-				ED6604981437CA67003881DA /* CFAObject.m */,
-				ED66049A1437CA67003881DA /* CFAOpenGLView.h */,
-				ED66049B1437CA67003881DA /* CFAOpenGLView.m */,
-				ED66049D1437CA67003881DA /* CFAQuartz.h */,
-				ED66049E1437CA67003881DA /* CFAQuartz.m */,
-				ED6604A01437CA67003881DA /* CFAShape.h */,
-				ED6604A11437CA67003881DA /* CFAShape.m */,
-				ED6604A31437CA67003881DA /* CFASound.h */,
-				ED6604A41437CA67003881DA /* CFASound.m */,
-				ED6604A61437CA67003881DA /* CFAString.h */,
-				ED6604A71437CA67003881DA /* CFAString.m */,
-				ED6604A91437CA67003881DA /* CFATransform.h */,
-				ED6604AA1437CA67003881DA /* CFATransform.m */,
-				ED6604AC1437CA67003881DA /* CFAVector.h */,
-				ED6604AD1437CA68003881DA /* CFAVector.m */,
-				ED6604AF1437CA68003881DA /* CFAVoice.h */,
-				ED6604B01437CA68003881DA /* CFAVoice.m */,
-				ED6604B21437CA68003881DA /* Singleton.h */,
+				EDBF18B3143B7AD90004DAF5 /* C4Canvas.h */,
+				EDBF18B5143B7AD90004DAF5 /* C4Color.h */,
+				EDBF18B6143B7AD90004DAF5 /* C4Color.m */,
+				EDBF18B7143B7AD90004DAF5 /* C4DateTime.h */,
+				EDBF18B8143B7AD90004DAF5 /* C4DateTime.m */,
+				EDBF18BA143B7AD90004DAF5 /* C4Font.h */,
+				EDBF18BB143B7AD90004DAF5 /* C4Font.m */,
+				EDBF18BC143B7AD90004DAF5 /* C4Foundation.h */,
+				EDBF18BD143B7AD90004DAF5 /* C4Foundation.m */,
+				EDBF18BE143B7AD90004DAF5 /* C4GlobalShapeAttributes.h */,
+				EDBF18BF143B7AD90004DAF5 /* C4GlobalShapeAttributes.m */,
+				EDBF18C0143B7AD90004DAF5 /* C4GlobalStringAttributes.h */,
+				EDBF18C1143B7AD90004DAF5 /* C4GlobalStringAttributes.m */,
+				EDBF18C2143B7AD90004DAF5 /* C4GlobalTypeAttributes.h */,
+				EDBF18C3143B7AD90004DAF5 /* C4GlobalTypeAttributes.m */,
+				EDBF18C4143B7AD90004DAF5 /* C4Gradient.h */,
+				EDBF18C5143B7AD90004DAF5 /* C4Gradient.m */,
+				EDBF18C6143B7AD90004DAF5 /* C4Image.h */,
+				EDBF18C7143B7AD90004DAF5 /* C4Image.m */,
+				EDBF18C9143B7AD90004DAF5 /* C4Math.h */,
+				EDBF18CA143B7AD90004DAF5 /* C4Math.m */,
+				EDBF18CB143B7AD90004DAF5 /* C4Movie.h */,
+				EDBF18CC143B7AD90004DAF5 /* C4Movie.m */,
+				EDBF18CD143B7AD90004DAF5 /* C4Noise.h */,
+				EDBF18CE143B7AD90004DAF5 /* C4Noise.m */,
+				EDBF18CF143B7AD90004DAF5 /* C4Object.h */,
+				EDBF18D0143B7AD90004DAF5 /* C4Object.m */,
+				EDBF18D1143B7AD90004DAF5 /* C4OpenGLView.h */,
+				EDBF18D2143B7AD90004DAF5 /* C4OpenGLView.m */,
+				EDBF18D3143B7AD90004DAF5 /* C4Quartz.h */,
+				EDBF18D4143B7AD90004DAF5 /* C4Quartz.m */,
+				EDBF18D5143B7AD90004DAF5 /* C4Shape.h */,
+				EDBF18D6143B7AD90004DAF5 /* C4Shape.m */,
+				EDBF18D7143B7AD90004DAF5 /* C4Sound.h */,
+				EDBF18D8143B7AD90004DAF5 /* C4Sound.m */,
+				EDBF18D9143B7AD90004DAF5 /* C4String.h */,
+				EDBF18DA143B7AD90004DAF5 /* C4String.m */,
+				EDBF18DB143B7AD90004DAF5 /* C4Transform.h */,
+				EDBF18DC143B7AD90004DAF5 /* C4Transform.m */,
+				EDBF18DD143B7AD90004DAF5 /* C4Vector.h */,
+				EDBF18DE143B7AD90004DAF5 /* C4Vector.m */,
+				EDBF18DF143B7AD90004DAF5 /* C4Voice.h */,
+				EDBF18E0143B7AD90004DAF5 /* C4Voice.m */,
 			);
-			name = "C4A Source";
+			name = "C4 Source";
 			sourceTree = "<group>";
 		};
-		ED6604B31437CA68003881DA /* C4A Media */ = {
+		ED6604B31437CA68003881DA /* C4 Media */ = {
 			isa = PBXGroup;
 			children = (
-				ED6604B41437CA68003881DA /* C4.mov */,
-				ED6604B61437CA68003881DA /* C4.qtz */,
-				ED6604B71437CA68003881DA /* C4Black.png */,
-				ED6604B91437CA68003881DA /* C4Blue.png */,
-				ED6604BB1437CA68003881DA /* C4Orange.png */,
-				ED6604BD1437CA68003881DA /* C4Red.png */,
-				ED6604BF1437CA68003881DA /* C4Sky.png */,
-				ED6604C11437CA68003881DA /* C4Wood.png */,
-				ED6604C31437CA68003881DA /* loop.aif */,
+				EDBF18A1143B7ACE0004DAF5 /* C4.mov */,
+				EDBF18A2143B7ACE0004DAF5 /* C4.qtz */,
+				EDBF18A3143B7ACE0004DAF5 /* C4Black.png */,
+				EDBF18A4143B7ACE0004DAF5 /* C4Blue.png */,
+				EDBF18A5143B7ACE0004DAF5 /* C4Orange.png */,
+				EDBF18A6143B7ACE0004DAF5 /* C4Red.png */,
+				EDBF18A7143B7ACE0004DAF5 /* C4Sky.png */,
+				EDBF18A8143B7ACE0004DAF5 /* C4Wood.png */,
+				EDBF18A9143B7ACE0004DAF5 /* loop.aif */,
 			);
-			name = "C4A Media";
+			name = "C4 Media";
 			sourceTree = "<group>";
 		};
 		ED6604C51437CA68003881DA /* C4 Examples */ = {
@@ -452,7 +441,6 @@
 				ED6604CE1437CA68003881DA /* Arrays - MutableArrays */,
 				ED6604CF1437CA68003881DA /* Arrays - ObjectArray1D */,
 				ED6604D01437CA68003881DA /* Arrays - ObjectArray2D */,
-				ED6604D11437CA68003881DA /* Arrays - ObjectArrays */,
 				ED6604D21437CA68003881DA /* Basics - Animated */,
 				ED6604D31437CA68003881DA /* Basics - Coordinates */,
 				ED6604D41437CA68003881DA /* Basics - CustomMethods */,
@@ -519,6 +507,7 @@
 				ED6605111437CA68003881DA /* KeyboardMouse - ConstrainedCircle */,
 				ED6605121437CA68003881DA /* KeyboardMouse - EasingCircle */,
 				ED6605131437CA68003881DA /* KeyboardMouse - Mouse1D */,
+				EDA5BEA9143BA0160007782C /* KeyboardMouse - StoringMouseCoords */,
 				ED6605141437CA68003881DA /* KeyboardMouse - Mouse2D */,
 				ED6605151437CA68003881DA /* KeyboardMouse - MouseMethods */,
 				ED6605161437CA68003881DA /* KeyboardMouse - MouseSignals */,
@@ -549,7 +538,6 @@
 				ED66053A1437CA68003881DA /* Objects - MouseTracker */,
 				ED66053B1437CA68003881DA /* Objects - ObjectUpdate */,
 				ED66053C1437CA68003881DA /* OpenGL - SimpleGL */,
-				ED66053D1437CA68003881DA /* Shapes - BlackWhiteCircles */,
 				ED66053E1437CA68003881DA /* Shapes - DrawingAnAlien */,
 				ED66053F1437CA68003881DA /* Shapes - PieChart */,
 				ED6605401437CA68003881DA /* Shapes - PointsAndLines */,
@@ -571,26 +559,8 @@
 				ED6605501437CA68003881DA /* Voice - PausableVoice */,
 				ED6605511437CA68003881DA /* Voice - QuietPrincess */,
 				ED6605521437CA68003881DA /* Voice - SimpleVoice */,
-				ED6605171437CA68003881DA /* KeyboardMouse - StoringMouseCoords */,
 			);
 			name = "C4 Examples";
-			sourceTree = "<group>";
-		};
-		ED6605171437CA68003881DA /* KeyboardMouse - StoringMouseCoords */ = {
-			isa = PBXGroup;
-			children = (
-				ED6605181437CA68003881DA /* AbstractKeyboard1 */,
-				ED6605191437CA68003881DA /* AbstractKeyboard2 */,
-				ED66051A1437CA68003881DA /* ConstantType */,
-				ED66051B1437CA68003881DA /* ConstrainedCircle */,
-				ED66051C1437CA68003881DA /* EasingCircle */,
-				ED66051D1437CA68003881DA /* Mouse1D */,
-				ED66051E1437CA68003881DA /* Mouse2D */,
-				ED66051F1437CA68003881DA /* MouseMethods */,
-				ED6605201437CA68003881DA /* MouseSignals */,
-				ED6605211437CA68003881DA /* StoringMouseCoords */,
-			);
-			path = "KeyboardMouse - StoringMouseCoords";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -645,17 +615,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED6604651437CA67003881DA /* InfoPlist.strings in Resources */,
-				ED6604B51437CA68003881DA /* C4.mov in Resources */,
-				ED6604B81437CA68003881DA /* C4Black.png in Resources */,
-				ED6604BA1437CA68003881DA /* C4Blue.png in Resources */,
-				ED6604BC1437CA68003881DA /* C4Orange.png in Resources */,
-				ED6604BE1437CA68003881DA /* C4Red.png in Resources */,
-				ED6604C01437CA68003881DA /* C4Sky.png in Resources */,
-				ED6604C21437CA68003881DA /* C4Wood.png in Resources */,
-				ED6604C41437CA68003881DA /* loop.aif in Resources */,
 				ED6605551437CA68003881DA /* C4Development.icns in Resources */,
 				ED6605581437CA69003881DA /* Credits.rtf in Resources */,
 				ED66055B1437CA69003881DA /* MainMenu.xib in Resources */,
+				EDBF18AA143B7ACE0004DAF5 /* C4.mov in Resources */,
+				EDBF18AB143B7ACE0004DAF5 /* C4.qtz in Resources */,
+				EDBF18AC143B7ACE0004DAF5 /* C4Black.png in Resources */,
+				EDBF18AD143B7ACE0004DAF5 /* C4Blue.png in Resources */,
+				EDBF18AE143B7ACE0004DAF5 /* C4Orange.png in Resources */,
+				EDBF18AF143B7ACE0004DAF5 /* C4Red.png in Resources */,
+				EDBF18B0143B7ACE0004DAF5 /* C4Sky.png in Resources */,
+				EDBF18B1143B7ACE0004DAF5 /* C4Wood.png in Resources */,
+				EDBF18B2143B7ACE0004DAF5 /* loop.aif in Resources */,
+				EDA5BEAA143BA0260007782C /* KeyboardMouse - StoringMouseCoords in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,28 +640,28 @@
 			files = (
 				ED6604691437CA67003881DA /* main.m in Sources */,
 				ED66046C1437CA67003881DA /* C4DevelopmentAppDelegate.m in Sources */,
-				ED6604701437CA67003881DA /* CFACanvas.m in Sources */,
-				ED6604731437CA67003881DA /* CFAColor.m in Sources */,
-				ED6604761437CA67003881DA /* CFADateTime.m in Sources */,
-				ED66047A1437CA67003881DA /* CFAFont.m in Sources */,
-				ED66047D1437CA67003881DA /* CFAFoundation.m in Sources */,
-				ED6604801437CA67003881DA /* CFAGlobalShapeAttributes.m in Sources */,
-				ED6604831437CA67003881DA /* CFAGlobalTypeAttributes.m in Sources */,
-				ED6604861437CA67003881DA /* CFAGlobalStringAttributes.m in Sources */,
-				ED6604891437CA67003881DA /* CFAGradient.m in Sources */,
-				ED66048C1437CA67003881DA /* CFAImage.m in Sources */,
-				ED6604901437CA67003881DA /* CFAMath.m in Sources */,
-				ED6604931437CA67003881DA /* CFAMovie.m in Sources */,
-				ED6604961437CA67003881DA /* CFANoise.m in Sources */,
-				ED6604991437CA67003881DA /* CFAObject.m in Sources */,
-				ED66049C1437CA67003881DA /* CFAOpenGLView.m in Sources */,
-				ED66049F1437CA67003881DA /* CFAQuartz.m in Sources */,
-				ED6604A21437CA67003881DA /* CFAShape.m in Sources */,
-				ED6604A51437CA67003881DA /* CFASound.m in Sources */,
-				ED6604A81437CA67003881DA /* CFAString.m in Sources */,
-				ED6604AB1437CA67003881DA /* CFATransform.m in Sources */,
-				ED6604AE1437CA68003881DA /* CFAVector.m in Sources */,
-				ED6604B11437CA68003881DA /* CFAVoice.m in Sources */,
+				EDBF18E1143B7AD90004DAF5 /* C4Canvas.m in Sources */,
+				EDBF18E2143B7AD90004DAF5 /* C4Color.m in Sources */,
+				EDBF18E3143B7AD90004DAF5 /* C4DateTime.m in Sources */,
+				EDBF18E4143B7AD90004DAF5 /* C4Font.m in Sources */,
+				EDBF18E5143B7AD90004DAF5 /* C4Foundation.m in Sources */,
+				EDBF18E6143B7AD90004DAF5 /* C4GlobalShapeAttributes.m in Sources */,
+				EDBF18E7143B7AD90004DAF5 /* C4GlobalStringAttributes.m in Sources */,
+				EDBF18E8143B7AD90004DAF5 /* C4GlobalTypeAttributes.m in Sources */,
+				EDBF18E9143B7AD90004DAF5 /* C4Gradient.m in Sources */,
+				EDBF18EA143B7AD90004DAF5 /* C4Image.m in Sources */,
+				EDBF18EB143B7AD90004DAF5 /* C4Math.m in Sources */,
+				EDBF18EC143B7AD90004DAF5 /* C4Movie.m in Sources */,
+				EDBF18ED143B7AD90004DAF5 /* C4Noise.m in Sources */,
+				EDBF18EE143B7AD90004DAF5 /* C4Object.m in Sources */,
+				EDBF18EF143B7AD90004DAF5 /* C4OpenGLView.m in Sources */,
+				EDBF18F0143B7AD90004DAF5 /* C4Quartz.m in Sources */,
+				EDBF18F1143B7AD90004DAF5 /* C4Shape.m in Sources */,
+				EDBF18F2143B7AD90004DAF5 /* C4Sound.m in Sources */,
+				EDBF18F3143B7AD90004DAF5 /* C4String.m in Sources */,
+				EDBF18F4143B7AD90004DAF5 /* C4Transform.m in Sources */,
+				EDBF18F5143B7AD90004DAF5 /* C4Vector.m in Sources */,
+				EDBF18F6143B7AD90004DAF5 /* C4Voice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,6 +784,7 @@
 				ED6605601437CA69003881DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,22 +1,22 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
 int y = 160;
 
-@implementation CFACanvas
+@implementation C4Canvas
 
 -(void)setup {
 [self windowWidth:400 andHeight:320];
 [self drawStyle:SINGLEFRAME];
-[CFAShape strokeRed:1.0f green:0.2f blue:0.2f];
-[CFAString fill:1.0f];
+[C4Shape strokeRed:1.0f green:0.2f blue:0.2f];
+[C4String fill:1.0f];
 }
 
 -(void)draw {
@@ -24,9 +24,9 @@ int y = 160;
 y++;
 if (y > self.canvasHeight) y = 0;
 
-[CFAShape lineFromX:0 Y:y toX:self.canvasWidth Y:y];	
+[C4Shape lineFromX:0 Y:y toX:self.canvasWidth Y:y];	
 
-[[CFAString stringWithString:@"Pressing the mouse triggers redraw"]
+[[C4String stringWithString:@"Pressing the mouse triggers redraw"]
 drawAtPoint:NSMakePoint(20, self.centerPos.y)];
 }
 

@@ -1,17 +1,17 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
-#import "CFACanvas.h"
-@interface CFACanvas () {}
+#import "C4Canvas.h"
+@interface C4Canvas () {}
 -(void)openGLDrawRect:(NSRect)destRect;
 -(NSRect)convertRectToOpenGLCoords:(NSRect)aRect;
 @end
 
-@implementation CFACanvas
+@implementation C4Canvas
 
 -(void)setup {
 [self drawStyle:DISPLAYRATE];
@@ -21,7 +21,7 @@
 -(void)draw {
 [self background:0 alpha:0.01];
 [self openGLDrawRect:NSMakeRect(mousePos.x/2, mousePos.y/2,mousePos.x, mousePos.y)];
-[CFAShape circleAt:mousePos radius:5];
+[C4Shape circleAt:mousePos radius:5];
 }
 
 -(NSRect)convertRectToOpenGLCoords:(NSRect)aRect {

@@ -1,18 +1,18 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
-@interface CFACanvas () {}
+@interface C4Canvas () {}
 -(void)setupC4Points;
 @end
 
-@implementation CFACanvas
+@implementation C4Canvas
 
 NSPoint points[371];
 NSInteger currentPointNumber, cCount, fourCount, squareCount;
@@ -22,7 +22,7 @@ NSInteger currentPointNumber, cCount, fourCount, squareCount;
 [self drawStyle:DISPLAYRATE];
 [self windowWidth:400 andHeight:320];
 [self setupC4Points];
-[CFAShape noStroke];
+[C4Shape noStroke];
 
 currentPointNumber = 0;
 cCount = 0;
@@ -33,23 +33,23 @@ squareCount = 335;
 -(void)draw {
 [self background:0 alpha:0.066];
 
-[CFAShape fillRed:1.0f green:0.2f blue:0.2f];
-[CFAShape circleAt:points[cCount] radius:2];
-[CFAShape circleAt:points[151-cCount] radius:2];
-//    [CFAShape pointAt:points[cCount]];
-//    [CFAShape pointAt:points[151-cCount]];
+[C4Shape fillRed:1.0f green:0.2f blue:0.2f];
+[C4Shape circleAt:points[cCount] radius:2];
+[C4Shape circleAt:points[151-cCount] radius:2];
+//    [C4Shape pointAt:points[cCount]];
+//    [C4Shape pointAt:points[151-cCount]];
 
-[CFAShape fillRed:0.2f green:0.4f blue:1.0f];
-[CFAShape circleAt:points[fourCount] radius:2];
-[CFAShape circleAt:points[325-fourCount+152] radius:2];
-//    [CFAShape pointAt:points[fourCount]];
-//    [CFAShape pointAt:points[325-fourCount+152]];
+[C4Shape fillRed:0.2f green:0.4f blue:1.0f];
+[C4Shape circleAt:points[fourCount] radius:2];
+[C4Shape circleAt:points[325-fourCount+152] radius:2];
+//    [C4Shape pointAt:points[fourCount]];
+//    [C4Shape pointAt:points[325-fourCount+152]];
 
-[CFAShape fillRed:0.3f green:0.3f blue:0.3f];
-[CFAShape circleAt:points[squareCount] radius:2];
-[CFAShape circleAt:points[370-squareCount+335] radius:2];
-//    [CFAShape pointAt:points[squareCount]];
-//    [CFAShape pointAt:points[371-squareCount+335]];
+[C4Shape fillRed:0.3f green:0.3f blue:0.3f];
+[C4Shape circleAt:points[squareCount] radius:2];
+[C4Shape circleAt:points[370-squareCount+335] radius:2];
+//    [C4Shape pointAt:points[squareCount]];
+//    [C4Shape pointAt:points[371-squareCount+335]];
 
 currentPointNumber++;
 cCount++;

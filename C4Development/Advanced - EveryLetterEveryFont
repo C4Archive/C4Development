@@ -1,57 +1,57 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
 //  Created by Travis Kirton
 //
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
 int fontCount, currentFont, characterIndex, size;
 NSPoint point;
 NSSize backgroundRectSize;
 NSArray *fontArray, *characterArray;
-CFAString *description, *character;
+C4String *description, *character;
 
-@implementation CFACanvas
+@implementation C4Canvas
 
 -(void)setup {
 [self drawStyle:DISPLAYRATE];
 [self windowWidth:[self screenWidth]-30 andHeight:[self screenHeight]-60];
 [self background:1];
-fontArray = [CFAFont availableFonts];
+fontArray = [C4Font availableFonts];
 fontCount = [fontArray count];
 currentFont = 0;
 
 size = 18;
 characterArray = [[[NSArray alloc] initWithArray:
-[[CFAString stringWithString:
+[[C4String stringWithString:
 @"a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z"]
 componentsSeparatedByString:@","]] retain];
 characterIndex = 0;
-character = [[CFAString stringWithString:[characterArray objectAtIndex:characterIndex]] retain];
+character = [[C4String stringWithString:[characterArray objectAtIndex:characterIndex]] retain];
 
-[CFAShape noStroke];
-[description font:[CFAFont fontWithFont:[CFAFont userFontOfSize:12]]];
+[C4Shape noStroke];
+[description font:[C4Font fontWithFont:[C4Font userFontOfSize:12]]];
 
 point = NSMakePoint(size, size*2);
 }
 
 -(void)draw {
-[CFAShape fill:0.2];
-[CFAShape rectWithXPos:0 yPos:0 width:self.canvasWidth andHeight:26];
+[C4Shape fill:0.2];
+[C4Shape rectWithXPos:0 yPos:0 width:self.canvasWidth andHeight:26];
 
-description = [CFAString stringWithFormat:@"current font: %@ (%d/%d)",
+description = [C4String stringWithFormat:@"current font: %@ (%d/%d)",
 [fontArray objectAtIndex:currentFont], 
 currentFont, 
 fontCount];
 [description fill:1];
 [description drawAtPoint:NSMakePoint(10, 6)];
 
-[CFAShape fill:1];
-[CFAShape rectAt:point size:backgroundRectSize];
-[character font:[CFAFont fontWithName:[fontArray objectAtIndex:currentFont] size:size]];
+[C4Shape fill:1];
+[C4Shape rectAt:point size:backgroundRectSize];
+[character font:[C4Font fontWithName:[fontArray objectAtIndex:currentFont] size:size]];
 [character drawAtPoint:point];
 
 point.x += [character size].width;
@@ -69,10 +69,10 @@ if(currentFont >= fontCount) {
 currentFont = 0;
 characterIndex++;
 if(characterIndex == [characterArray count]) characterIndex = 0;
-character = [[CFAString stringWithString:[characterArray objectAtIndex:characterIndex]] retain];
-[character fillRed:FLOAT_FROM_255([CFAMath randomInt:255]) 
-green:FLOAT_FROM_255([CFAMath randomInt:255]) 
-blue:FLOAT_FROM_255([CFAMath randomInt:255])];
+character = [[C4String stringWithString:[characterArray objectAtIndex:characterIndex]] retain];
+[character fillRed:FLOAT_FROM_255([C4Math randomInt:255]) 
+green:FLOAT_FROM_255([C4Math randomInt:255]) 
+blue:FLOAT_FROM_255([C4Math randomInt:255])];
 }
 }
 @end

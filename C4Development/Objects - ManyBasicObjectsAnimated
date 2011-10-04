@@ -1,5 +1,5 @@
 //
-//  CFACanvas.h
+//  C4Canvas.h
 //  CodeSamples
 //
 //	A Cocoa For Artists project
@@ -19,8 +19,8 @@ If you do it this way, you need to have the new class interface written out firs
 // The Basic Object
 ////////////////////////////////////////////////////////////////
 
-@interface BasicObject : CFAObject {
-CFAColor *randomColor;
+@interface BasicObject : C4Object {
+C4Color *randomColor;
 NSPoint position;
 CGFloat radius;
 }
@@ -32,19 +32,19 @@ CGFloat radius;
 {
 self = [super init];
 if (self) {
-randomColor = [[CFAColor colorWithRed:FLOAT_FROM_255([CFAMath randomInt:255])
-green:FLOAT_FROM_255([CFAMath randomInt:255])
-blue:FLOAT_FROM_255([CFAMath randomInt:255])] retain];
-position = NSMakePoint([CFAMath randomInt:400], [CFAMath randomInt:320]);
-radius = [CFAMath randomInt:20]+10;
+randomColor = [[C4Color colorWithRed:FLOAT_FROM_255([C4Math randomInt:255])
+green:FLOAT_FROM_255([C4Math randomInt:255])
+blue:FLOAT_FROM_255([C4Math randomInt:255])] retain];
+position = NSMakePoint([C4Math randomInt:400], [C4Math randomInt:320]);
+radius = [C4Math randomInt:20]+10;
 }
 return self;
 }
 
 -(void)draw {
-[CFAShape noStroke];
-[CFAShape fillColor:randomColor];
-[CFAShape circleAt:position radius:radius];
+[C4Shape noStroke];
+[C4Shape fillColor:randomColor];
+[C4Shape circleAt:position radius:radius];
 }
 
 @end
@@ -53,12 +53,12 @@ return self;
 // The Canvas
 ////////////////////////////////////////////////////////////////
 
-#import "CFACanvas.h"
+#import "C4Canvas.h"
 
 NSMutableArray *objectsArray;
 NSInteger currentObject;
 
-@implementation CFACanvas
+@implementation C4Canvas
 -(void)setup {
 [self drawStyle:ANIMATED];
 [self windowWidth:400 andHeight:320];

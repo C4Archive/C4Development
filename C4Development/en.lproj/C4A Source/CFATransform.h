@@ -11,8 +11,6 @@
 	NSMutableArray *transformArray;
 }
 
--(id)_init;
--(void)_dealloc;
 +(CFATransform *)sharedManager;
 
 +(void)begin;

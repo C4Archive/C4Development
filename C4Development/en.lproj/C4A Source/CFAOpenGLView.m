@@ -6,9 +6,9 @@
 
 #import "CFAOpenGLView.h"
 
-static CFAOpenGLView *cfaOpenGLView;
+static CFAOpenGLView *sharedCFAOpenGLView = nil;
+
 @implementation CFAOpenGLView
-GENERATE_SINGLETON(CFAOpenGLView, cfaOpenGLView);
 
 @synthesize backgroundColor, exportDir, exportFileName, exportFileType, appName;
 @synthesize keyIsPressed, mouseIsPressed;
@@ -20,13 +20,6 @@ GENERATE_SINGLETON(CFAOpenGLView, cfaOpenGLView);
 
 +(void)load {
 	if(VERBOSELOAD) printf("CFAOpenGLView\n");
-}
-
--(id)_init {
-	return self;
-}
-
--(void)_dealloc {
 }
 
 -(void)awakeFromNib {
@@ -638,6 +631,39 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink, const CVTime
     GLint opacity = 0;
 	[[self openGLContext] setValues:&opacity forParameter:NSOpenGLCPSurfaceOpacity];	
 	readyToDraw = YES;
+}
+
+#pragma mark Singleton
+
+-(id) init
+{
+    if((self = [super init]))
+    {
+    }
+    
+    return self;
+}
+
++ (CFAOpenGLView*)sharedManager
+{
+    if (sharedCFAOpenGLView == nil) {
+        static dispatch_once_t once;
+        dispatch_once(&once, ^ { sharedCFAOpenGLView = [[super allocWithZone:NULL] init]; });
+        return sharedCFAOpenGLView;
+
+        
+    }
+    return sharedCFAOpenGLView;
+}
+
++ (id)allocWithZone:(NSZone *)zone
+{
+    return [[self sharedManager] retain];
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
 }
 
 @end

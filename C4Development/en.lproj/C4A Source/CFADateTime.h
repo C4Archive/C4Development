@@ -11,8 +11,6 @@
 }
 
 #pragma mark Singleton
--(id)_init;
--(void)_dealloc;
 +(CFADateTime *)sharedManager;
 
 #pragma mark Date & Time

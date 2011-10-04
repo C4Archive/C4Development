@@ -10,8 +10,6 @@
 }
 
 #pragma mark Singleton
--(id)_init;
--(void)_dealloc;
 +(CFAFoundation *)sharedManager;
 +(NSComparator)floatComparator;
 -(NSComparator)floatComparator;

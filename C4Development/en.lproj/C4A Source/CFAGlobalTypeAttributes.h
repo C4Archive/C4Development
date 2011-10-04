@@ -13,8 +13,6 @@
 	NSMutableDictionary	*attributes;
 }
 
--(id)_init;
--(void)_dealloc;
 +(CFAGlobalTypeAttributes *)sharedManager;
 
 -(void)setObject:(id)object forKey:(NSString *)key;

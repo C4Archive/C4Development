@@ -7,10 +7,10 @@
 //
 
 #import "CFAGlobalShapeAttributes.h"
-static CFAGlobalShapeAttributes *cfaGlobalShapeAttributes;
+static CFAGlobalShapeAttributes *sharedCFAGlobalShapeAttributes;
 
 @implementation CFAGlobalShapeAttributes
-GENERATE_SINGLETON(CFAGlobalShapeAttributes, cfaGlobalShapeAttributes);
+
 //BOOL
 @synthesize useFill, useStroke, checkShape, drawShapesToPDF, firstPoint, isClean;
 
@@ -32,26 +32,55 @@ GENERATE_SINGLETON(CFAGlobalShapeAttributes, cfaGlobalShapeAttributes);
 //NSBezierPath
 @synthesize vertexPath;
 
--(id)_init {
-	strokeWidth = 1.0f;
-	fillColor = [[CFAColor colorWithGrey:1] retain];		//white
-	strokeColor = [[CFAColor	colorWithGrey:0] retain];	//black
-	ellipseMode = CENTER;
-	rectMode = CORNER;
+#pragma mark Singleton
+
+-(id) init
+{
+    if((self = [super init]))
+    {
+        strokeWidth = 1.0f;
+        fillColor = [[CFAColor colorWithGrey:1] retain];		//white
+        strokeColor = [[CFAColor	colorWithGrey:0] retain];	//black
+        ellipseMode = CENTER;
+        rectMode = CORNER;
+        
+        useFill = YES;
+        useStroke = YES;
+        checkShape = NO;
+        firstPoint	= YES;
+        drawShapesToPDF = NO;
+        
+        rectMode = CORNER;
+        ellipseMode = CENTER;    
+    }
     
-    useFill = YES;
-    useStroke = YES;
-    checkShape = NO;
-    firstPoint	= YES;
-    drawShapesToPDF = NO;
-    
-    rectMode = CORNER;
-    ellipseMode = CENTER;
-    
-	return self;
+    return self;
 }
 
 -(void)_dealloc {
+}
+
++ (CFAGlobalShapeAttributes*)sharedManager
+{
+    if (sharedCFAGlobalShapeAttributes == nil) {
+        static dispatch_once_t once;
+        dispatch_once(&once, ^ { sharedCFAGlobalShapeAttributes = [[super allocWithZone:NULL] init]; 
+        });
+        return sharedCFAGlobalShapeAttributes;
+        
+        
+    }
+    return sharedCFAGlobalShapeAttributes;
+}
+
++ (id)allocWithZone:(NSZone *)zone
+{
+    return [[self sharedManager] retain];
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
 }
 
 @end

@@ -5,7 +5,8 @@
 
 #import "CFAFoundation.h"
 
-static CFAFoundation *cfaFoundation;
+static CFAFoundation *sharedCFAFoundation = nil;
+
 @interface CFAFoundation (private)
 NSInteger numSort(id num1, id num2, void *context);
 NSInteger strSort(id str1, id str2, void *context);
@@ -13,28 +14,9 @@ NSInteger floatSort(id obj1, id obj2, void *context);
 @end
 
 @implementation CFAFoundation
-GENERATE_SINGLETON(CFAFoundation, cfaFoundation);
 
 +(void)load {
 	if(VERBOSELOAD) printf("CFAFoundation\n");
-}
-
--(id)_init {
-    floatSortComparator = ^(id obj1, id obj2) {
-        float flt1 = [obj1 floatValue];
-        float flt2 = [obj2 floatValue];
-        if (flt1 < flt2)
-            return NSOrderedAscending;
-        else if (flt1 > flt2)
-            return NSOrderedDescending;
-        else
-            return NSOrderedSame;
-    };
-
-	return self;
-}
-
--(void)_dealloc {
 }
 
 void CFALog(NSString *logString,...) {
@@ -84,4 +66,50 @@ NSInteger floatSort(id obj1, id obj2, void *context) {
     return [[self sharedManager] floatComparator];
 }
 
+#pragma mark Singleton
+
+-(id) init
+{
+    if((self = [super init]))
+    {
+        floatSortComparator = ^(id obj1, id obj2) {
+            float flt1 = [obj1 floatValue];
+            float flt2 = [obj2 floatValue];
+            if (flt1 < flt2)
+                return NSOrderedAscending;
+            else if (flt1 > flt2)
+                return NSOrderedDescending;
+            else
+                return NSOrderedSame;
+        };
+    }
+    
+    return self;
+}
+
+-(void)_dealloc {
+}
+
++ (CFAFoundation*)sharedManager
+{
+    if (sharedCFAFoundation == nil) {
+        static dispatch_once_t once;
+        dispatch_once(&once, ^ { sharedCFAFoundation = [[super allocWithZone:NULL] init]; 
+        });
+        return sharedCFAFoundation;
+        
+        
+    }
+    return sharedCFAFoundation;
+}
+
++ (id)allocWithZone:(NSZone *)zone
+{
+    return [[self sharedManager] retain];
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
+}
 @end

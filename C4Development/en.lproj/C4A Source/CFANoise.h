@@ -13,8 +13,7 @@
 @private
     
 }
--(id)_init;
--(void)_dealloc;
+
 +(CFANoise *)sharedManager;
 
 +(CGFloat)noiseX:(CGFloat)x;

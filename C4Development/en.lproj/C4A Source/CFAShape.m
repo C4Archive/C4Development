@@ -5,7 +5,7 @@
 
 #import "CFAShape.h"
 
-static CFAShape *cfaShape;
+static CFAShape *sharedCFAShape;
 
 @interface CFAShape (private)
 +(void)fillColorSet;
@@ -15,34 +15,9 @@ static CFAShape *cfaShape;
 @end
 
 @implementation CFAShape
-GENERATE_SINGLETON(CFAShape, cfaShape);
 
 +(void)load {
 	if(VERBOSELOAD) printf("CFAShape\n");
-}
-
--(id)_init {
-	strokeWidth = 1.0f;
-	fillColor =     [[CFAColor colorWithGrey:1] retain];	//white
-	strokeColor =   [[CFAColor colorWithGrey:0] retain];	//black
-	ellipseMode =   CENTER;
-	rectMode =      CORNER;
-    
-    useFill = YES;
-    useStroke = YES;
-    checkShape = NO;
-    firstPoint	= YES;
-    drawShapesToPDF = NO;
-    
-    rectMode = CORNER;
-    ellipseMode = CENTER;
-    
-    strokeWidth = 0.1f;
-    
-	return self;
-}
-
--(void)_dealloc {
 }
 
 #pragma mark Shapes
@@ -676,4 +651,51 @@ GENERATE_SINGLETON(CFAShape, cfaShape);
 	CFALog(@"endDrawShapesToPDFContext");
 }
 
+#pragma mark Singleton
+
+-(id) init
+{
+    if((self = [super init]))
+    {
+        strokeWidth = 1.0f;
+        fillColor =     [[CFAColor colorWithGrey:1] retain];	//white
+        strokeColor =   [[CFAColor colorWithGrey:0] retain];	//black
+        ellipseMode =   CENTER;
+        rectMode =      CORNER;
+        
+        useFill = YES;
+        useStroke = YES;
+        checkShape = NO;
+        firstPoint	= YES;
+        drawShapesToPDF = NO;
+        
+        rectMode = CORNER;
+        ellipseMode = CENTER;
+        
+        strokeWidth = 0.1f;
+    }
+    
+    return self;
+}
+
++ (CFAShape *)sharedManager
+{
+    if (sharedCFAShape == nil) {
+        static dispatch_once_t once;
+        dispatch_once(&once, ^ { sharedCFAShape = [[super allocWithZone:NULL] init]; 
+        });
+        return sharedCFAShape;
+    }
+    return sharedCFAShape;
+}
+
++ (id)allocWithZone:(NSZone *)zone
+{
+    return [[self sharedManager] retain];
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
+}
 @end

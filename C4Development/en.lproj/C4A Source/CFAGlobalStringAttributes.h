@@ -15,8 +15,6 @@
 
 }
 
--(id)_init;
--(void)_dealloc;
 +(CFAGlobalStringAttributes *)sharedManager;
 
 @property(readwrite) BOOL drawStringsToPDF, isClean;

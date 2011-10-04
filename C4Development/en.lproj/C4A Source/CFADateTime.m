@@ -10,20 +10,10 @@
 #include <mach/mach_time.h>
 #include <unistd.h>
 
-static CFADateTime *cfaDateTime;
+static CFADateTime *sharedCFADateTime = nil;
 static uint64_t starttime;
 
 @implementation CFADateTime
-GENERATE_SINGLETON(CFADateTime, cfaDateTime);
-
--(id)_init {
-	gregorian = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] retain];
-	starttime = mach_absolute_time();
-	return self;
-}
-
--(void)_dealloc {
-}
 
 #pragma mark Date & Time
 +(NSInteger)year{
@@ -265,6 +255,42 @@ GENERATE_SINGLETON(CFADateTime, cfaDateTime);
     }
     
     return (NSInteger) (conversion * (double) difference);
+}
+
+#pragma mark Singleton
+
+-(id) init
+{
+    if((self = [super init]))
+    {
+        gregorian = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] retain];
+        starttime = mach_absolute_time();
+    }
+    
+    return self;
+}
+
++ (CFADateTime*)sharedManager
+{
+    if (sharedCFADateTime == nil) {
+        static dispatch_once_t once;
+        dispatch_once(&once, ^ { sharedCFADateTime = [[super allocWithZone:NULL] init]; 
+        });
+        return sharedCFADateTime;
+        
+        
+    }
+    return sharedCFADateTime;
+}
+
++ (id)allocWithZone:(NSZone *)zone
+{
+    return [[self sharedManager] retain];
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
 }
 
 @end

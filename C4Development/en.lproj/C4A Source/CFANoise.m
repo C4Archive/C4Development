@@ -15,19 +15,11 @@ CGFloat lerp(CGFloat t, CGFloat a, CGFloat b);
 CGFloat grad(NSInteger hash, CGFloat x, CGFloat y, CGFloat z);
 @end
 
-static CFANoise *cfaNoise;
+static CFANoise *sharedCFANoise = nil;
 
 @implementation CFANoise 
-GENERATE_SINGLETON(CFANoise, cfaNoise);
 
 #pragma mark Initialization
--(id)_init {
-	return self;
-}
-
--(void)_dealloc {
-}
-
 BOOL ready = NO;
 int p[512];
 int permutation[512] = { 151,160,137,91,90,15,
@@ -112,6 +104,38 @@ CGFloat grad(NSInteger hash, CGFloat x, CGFloat y, CGFloat z) {
     v = h<4 ? y : h==12||h==14 ? x : z;
         gradValue = ((h&1) == 0 ? u : -u) + ((h&2) == 0 ? v : -v);});
     return gradValue;
+}
+
+#pragma mark Singleton
+
+-(id) init
+{
+    if((self = [super init]))
+    {
+    }
+    
+    return self;
+}
+
++ (CFANoise *)sharedManager
+{
+    if (sharedCFANoise == nil) {
+        static dispatch_once_t once;
+        dispatch_once(&once, ^ { sharedCFANoise = [[super allocWithZone:NULL] init]; 
+        });
+        return sharedCFANoise;
+    }
+    return sharedCFANoise;
+}
+
++ (id)allocWithZone:(NSZone *)zone
+{
+    return [[self sharedManager] retain];
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
 }
 
 @end

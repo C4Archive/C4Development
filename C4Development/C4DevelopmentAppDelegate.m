@@ -17,15 +17,15 @@
 
 - (void)awakeFromNib {
 	/* create instances of singletons */
-	cfaOpenGLView	= [[[CFAOpenGLView alloc] _init] retain];
-	cfaDateTime		= [[[CFADateTime alloc] _init] retain];
-	cfaFoundation	= [[[CFAFoundation alloc] _init] retain];
-	cfaMath			= [[[CFAMath alloc] _init] retain];
-	cfaShape		= [[[CFAShape alloc] _init] retain];
-	cfaTransform	= [[[CFATransform alloc] _init] retain];
-	cfaGlobalTypeAttributes = [[[CFAGlobalTypeAttributes alloc] _init] retain];
-	cfaGlobalStringAttributes = [[[CFAGlobalStringAttributes alloc] _init] retain];
-	cfaGlobalShapeAttributes = [[[CFAGlobalShapeAttributes alloc] _init] retain];
+	cfaOpenGLView	= [[[CFAOpenGLView alloc] init] retain];
+	cfaDateTime		= [[[CFADateTime alloc] init] retain];
+	cfaFoundation	= [[[CFAFoundation alloc] init] retain];
+	cfaMath			= [[[CFAMath alloc] init] retain];
+	cfaShape		= [[[CFAShape alloc] init] retain];
+	cfaTransform	= [[[CFATransform alloc] init] retain];
+	cfaGlobalTypeAttributes = [[[CFAGlobalTypeAttributes alloc] init] retain];
+	cfaGlobalStringAttributes = [[[CFAGlobalStringAttributes alloc] init] retain];
+	cfaGlobalShapeAttributes = [[[CFAGlobalShapeAttributes alloc] init] retain];
 }
 
 -(void)applicationWillFinishLaunching:(NSNotification *)notification {

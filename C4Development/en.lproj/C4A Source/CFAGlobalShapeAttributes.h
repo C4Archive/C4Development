@@ -27,8 +27,6 @@
     CGMutablePathRef currentShape;
 }
 
--(id)_init;
--(void)_dealloc;
 +(CFAGlobalShapeAttributes *)sharedManager;
 
 @property(readwrite) NSInteger rectMode, ellipseMode;

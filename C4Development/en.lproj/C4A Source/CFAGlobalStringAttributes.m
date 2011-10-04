@@ -8,17 +8,42 @@
 //
 
 #import "CFAGlobalStringAttributes.h"
-static CFAGlobalStringAttributes *cfaGlobalStringAttributes;
+static CFAGlobalStringAttributes *shareCFAGlobalStringAttributes = nil;
 
 @implementation CFAGlobalStringAttributes
 @synthesize pdfContext,drawStringsToPDF,isClean;
-GENERATE_SINGLETON(CFAGlobalStringAttributes, cfaGlobalStringAttributes);
 
-- (id)_init
+#pragma mark Singleton
+
+-(id) init
 {
-   return self;
+    if((self = [super init]))
+    {
+    }
+    
+    return self;
 }
 
--(void)_dealloc {
++ (CFAGlobalStringAttributes*)sharedManager
+{
+    if (shareCFAGlobalStringAttributes == nil) {
+        static dispatch_once_t once;
+        dispatch_once(&once, ^ { shareCFAGlobalStringAttributes = [[super allocWithZone:NULL] init]; 
+        });
+        return shareCFAGlobalStringAttributes;
+        
+        
+    }
+    return shareCFAGlobalStringAttributes;
+}
+
++ (id)allocWithZone:(NSZone *)zone
+{
+    return [[self sharedManager] retain];
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
 }
 @end

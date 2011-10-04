@@ -31,8 +31,6 @@
 }
 
 #pragma mark Singleton
--(id)_init;
--(void)_dealloc;
 +(CFAShape *)sharedManager;
 
 /*

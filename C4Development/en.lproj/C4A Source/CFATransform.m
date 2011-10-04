@@ -5,24 +5,14 @@
 
 #import "CFATransform.h"
 
-static CFATransform *cfaTransform;
+static CFATransform *sharedCFATransform = nil;
 
 @implementation CFATransform
-
-GENERATE_SINGLETON(CFATransform, cfaTransform);
 
 @synthesize transformArray;
 
 +(void)load {
 	if(VERBOSELOAD) printf("CFATransform\n");
-}
-
--(id)_init {
-	transformArray = [[NSMutableArray alloc] initWithCapacity:0];
-	return self;
-}
-
--(void)_dealloc {
 }
 
 +(void)begin{
@@ -76,4 +66,38 @@ GENERATE_SINGLETON(CFATransform, cfaTransform);
 -(void)rotateByAngle:(CGFloat)angle {
 	[[transformArray lastObject] rotateByRadians:angle];
 }
+
+#pragma mark Singleton
+
+-(id) init
+{
+    if((self = [super init]))
+    {
+        transformArray = [[NSMutableArray alloc] initWithCapacity:0];
+    }
+    
+    return self;
+}
+
++ (CFATransform *)sharedManager
+{
+    if (sharedCFATransform == nil) {
+        static dispatch_once_t once;
+        dispatch_once(&once, ^ { sharedCFATransform = [[super allocWithZone:NULL] init]; 
+        });
+        return sharedCFATransform;
+    }
+    return sharedCFATransform;
+}
+
++ (id)allocWithZone:(NSZone *)zone
+{
+    return [[self sharedManager] retain];
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
+}
+
 @end

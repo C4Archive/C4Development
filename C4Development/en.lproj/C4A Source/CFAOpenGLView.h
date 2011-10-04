@@ -44,8 +44,6 @@
 }
 
 #pragma mark Singleton
--(id)_init;
--(void)_dealloc;
 +(CFAOpenGLView *)sharedManager;
 
 #pragma mark Structure

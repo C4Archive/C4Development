@@ -13,7 +13,7 @@
 
 @implementation CFAQuartz
 
-+(CFACanvas *)patchWithName:(id)patchName {
++(CFAQuartz *)patchWithName:(id)patchName {
     return [[[CFAQuartz alloc] initWithPatchName:patchName] retain];
 }
 

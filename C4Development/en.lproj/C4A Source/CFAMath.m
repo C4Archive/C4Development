@@ -5,22 +5,14 @@
 
 #import "CFAMath.h"
 
-static CFAMath *cfaMath;
+static CFAMath *sharedCFAMath = nil;
 
 @implementation CFAMath
-GENERATE_SINGLETON(CFAMath, cfaMath);
 
 #pragma mark Initialization
 
 +(void)load {
 	if(VERBOSELOAD) printf("CFAMath\n");
-}
-
--(id)_init {
-	return self;
-}
-
--(void)_dealloc {
 }
 
 #pragma mark Calculation
@@ -166,7 +158,42 @@ GENERATE_SINGLETON(CFAMath, cfaMath);
     return returnVal;
 }
 
+#pragma mark Singleton
+
+-(id) init
+{
+    if((self = [super init]))
+    {
+    }
+    
+    return self;
+}
+
++ (CFAMath*)sharedManager
+{
+    if (sharedCFAMath == nil) {
+        static dispatch_once_t once;
+        dispatch_once(&once, ^ { sharedCFAMath = [[super allocWithZone:NULL] init]; 
+        });
+        return sharedCFAMath;
+        
+        
+    }
+    return sharedCFAMath;
+}
+
++ (id)allocWithZone:(NSZone *)zone
+{
+    return [[self sharedManager] retain];
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
+}
+
 #pragma mark Unused
+
 /*
  
  NOTE

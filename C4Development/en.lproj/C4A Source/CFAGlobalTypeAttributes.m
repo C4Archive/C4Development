@@ -8,28 +8,14 @@
 
 #import "CFAGlobalTypeAttributes.h"
 
-static CFAGlobalTypeAttributes *cfaGlobalTypeAttributes;
+static CFAGlobalTypeAttributes *sharedCFAGlobalTypeAttributes = nil;
 
 @implementation CFAGlobalTypeAttributes
-GENERATE_SINGLETON(CFAGlobalTypeAttributes, cfaGlobalTypeAttributes);
 
 @synthesize attributes;
 
 +(void)load {
 	if(VERBOSELOAD) printf("CFAGlobalTypeAttributes\n");
-}
-
--(id)_init {
-	self.attributes = [[[NSMutableDictionary alloc] initWithCapacity:0] retain];
-
-	//Default attributes
-	[self.attributes setObject:[NSColor blackColor] forKey:NSForegroundColorAttributeName];
-	[self.attributes setObject:[NSFont systemFontOfSize:14.0f] forKey:NSFontAttributeName];
-	
-	return self;
-}
-
--(void)_dealloc {
 }
 
 -(void)setObject:(id)object forKey:(NSString *)key {
@@ -101,5 +87,44 @@ GENERATE_SINGLETON(CFAGlobalTypeAttributes, cfaGlobalTypeAttributes);
                        }
                    });
             return mDict;
+}
+
+#pragma mark Singleton
+
+-(id) init
+{
+    if((self = [super init]))
+    {
+        self.attributes = [[[NSMutableDictionary alloc] initWithCapacity:0] retain];
+        
+        //Default attributes
+        [self.attributes setObject:[NSColor blackColor] forKey:NSForegroundColorAttributeName];
+        [self.attributes setObject:[NSFont systemFontOfSize:14.0f] forKey:NSFontAttributeName];
+    }
+    
+    return self;
+}
+
++ (CFAGlobalTypeAttributes*)sharedManager
+{
+    if (sharedCFAGlobalTypeAttributes == nil) {
+        static dispatch_once_t once;
+        dispatch_once(&once, ^ { sharedCFAGlobalTypeAttributes = [[super allocWithZone:NULL] init]; 
+        });
+        return sharedCFAGlobalTypeAttributes;
+        
+        
+    }
+    return sharedCFAGlobalTypeAttributes;
+}
+
++ (id)allocWithZone:(NSZone *)zone
+{
+    return [[self sharedManager] retain];
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
 }
 @end

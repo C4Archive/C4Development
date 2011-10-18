@@ -21,11 +21,15 @@
 +(C4Image *)imageName:(NSString *)name;
 +(C4Image *)imageName:(NSString *)name andType:(NSString *)type;
 +(C4Image *)imageWithCGImage:(CGImageRef)image;
++(C4Image *)imageWithData:(unsigned char *)data andSize:(CGSize)size;
+
+-(void)saveWithFileName:(NSString *)fileName andType:(NSString *)type toFolder:(NSString *)folderName inDirectory:(NSInteger)directory;
 
 -(id)initWithImage:(C4Image *)image;
 -(id)initWithImageName:(NSString *)name;
 -(id)initWithImageName:(NSString *)name andType:(NSString *)type;
 -(id)initWithCGImage:(CGImageRef)image;
+-(id)initWithData:(unsigned char *)data andSize:(CGSize)size;
 
 -(void)drawAt:(NSPoint)p;
 -(void)drawAt:(NSPoint)p withAlpha:(float)alpha;
@@ -35,6 +39,8 @@
 -(void)drawInRect:(NSRect)rect withAlpha:(CGFloat)alpha;
 
 -(CGImageRef)cgImage;
+-(CGImageRef)createGrayscaleImageRefFromData:(unsigned char *)data withSize:(CGSize)size;
+
 
 -(C4Color *)colorAtX:(int)x andY:(int)y;
 -(void)loadPixelData;

@@ -17,4 +17,6 @@
 #pragma mark Foundation 
 void C4Log(NSString *logString,...);
 NSInteger basicSort(id obj1, id obj2, void *context);
+void	free_data(void *info, const void *data, size_t size);
+
 @end

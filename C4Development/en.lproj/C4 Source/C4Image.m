@@ -9,7 +9,6 @@
 -(void)drawFilteredImageInRect:(NSRect)aRect;
 @end
 
-
 @implementation C4Image
 
 @synthesize originalImage, filteredImage, imageWidth, imageHeight, imageSize, imageRect, imageMode, drawFilteredImage, filterContext, rawData, bytesPerPixel;
@@ -19,36 +18,43 @@
 }
 
 -(id)init {
-	if (![super init]) {
-		return nil;
-	}
+    self = [super init];
+    if(self != nil) {
 	self.originalImage = [CIImage emptyImage];
 	imageRect = NSRectFromCGRect([originalImage extent]);
 	filterContext = [[CIContext contextWithCGContext:[[NSGraphicsContext currentContext] graphicsPort]
 											 options:nil] retain];
 	singleFilter = YES;
     imageMode = CORNER;
+    }
 	return self;
 }
 
 -(id)initWithImage:(C4Image *)image {
+    self = [super init];
+    if(self != nil) {
 	[self setOriginalImage:image.originalImage];
 	imageRect = NSRectFromCGRect([originalImage extent]);
 	filterContext = [[CIContext contextWithCGContext:[[NSGraphicsContext currentContext] graphicsPort]
 									  options:nil] retain];
 	singleFilter = YES;
     imageMode = CORNER;
+    }
 	return self;
 }
 
 -(id)initWithImageName:(NSString *)name {
 	NSArray *nameComponents = [name componentsSeparatedByString:@"."];
-	if([nameComponents count] == 2) [self initWithImageName:[nameComponents objectAtIndex:0]
-													andType:[nameComponents objectAtIndex:1]];
+	if([nameComponents count] == 2){
+        return [self initWithImageName:[nameComponents objectAtIndex:0]
+                               andType:[nameComponents objectAtIndex:1]];
+    }
 	return nil;
 }
 
 -(id)initWithImageName:(NSString *)name andType:(NSString *)type{
+    self = [super init];
+    if(self != nil) {
 	NSString *   path = [[NSBundle mainBundle] pathForResource:name
 														ofType:type];
 	NSURL *      url = [NSURL fileURLWithPath: path];
@@ -59,17 +65,30 @@
 												   options:nil]];
 	singleFilter = YES;
     imageMode = CORNER;
+    }
 	return self;
 }
 
 -(id)initWithCGImage:(CGImageRef)image {
+    self = [super init];
+    if(self != nil) {
 	self.originalImage = [CIImage imageWithCGImage:image];
 	imageRect = NSRectFromCGRect([originalImage extent]);
 	[self setFilterContext:[CIContext contextWithCGContext:[[NSGraphicsContext currentContext] graphicsPort]
 												   options:nil]];
 	singleFilter = YES;
     imageMode = CORNER;
+    }
 	return self;
+}
+
+-(id)initWithData:(unsigned char *)data andSize:(CGSize)size {
+        NSInteger depth = 1; // for non-alpha grayscale
+        NSInteger datasize = size.width * size.height * depth;
+        CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceGray();
+        CGDataProviderRef provider = CGDataProviderCreateWithData(NULL,data, datasize, free_data);
+        CGImageRef imageRef = CGImageCreate(size.width, size.height, 8, depth * 8, size.width * depth, colorspace, kCGImageAlphaNone, provider, NULL, false, kCGRenderingIntentDefault);
+    return [[C4Image alloc]  initWithCGImage:imageRef];
 }
 
 -(void)dealloc {
@@ -94,6 +113,10 @@
 
 +(C4Image *)imageWithCGImage:(CGImageRef)image {
     return [[[C4Image alloc] initWithCGImage:image] retain];
+}
+
++(C4Image *)imageWithData:(unsigned char *)data andSize:(CGSize)size {
+    return [[C4Image alloc] initWithData:data andSize:size];
 }
 
 -(void)loadPixelData {
@@ -249,6 +272,68 @@
         returnImage = rep.CGImage;
     }
     return returnImage;
+}
+
+-(CGImageRef)createGrayscaleImageRefFromData:(unsigned char *)data withSize:(CGSize)size {
+    NSInteger depth = 1; // for non-alpha grayscale
+    NSInteger datasize = size.width * size.height * depth;
+    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceGray();
+    CGDataProviderRef provider = CGDataProviderCreateWithData(NULL,data, datasize, free_data);
+    
+    return CGImageCreate(size.width, size.height, 8, depth * 8, size.width * depth, colorspace, kCGImageAlphaNone, provider, NULL, false, kCGRenderingIntentDefault);
+}
+
+-(void)saveWithFileName:(NSString *)fileName andType:(NSString *)type toFolder:(NSString *)folderName inDirectory:(NSInteger)directory {
+
+    NSString *path = nil;
+    NSArray *paths;
+    
+    paths = NSSearchPathForDirectoriesInDomains(directory, NSUserDirectory, YES);
+    
+    NSAssert(paths != nil, @"[... saveCGImageRef couldn't find the directory");
+    
+    if([paths count]) {		
+        path = [paths objectAtIndex:0];
+        path = [path stringByAppendingPathComponent:folderName];
+        
+        BOOL isDir;
+        NSFileManager *defaultManager = [NSFileManager defaultManager];
+        [defaultManager fileExistsAtPath:path isDirectory:&isDir];
+        if (isDir) {
+            [defaultManager createDirectoryAtPath:path withIntermediateDirectories:NO attributes:nil error:nil];
+        }                                     
+        
+        NSMutableString *fullFilePathStr = [NSMutableString stringWithString:path];
+        NSAssert( fullFilePathStr != nil, @"stringWithString failed");
+        
+        
+        [fullFilePathStr appendString:fileName];
+        
+        NSString *finalPath = [NSString stringWithString:fullFilePathStr];
+        NSAssert( finalPath != nil, @"stringWithString failed");
+        
+        CFURLRef url = CFURLCreateWithFileSystemPath (
+                                                      kCFAllocatorDefault,
+                                                      (CFStringRef)finalPath,
+                                                      kCFURLPOSIXPathStyle,
+                                                      false);
+        NSAssert( url != 0, @"CFURLCreateWithFileSystemPath failed");
+        
+        
+        // Save the image to the file
+        CGImageDestinationRef dest = CGImageDestinationCreateWithURL(url, CFSTR("public.tiff"), 1, nil);
+        NSAssert( dest != 0, @"CGImageDestinationCreateWithURL failed");
+        
+        // Set the image in the image destination to be `image' with
+        // optional properties specified in saved properties dict.
+        CGImageDestinationAddImage(dest, [self cgImage], nil);
+        
+        bool success = CGImageDestinationFinalize(dest);
+        NSAssert( success != 0, @"Image could not be written successfully");
+        
+        CFRelease(dest);
+        CFRelease(url);
+    }
 }
 
 #pragma mark BLUR FILTERS

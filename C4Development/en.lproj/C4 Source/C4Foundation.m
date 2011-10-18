@@ -66,6 +66,18 @@ NSInteger floatSort(id obj1, id obj2, void *context) {
     return [[self sharedManager] floatComparator];
 }
 
+void
+free_data(void       *info,		/* I - Context pointer (unused) */
+          const void *data,		/* I - Pointer to data */
+          size_t     size)		/* I - Size of data buffer (unused) */
+{
+    (void)info;
+    (void)size;
+    
+    free((void *)data);
+}
+
+
 #pragma mark Singleton
 
 -(id) init

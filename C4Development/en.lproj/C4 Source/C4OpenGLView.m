@@ -62,6 +62,7 @@ static C4OpenGLView *sharedC4OpenGLView = nil;
 }
 
 -(void)drawRect:(NSRect)dirtyRect {
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	if(readyToDraw) {
         glClearColor(0, 0, 0, 0);
         glClear(GL_COLOR_BUFFER_BIT);
@@ -87,6 +88,7 @@ static C4OpenGLView *sharedC4OpenGLView = nil;
      */
     [self.window display];
     //[self.window makeKeyAndOrderFront:nil];
+    [pool drain];
 }
 
 -(void)drawStyle:(int)style {

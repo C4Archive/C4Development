@@ -123,3 +123,5 @@
 #define MOUSEDRAGGED	@"MouseDraggedNotification"
 #define MOUSEMOVED		@"MouseMovedNotification"
 #define FULLSCREEN		@"FullScreenNotification"
+
+#define DOCUMENTSDIR    NSDocumentDirectory

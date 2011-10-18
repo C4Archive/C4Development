@@ -176,7 +176,10 @@ static void	free_data(void *info, const void *data, size_t size);
                                     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
                                     
                                     [self setData];
-                                    [self createImageFromData:data];
+                                    //[self createImageFromData:data];
+                                    
+                                    colorspace = CGColorSpaceCreateDeviceGray();
+                                    provider = CGDataProviderCreateWithData(NULL,raster_data, raster_size, free_data);
                                     
                                     imageRef = CGImageCreate(raster_width, raster_height, 8, raster_depth * 8, raster_width * raster_depth, colorspace, kCGImageAlphaNone, provider, NULL, false, kCGRenderingIntentDefault);
                                     
@@ -186,7 +189,7 @@ static void	free_data(void *info, const void *data, size_t size);
                                     NSArray	*paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDirectory, YES);
                                     if([paths count]) {		
                                         path = [paths objectAtIndex:0];
-                                        NSString *folderName = @"CA_Wolfram_SinglePointAdditive";
+                                        NSString *folderName = @"test";
                                         path = [path stringByAppendingPathComponent:folderName];
                                         
                                         BOOL isDir;

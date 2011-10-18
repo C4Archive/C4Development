@@ -491,6 +491,16 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink, const CVTime
 #pragma mark Output
 
 -(void)setupPDF {
+    
+    NSDateFormatter *format = [[[NSDateFormatter alloc] init] autorelease];
+    [format setDateFormat:@"MMddYY(hhmmss)"];
+    
+    NSString *fileName = [NSString stringWithFormat:@"%@-%@.pdf",appName,[format stringFromDate:[NSDate date]]];
+    
+    [self setupPDFWithName:fileName];
+}
+
+-(void)setupPDFWithName:(NSString *)name {
 	drawToPDF = YES;
 	isClean = NO;
     
@@ -507,11 +517,7 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink, const CVTime
 			[defaultManager createDirectoryAtPath:path withIntermediateDirectories:NO attributes:nil error:nil];
 		}
 		
-		NSDateFormatter *format = [[[NSDateFormatter alloc] init] autorelease];
-		[format setDateFormat:@"MMddYY(hhmmss)"];
-        
-		NSString *fileName = [NSString stringWithFormat:@"%@-%@.pdf",appName,[format stringFromDate:[NSDate date]]];
-		pdfURL = (CFURLRef)[NSURL fileURLWithPath:[path stringByAppendingPathComponent:fileName]];
+		pdfURL = (CFURLRef)[NSURL fileURLWithPath:[path stringByAppendingPathComponent:name                                                                      ]];
 		CFRetain(pdfURL);
 		NSMutableData *data = [[[NSMutableData alloc] init] autorelease];
 		pdfConsumer = CGDataConsumerCreateWithCFData((CFMutableDataRef)data);

@@ -638,7 +638,7 @@ static C4Shape *sharedC4Shape;
 }
 
 +(void)beginDrawShapesToPDFContext:(CGContextRef)context {
-	C4Log(@"beginDrawShapesToPDFContext");
+//	C4Log(@"beginDrawShapesToPDFContext");
 	[C4GlobalShapeAttributes sharedManager].pdfContext = context;
 	[C4GlobalShapeAttributes sharedManager].drawShapesToPDF = YES;
 	[C4GlobalShapeAttributes sharedManager].isClean = NO;
@@ -648,7 +648,7 @@ static C4Shape *sharedC4Shape;
 	[C4GlobalShapeAttributes sharedManager].drawShapesToPDF = NO;
     [C4GlobalShapeAttributes sharedManager].pdfContext = nil;
 	[C4GlobalShapeAttributes sharedManager].isClean = YES;
-	C4Log(@"endDrawShapesToPDFContext");
+//	C4Log(@"endDrawShapesToPDFContext");
 }
 
 #pragma mark Singleton

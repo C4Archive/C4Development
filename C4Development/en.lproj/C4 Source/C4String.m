@@ -68,7 +68,7 @@
 		newString = (NSString *)aString;
 	}
 	else if ([aString isKindOfClass:[C4String class]]) {
-		newString = ((C4String *)aString).string;
+		newString = (NSString *)((C4String *)aString).string;
 	}
 	else {
 		C4Log(@"Type is not C4String or NSString");
@@ -511,7 +511,7 @@
 }
 
 +(void)beginDrawStringsToPDFContext:(CGContextRef)context {
-	C4Log(@"beginDrawStringsToPDFContext");
+//	C4Log(@"beginDrawStringsToPDFContext");
 	[C4GlobalStringAttributes sharedManager].pdfContext = context;
 	[C4GlobalStringAttributes sharedManager].drawStringsToPDF = YES;
 	[C4GlobalStringAttributes sharedManager].isClean = NO;
@@ -521,7 +521,7 @@
 	[C4GlobalStringAttributes sharedManager].drawStringsToPDF = NO;
     [C4GlobalStringAttributes sharedManager].pdfContext = nil;
 	[C4GlobalStringAttributes sharedManager].isClean = YES;
-	C4Log(@"endDrawStringsToPDFContext");
+//	C4Log(@"endDrawStringsToPDFContext");
 }
 
 +(C4String *)globalAttributes {

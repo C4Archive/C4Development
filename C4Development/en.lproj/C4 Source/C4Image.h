@@ -18,7 +18,6 @@
 	NSInteger bytesPerPixel,imageMode;
 }
 
-
 +(C4Image *)imageName:(NSString *)name;
 +(C4Image *)imageName:(NSString *)name andType:(NSString *)type;
 +(C4Image *)imageWithCGImage:(CGImageRef)image;

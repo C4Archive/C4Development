@@ -102,6 +102,7 @@
 
 #pragma mark Output
 -(void)setupPDF;
+-(void)setupPDFWithName:(NSString *)name;
 -(void)endPDF;
 
 #pragma mark Screen Shots

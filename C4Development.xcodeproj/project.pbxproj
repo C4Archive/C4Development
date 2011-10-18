@@ -24,6 +24,7 @@
 		ED6605551437CA68003881DA /* C4Development.icns in Resources */ = {isa = PBXBuildFile; fileRef = ED6605531437CA68003881DA /* C4Development.icns */; };
 		ED6605581437CA69003881DA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = ED6605561437CA68003881DA /* Credits.rtf */; };
 		ED66055B1437CA69003881DA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6605591437CA69003881DA /* MainMenu.xib */; };
+		ED68EA72144C828500B06803 /* Advanced - WolframCA in Resources */ = {isa = PBXBuildFile; fileRef = ED68EA71144C828500B06803 /* Advanced - WolframCA */; };
 		EDA5BEAA143BA0260007782C /* KeyboardMouse - StoringMouseCoords in Resources */ = {isa = PBXBuildFile; fileRef = EDA5BEA9143BA0160007782C /* KeyboardMouse - StoringMouseCoords */; };
 		EDBF18AA143B7ACE0004DAF5 /* C4.mov in Resources */ = {isa = PBXBuildFile; fileRef = EDBF18A1143B7ACE0004DAF5 /* C4.mov */; };
 		EDBF18AB143B7ACE0004DAF5 /* C4.qtz in Resources */ = {isa = PBXBuildFile; fileRef = EDBF18A2143B7ACE0004DAF5 /* C4.qtz */; };
@@ -208,6 +209,7 @@
 		ED6605541437CA68003881DA /* en */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = en; path = en.lproj/C4Development.icns; sourceTree = "<group>"; };
 		ED6605571437CA69003881DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		ED66055A1437CA69003881DA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		ED68EA71144C828500B06803 /* Advanced - WolframCA */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Advanced - WolframCA"; sourceTree = "<group>"; };
 		EDA5BEA9143BA0160007782C /* KeyboardMouse - StoringMouseCoords */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KeyboardMouse - StoringMouseCoords"; sourceTree = "<group>"; };
 		EDBF18A1143B7ACE0004DAF5 /* C4.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = C4.mov; path = "en.lproj/C4 Media/C4.mov"; sourceTree = "<group>"; };
 		EDBF18A2143B7ACE0004DAF5 /* C4.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; name = C4.qtz; path = "en.lproj/C4 Media/C4.qtz"; sourceTree = "<group>"; };
@@ -435,6 +437,7 @@
 				ED6604C81437CA68003881DA /* Advanced - Oscillator */,
 				ED6604C91437CA68003881DA /* Advanced - SketchPad */,
 				ED6604CA1437CA68003881DA /* Advanced - StoringInputAdvanced */,
+				ED68EA71144C828500B06803 /* Advanced - WolframCA */,
 				ED6604CB1437CA68003881DA /* Arrays - Array1D */,
 				ED6604CC1437CA68003881DA /* Arrays - Array2D */,
 				ED6604CD1437CA68003881DA /* Arrays - MoreOnCArrays */,
@@ -628,6 +631,7 @@
 				EDBF18B1143B7ACE0004DAF5 /* C4Wood.png in Resources */,
 				EDBF18B2143B7ACE0004DAF5 /* loop.aif in Resources */,
 				EDA5BEAA143BA0260007782C /* KeyboardMouse - StoringMouseCoords in Resources */,
+				ED68EA72144C828500B06803 /* Advanced - WolframCA in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

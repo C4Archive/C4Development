@@ -1,0 +1,103 @@
+//
+//  C4Canvas.h
+//  CodeSamples
+//
+//	A Cocoa For Artists project
+//  Created by Travis Kirton
+//
+
+#import "C4Canvas.h"
+int line[1024][768];
+int rule[2][2][2];
+
+@interface C4Canvas()
+    -(void)setRules;
+    -(void)generateLines;
+@end
+
+@implementation C4Canvas 
+
+-(id)init {
+    self = [super init];
+    if(self) {
+        [self setRules];
+        [self generateLines];
+    }
+    return self;
+}
+
+-(void)setRules {
+    rule[1][1][1] = 1;
+    rule[1][1][0] = 0;
+    rule[1][0][1] = 0;
+    rule[1][0][0] = 1;
+    rule[0][1][1] = 0;
+    rule[0][1][0] = 1;
+    rule[0][0][1] = 1;
+    rule[0][0][0] = 0;
+}
+
+-(void)generateRandomRules {
+    rule[1][1][1] = 0;
+    rule[1][1][0] = 0;
+    rule[1][0][1] = 0;
+    rule[1][0][0] = 0;
+    rule[0][1][1] = 0;
+    rule[0][1][0] = 0;
+    rule[0][0][1] = 0;
+    rule[0][0][0] = 0;
+}
+
+-(void)printFirstLine {
+    NSMutableString *s = [[NSMutableString alloc] initWithCapacity:0];
+    
+    for(int i = 0; i < 768; i++) {
+        [s appendFormat:@"%d",line[1][i]];
+    }
+    C4Log(@"%@",s);
+}
+
+-(void)generateLines {
+    line[0][384] = 1;
+    int a,b,c;
+    
+    for (int currentLine = 1; currentLine <1024; currentLine++) {
+        for(int currentCell = 1; currentCell < 768; currentCell++) {
+            if(currentCell == 0) {
+                b = line[currentLine-1][currentCell];
+                c = line[currentLine-1][currentCell+1];
+                line[currentLine][currentCell] = rule[0][b][c];
+            }
+            else if(currentCell == 767) {
+                a = line[currentLine-1][currentCell-1];
+                b = line[currentLine-1][currentCell];
+                line[currentLine][currentCell] = rule[a][b][0];
+            }
+            else {
+                a = line[currentLine-1][currentCell-1];
+                b = line[currentLine-1][currentCell];
+                c = line[currentLine-1][currentCell+1];
+                line[currentLine][currentCell] = rule[a][b][c];
+            }
+        }
+    }
+}
+
+-(void)setup {
+    [self windowWidth:768 andHeight:1024];
+}
+
+-(void)draw {
+    [self setupPDF];
+    [self background:0];
+    [self drawBackground];
+    for (int y = 0; y < 1024; y++) {
+        for(int x = 0; x < 768; x++) {
+            if(line[y][x] == 1){
+                [C4Shape pointAt:NSMakePoint(x, y)];
+            }
+        }
+    }
+    [self endPDF];
+}
+@end
